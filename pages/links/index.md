@@ -11,7 +11,7 @@ waline: true
   <span>站名：Axi404'Blog</span>
   <span>|</span>
   <span>
-  地址：<a href="https://axi404.github.io/Blog/">https://axi404.github.io/Blog/</a>
+  地址：<a href="https://axi404-github-io.vercel.app/">https://axi404-github-io.vercel.app/</a>
   </span>
   <span>图片：右边用户栏</span>
   <span>|</span>
