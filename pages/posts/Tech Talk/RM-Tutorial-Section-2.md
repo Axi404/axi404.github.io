@@ -31,7 +31,7 @@ top: 1       # You can add weight to some posts to override the default sorting 
 
 Markdown 的文件格式为 `.md`，使用此后缀名便可以较为轻松的将内容标记为 Markdown，并在大多数的代码工具中被直接渲染。而专业的 Markdown 编辑器，如 typora/obsidian/VSCode Markdown 插件，读者均可以自行进行探索。
 
-Markdown 的详细语法见 [Markdown 官网文档]()，在这里不进行重复的说明，因为在占用篇幅的同时，这是多余的。
+Markdown 的详细语法见 [Markdown 官网文档](https://markdown.com.cn/)，在这里不进行重复的说明，因为在占用篇幅的同时，这是多余的。
 
 ## SSH
 
