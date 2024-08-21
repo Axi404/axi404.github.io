@@ -8,6 +8,7 @@ export default defineSiteConfig({
     avatar: 'https://Axi404.github.io/picx-images-hosting/avatar.6t71qqiv1e.png',
     name: '阿汐',
   },
+  pageSize: 100,
   search: {
     enable: true,
     type: 'fuse',
