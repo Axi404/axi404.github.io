@@ -1,0 +1,13 @@
+:root {
+  --un-prose-hr: #000;
+  // --hy-font-family-seto: monospace, Seto;
+}
+
+.dark {
+  --un-prose-hr: rgb(195, 195, 195);
+}
+
+.aplayer-lrc::before,
+.aplayer-lrc::after {
+  display: none !important;
+}

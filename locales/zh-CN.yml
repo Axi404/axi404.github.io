@@ -1,0 +1,16 @@
+# 你可以像这样自定义 i18n
+intro:
+  desc: Valaxy 模版
+  hi: 你好，Valaxy
+
+TALKS: 杂谈
+
+Notes: 笔记
+Uncategorized: 未分类
+Daily: 日常
+blog: 博客
+daily: 日常
+
+Daily Talk: 日常闲聊
+AI Talk: AI 分享
+Tech Talk: 技术杂谈
