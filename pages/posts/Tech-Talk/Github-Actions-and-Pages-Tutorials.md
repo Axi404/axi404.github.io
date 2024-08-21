@@ -4,9 +4,9 @@ excerpt: 关于 Actions 与 Pages 的教程，暨 CSBAOYANDDL 技术分享
 date: 2024-07-02 00:00:00+0000
 image: https://Axi404.github.io/picx-images-hosting/cover.8l00ld9mjs.jpg
 categories:
-    - Tech Talk
+    - 'Tech Talk'
 tags:
-    - Tech Talk
+    - 'Tech Talk'
 top: 1
 ---
 

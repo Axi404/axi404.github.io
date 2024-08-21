@@ -4,12 +4,12 @@ excerpt: 从一些工作中扫过。
 date: 2024-08-16 10:00:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.2veo9u2fuj.jpg
 categories:
-    - AI Talk
+    - 'AI Talk'
 tags:
-    - AI Talk
+    - 'AI Talk'
     - LLM
     - VLM
-    - Embodied AI
+    - 'Embodied AI'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

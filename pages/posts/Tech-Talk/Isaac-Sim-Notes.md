@@ -4,10 +4,10 @@ excerpt: 关于 Isaac Sim，注定还有一段漫长的路。
 date: 2024-08-19 09:20:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.1seyyy61ak.png
 categories:
-    - Tech Talk
+    - 'Tech Talk'
 tags:
-    - Tech Talk
-    - Embodied AI
+    - 'Tech Talk'
+    - 'Embodied AI'
     - Isaac Sim
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---

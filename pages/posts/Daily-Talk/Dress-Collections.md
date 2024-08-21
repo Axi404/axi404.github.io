@@ -4,9 +4,9 @@ excerpt: 本人女装收集，欢迎欣赏。原有大约 200 余张，不过大
 date: 2024-07-08 00:00:00+0000
 image: https://Axi404.github.io/picx-images-hosting/cover.5fkimf6u7r.png
 categories:
-    - Daily Talk
+    - 'Daily Talk'
 tags:
-    - Daily Talk
+    - 'Daily Talk'
 ---
 
 本人女装收集，欢迎欣赏。原有大约 200 余张，不过大多为同一姿势连拍，或未达到分享标准，在此给出本人较为喜欢的照片。

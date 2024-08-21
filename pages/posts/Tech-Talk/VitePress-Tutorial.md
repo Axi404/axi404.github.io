@@ -4,9 +4,9 @@ excerpt: 如何对于 VitePress 项目进行贡献，快速看懂项目结构，
 date: 2024-07-03 00:00:00+0000
 image: https://Axi404.github.io/picx-images-hosting/cover.5xakb259g9.jpg
 categories:
-    - Tech Talk
+    - 'Tech Talk'
 tags:
-    - Tech Talk
+    - 'Tech Talk'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

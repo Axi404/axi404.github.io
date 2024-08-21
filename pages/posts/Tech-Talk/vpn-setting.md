@@ -4,9 +4,9 @@ excerpt: EasyConnect + SSH 校外链接服务器。
 date: 2024-08-16 20:51:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.175bcndq2f.jpg
 categories:
-    - Tech Talk
+    - 'Tech Talk'
 tags:
-    - Tech Talk
+    - 'Tech Talk'
     - VPN
 top: 1
 ---

@@ -4,9 +4,9 @@ excerpt: 关于 C++ 的快速入门以及基础概念讲解。
 date: 2024-07-10 00:00:00+0000
 image: https://Axi404.github.io/picx-images-hosting/cover.4qr92gfedz.jpg
 categories:
-    - Tech Talk
+    - 'Tech Talk'
 tags:
-    - Tech Talk
+    - 'Tech Talk'
     - RoboMaster
     - C++
 top: 1       # You can add weight to some posts to override the default sorting (date descending)

@@ -4,9 +4,9 @@ excerpt: Obsidian 快速上手，概念辨析 & 基础使用。
 date: 2024-07-06 00:00:00+0000
 image: https://Axi404.github.io/picx-images-hosting/cover.1ovd18do97.jpg
 categories:
-    - Tech Talk
+    - 'Tech Talk'
 tags:
-    - Tech Talk
+    - 'Tech Talk'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

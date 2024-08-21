@@ -4,9 +4,9 @@ excerpt: 2024-07-29 ~ 2024-08-04.
 date: 2024-07-31 04:58:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.32hw59qv95.jpg
 categories:
-    - Daily Talk
+    - 'Daily Talk'
 tags:
-    - Daily Talk
+    - 'Daily Talk'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

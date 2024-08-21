@@ -4,9 +4,9 @@ excerpt: 我的 RM 故事。
 date: 2024-08-03 22:17:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.2veo9u2s19.PNG
 categories:
-    - Daily Talk
+    - 'Daily Talk'
 tags:
-    - Daily Talk
+    - 'Daily Talk'
     - RoboMaster
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---

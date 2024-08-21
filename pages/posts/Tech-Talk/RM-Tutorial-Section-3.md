@@ -4,9 +4,9 @@ excerpt: 关于使用虚拟机操作 Linux（Ubuntu）系统。
 date: 2024-08-13 16:12:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.1lbr3ilppr.png
 categories:
-    - Tech Talk
+    - 'Tech Talk'
 tags:
-    - Tech Talk
+    - 'Tech Talk'
     - RoboMaster
     - Linux
     - Ubuntu

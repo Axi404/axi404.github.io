@@ -4,12 +4,12 @@ excerpt: OpenVLA 纯小白代码阅读记录。
 date: 2024-07-23 09:00:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.4jo170syo0.jpg
 categories:
-    - AI Talk
+    - 'AI Talk'
 tags:
-    - Tech Talk
+    - 'Tech Talk'
     - LLM
-    - Code Reading
-    - Embodied AI
+    - 'Code Reading'
+    - 'Embodied AI'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

@@ -4,12 +4,12 @@ excerpt: 在 LLM 之前，我看过的一些论文/思考/推荐。
 date: 2024-08-01 19:41:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.64ds6hpiyc.jpg
 categories:
-    - AI Talk
+    - 'AI Talk'
 tags:
-    - AI Talk
+    - 'AI Talk'
     - LLM
     - VLM
-    - Embodied AI
+    - 'Embodied AI'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

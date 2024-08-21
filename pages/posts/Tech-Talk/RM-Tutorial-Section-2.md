@@ -4,9 +4,9 @@ excerpt: 关于 SSH 以及 CMake 的基础讲解。
 date: 2024-07-17 00:00:00+0000
 image: https://Axi404.github.io/picx-images-hosting/cover.5fkimh32iy.png
 categories:
-    - Tech Talk
+    - 'Tech Talk'
 tags:
-    - Tech Talk
+    - 'Tech Talk'
     - RoboMaster
     - C++
 top: 1       # You can add weight to some posts to override the default sorting (date descending)

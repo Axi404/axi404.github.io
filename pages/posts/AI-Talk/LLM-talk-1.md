@@ -4,12 +4,12 @@ excerpt: 从 BOW 到 Embodied AI，一些 insight 与思考。
 date: 2024-08-08 22:34:00+0800
 image: https://Axi404.github.io/picx-images-hosting/cover.7w6r1e925a.jpg
 categories:
-    - AI Talk
+    - 'AI Talk'
 tags:
-    - AI Talk
+    - 'AI Talk'
     - LLM
     - VLM
-    - Embodied AI
+    - 'Embodied AI'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
