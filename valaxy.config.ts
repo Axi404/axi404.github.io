@@ -17,7 +17,7 @@ export default defineConfig<ThemeConfig>({
       headline:"1",
       description:"2",
       images: [
-        "https://Axi404.github.io/picx-images-hosting/cover.5fkimf6u7r.png",
+        "https://Axi404.github.io/picx-images-hosting/119323491_p0.4uav0b030o.jpg",
       ]
     },
     nav: [
