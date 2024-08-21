@@ -3,7 +3,7 @@ import { defineSiteConfig } from 'valaxy'
 export default defineSiteConfig({
   lang: 'zh-CN',
   title: 'Axi\'s Blog',
-  url: 'https://axi404.github.io/',
+  url: 'https://axi404-github-io.vercel.app/',
   author: {
     avatar: 'https://axi404.github.io/Blog/img/avatar_hu12164355173948498683.png',
     name: '阿汐',
