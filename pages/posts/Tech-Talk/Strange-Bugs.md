@@ -27,28 +27,30 @@ top: 1       # You can add weight to some posts to override the default sorting 
 
 首先给出下载 CUDA 和 CUDNN 的官网，其中 CUDA 12.1 为 [https://developer.nvidia.com/cuda-12-1-0-download-archive](https://developer.nvidia.com/cuda-12-1-0-download-archive)，CUDNN 9.3.0 为 [https://developer.nvidia.com/cudnn-downloads](https://developer.nvidia.com/cudnn-downloads)，之后依次选择自己的系统版本即可。其中 CUDA 的安装方法使用的是 `runfile (local)`，并且在此之前运行了 `sudo ubuntu-drivers autoinstall` 并重启以安装 driver。
 
-问题出现在，对于任何一个全新的最小安装的 Ubuntu 20.04 系统，在使用 runfile 的时候，均会报错，并说明在 `/var/log/nvidia-installer.log` 中可以看到详情，其最后为：
+问题出现在，对于任何一个全新的最小安装的 Ubuntu 20.04 系统，在使用 runfile 的时候，均会报错，并说明在 `/var/log/nvidia-installer.log` 中可以看到详情，为：
 
-```txt
--> Error.
-ERROR: An error occurred while performing the step: "Checking to see whether the nvidia kernel module was successfully built". See /var/log/nvidia-installer.log for details.
--> The command `cd ./kernel; /usr/bin/make -k -j16  NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.15.0-117-generic/build" SYSOUT="/lib/modules/5.15.0-117-generic/build" NV_KERNEL_MODULES="nvidia"` failed with the following output:
+<details style="width: 1000px; word-wrap: break-word;">
+  <summary>报错信息 `/var/log/cuda-installer.log`</summary>
 
-make[1]: Entering directory '/usr/src/linux-headers-5.15.0-117-generic'
-warning: the compiler differs from the one used to build the kernel
-  The kernel was built by: gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
-  You are using:           cc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
-  MODPOST /tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers
-ERROR: modpost: GPL-incompatible module nvidia.ko uses GPL-only symbol 'rcu_read_unlock_strict'
-make[2]: *** [scripts/Makefile.modpost:133: /tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers] Error 1
-make[2]: *** Deleting file '/tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers'
-make[2]: Target '__modpost' not remade because of errors.
-make[1]: *** [Makefile:1830: modules] Error 2
-make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-117-generic'
-make: *** [Makefile:82: modules] Error 2
-ERROR: The nvidia kernel module was not created.
-ERROR: Installation has failed.  Please see the file '/var/log/nvidia-installer.log' for details.  You may find suggestions on fixing installation problems in the README available on the Linux driver download page at www.nvidia.com.
-```
+    -> Error.
+    ERROR: An error occurred while performing the step: "Checking to see whether the nvidia kernel module was successfully built". See /var/log/nvidia-installer.log for details.
+    -> The command `cd ./kernel; /usr/bin/make -k -j16  NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.15.0-117-generic/build" SYSOUT="/lib/modules/5.15.0-117-generic/build" NV_KERNEL_MODULES="nvidia"` failed with the following output:
+
+    make[1]: Entering directory '/usr/src/linux-headers-5.15.0-117-generic'
+    warning: the compiler differs from the one used to build the kernel
+    The kernel was built by: gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+    You are using:           cc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+    MODPOST /tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers
+    ERROR: modpost: GPL-incompatible module nvidia.ko uses GPL-only symbol 'rcu_read_unlock_strict'
+    make[2]: *** [scripts/Makefile.modpost:133: /tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers] Error 1
+    make[2]: *** Deleting file '/tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers'
+    make[2]: Target '__modpost' not remade because of errors.
+    make[1]: *** [Makefile:1830: modules] Error 2
+    make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-117-generic'
+    make: *** [Makefile:82: modules] Error 2
+    ERROR: The nvidia kernel module was not created.
+    ERROR: Installation has failed.  Please see the file '/var/log/nvidia-installer.log' for details.  You may find suggestions on fixing installation problems in the README available on the Linux driver download page at www.nvidia.com.
+</details>
 
 经过检查，发现问题其实很简单，是因为 g++ 等版本为 9，太高了，设置为 7 即可。
 
@@ -64,25 +66,27 @@ sudo update-alternatives --display g++
 
 之后再次运行，获得输出：
 
-```txt
-===========
-= Summary =
-===========
 
-Driver:   Not Selected
-Toolkit:  Installed in /usr/local/cuda-12.1/
+<details style="width: 1000px; word-wrap: break-word;">
+  <summary>CUDA 安装成功输出</summary>
+    <p>===========</p>
+    <p>= Summary =</p>
+    <p>===========</p>
 
-Please make sure that
- -   PATH includes /usr/local/cuda-12.1/bin
- -   LD_LIBRARY_PATH includes /usr/local/cuda-12.1/lib64, or, add /usr/local/cuda-12.1/lib64 to /etc/ld.so.conf and run ldconfig as root
+    Driver:   Not Selected
+    Toolkit:  Installed in /usr/local/cuda-12.1/
 
-To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-12.1/bin
-***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 530.00 is required for CUDA 12.1 functionality to work.
-To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
-    sudo <CudaInstaller>.run --silent --driver
+    Please make sure that
+    -   PATH includes /usr/local/cuda-12.1/bin
+    -   LD_LIBRARY_PATH includes /usr/local/cuda-12.1/lib64, or, add /usr/local/cuda-12.1/lib64 to /etc/ld.so.conf and run ldconfig as root
 
-Logfile is /var/log/cuda-installer.log
-```
+    To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-12.1/bin
+    ***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 530.00 is required for CUDA 12.1 functionality to work.
+    To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
+        sudo <CudaInstaller>.run --silent --driver
+
+    Logfile is /var/log/cuda-installer.log
+</details>
 
 设置环境变量：
 
