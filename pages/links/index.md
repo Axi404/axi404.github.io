@@ -39,14 +39,14 @@ waline: true
     {
       name: '主治医师李大华',
       url: 'https://ilovebread.buzz',
-      image: 'https://Axi404.github.io/picx-images-hosting/Assyrian.4qr92oh1mq.png',
+      image: 'https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/Assyrian.4qr92oh1mq.png',
       color: '#e9546b',
       desc: '何地才是樂土，讓競爭做指數。',
     },
     {
       name: '小树',
       url: 'https://blog.juniortree.com',
-      image: 'https://Axi404.github.io/picx-images-hosting/xiaoshu.7sn53widtv.jpeg',
+      image: 'https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/xiaoshu.7sn53widtv.jpeg',
       color: '#e9546b',
       desc: '「妳突然對我説 七里香的名字很美」',
     },

@@ -2,7 +2,7 @@
 title: Git 的常见操作
 excerpt: 日常使用的 Git 操作，丝滑小连招。
 date: 2024-07-03 00:00:00+0000
-image: https://Axi404.github.io/picx-images-hosting/cover.3gobw4w1xg.jpg
+image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.3gobw4w1xg.jpg
 categories:
     - 'Tech Talk'
 tags:

@@ -2,7 +2,7 @@
 title: LLM Talk 1
 excerpt: 从 BOW 到 Embodied AI，一些 insight 与思考。
 date: 2024-08-08 22:34:00+0800
-image: https://Axi404.github.io/picx-images-hosting/cover.7w6r1e925a.jpg
+image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.7w6r1e925a.jpg
 categories:
     - 'AI Talk'
 tags:
@@ -54,7 +54,7 @@ Word 2 Vec 的一个 insight 是，它将词映射到了一个高维空间中，
 
 论文链接：[https://arxiv.org/pdf/2103.00020](https://arxiv.org/pdf/2103.00020)
 
-![The pipeline of CLIP](https://Axi404.github.io/picx-images-hosting/CLIP.7ljx88ttzm.png)
+![The pipeline of CLIP](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/CLIP.7ljx88ttzm.png)
 
 CLIP 在某种程度上也可以说是一个开山之作，虽然说对多模态的探索早在它之前就已经开始了，然而不只是数据量很大，本身对于内容处理的范式也使得 CLIP 极具拓展性，可以在很多任务中泛化。
 
@@ -72,7 +72,7 @@ CLIP 在某种程度上也可以说是一个开山之作，虽然说对多模态
 
 论文链接：[https://arxiv.org/pdf/2102.03334](https://arxiv.org/pdf/2102.03334)
 
-![The pipeline of ViLT](https://Axi404.github.io/picx-images-hosting/ViLT.67xe47irzd.png)
+![The pipeline of ViLT](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/ViLT.67xe47irzd.png)
 
 ViLT 也算是比较经典的多模态领域的工作了，这里面需要说的东西其实不多。首先需要先理清一些常规的内容，也就是 ViT 和 Transformer 在形式上究竟有什么区别。假如说我们不去关注这两个模型的输出，一个显而易见的事情是，他们的不同点仅仅在于模型的输入部分，当然对于输入的处理也有所不同。具体来说，在文本的部分使用了 tokenizer，还在图像的部分分 patch 变成 token 之后进行了一次简单的编码。借用一下后期的 insight，假如不去在意这种简单的编码的性能，已经可以理解为，视觉信息本身就是一种语言。
 
@@ -91,7 +91,7 @@ ViLT 也算是比较经典的多模态领域的工作了，这里面需要说的
 
 论文链接：[https://arxiv.org/pdf/2107.07651](https://arxiv.org/pdf/2107.07651)
 
-![The pipeline of ALBEF](https://Axi404.github.io/picx-images-hosting/ALBEF.1ovd18db0t.png)
+![The pipeline of ALBEF](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/ALBEF.1ovd18db0t.png)
 
 介绍一下 ALBEF，这份工作可以说也是很经典的内容了，基本来说，符合了前人工作的几个共识。首先就是，一般来说，图像编码器需要大于文本编码器，同时的话，多模态的编码器也要尽可能的大，于是使用了 12 层 Transformer 作为图像编码器，6 层文本以及 6 层多模态。同时也是用了 ITC/ITM/MLM，这几种经典的任务。
 
@@ -107,7 +107,7 @@ ViLT 也算是比较经典的多模态领域的工作了，这里面需要说的
 
 论文链接：[https://arxiv.org/pdf/2111.02358](https://arxiv.org/pdf/2111.02358)
 
-![The pipeline of VLMo](https://Axi404.github.io/picx-images-hosting/VLMo.6t71qid8a3.png)
+![The pipeline of VLMo](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/VLMo.6t71qid8a3.png)
 
 VLMo 也可以说是一个比较经典的工作，其中提出的主要就是 MoME，但是这里面，MoE 的experts 是模型自己去选择的，而在这个里面则是手动的进行切换。
 
@@ -127,7 +127,7 @@ VLMo 也可以说是一个比较经典的工作，其中提出的主要就是 Mo
 
 论文链接：[https://arxiv.org/pdf/2201.12086](https://arxiv.org/pdf/2201.12086)
 
-![The pipeline of BLIP](https://Axi404.github.io/picx-images-hosting/BLIP.3d4pyf3l73.png)
+![The pipeline of BLIP](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/BLIP.3d4pyf3l73.png)
 
 BLIP 可以说是我比较喜欢的一篇工作了，当然，基础的模型结构并没有很大的创新，本身还是 VLMo 的框架，贡献了 attention block 的参数，但是把 MLM 换成了 LM，所以这里的参数不能共享，换成了一个 casual attention。
 
@@ -145,7 +145,7 @@ BLIP 的重点在于，ALBEF 只关注到了 MLM 生成的高质量，然后就�
 
 论文链接：[https://arxiv.org/pdf/2205.01917](https://arxiv.org/pdf/2205.01917)
 
-![The pipeline of CoCa](https://Axi404.github.io/picx-images-hosting/CoCa.41xzifr47n.png)
+![The pipeline of CoCa](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/CoCa.41xzifr47n.png)
 
 CoCa 可以说和 ALBEF 十分的相似，基本上就是和 ALBEF 一模一样，但是 CoCa 的关注点在于，之前的工作，虽然看上去从 pipeline 里面都是同时进行的输入，但是实际上在一个 iteration 里面都是经过了很多次的 forward，而 CoCa 则是希望，在同一个 iteration 里面，所有的 forward 都只进行一次，也就是所谓的 one-pass。
 
@@ -161,7 +161,7 @@ CoCa 可以说和 ALBEF 十分的相似，基本上就是和 ALBEF 一模一样�
 
 论文链接：[https://arxiv.org/pdf/2208.10442](https://arxiv.org/pdf/2208.10442)
 
-![The pipeline of BEiT V3](https://Axi404.github.io/picx-images-hosting/BEiT_V3.8l00lewl5a.png)
+![The pipeline of BEiT V3](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/BEiT_V3.8l00lewl5a.png)
 
 可以说 BEiT V3 本质上和之前的 VLMo 是十分类似的，但是区别在于，其只采用了一种任务，也就是 LM 任务，这自然也增加了运算的效率。之后就是通过大量的数据，以及不同 FFN 的激活，来在不同的的任务里面训练，可以说是十分的简洁。
 
@@ -179,11 +179,11 @@ CoCa 可以说和 ALBEF 十分的相似，基本上就是和 ALBEF 一模一样�
 
 BLIP2 的主要贡献，以及 motivation 在于，之前的模型，都是全部由自己训练的，无论是效率还是算力之类的，开销都很大，而目前领域内已经有了很多的性能很好的模型，于是直接 frozen 之后拿过来用就好。于是提出了一个 Q-former，可以对于 frozen 的图像 encoder 以及 LLM 起到桥梁的作用。
 
-![Stage 1 for BLIP2](https://Axi404.github.io/picx-images-hosting/BLIP2-1.1ovd18db0w.png)
+![Stage 1 for BLIP2](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/BLIP2-1.1ovd18db0w.png)
 
 训练还是一个 two-stage，这里面 stage-1 和 stage-2 的图画的其实很迷惑，因为 Q-former 里面本质上是有两个 Transformer 的，那么后面在 stage-2 的输出，是两个 Transformer 的 concat 还是什么，就很神秘。这里一篇 [csdn 的博客](https://blog.csdn.net/LoseInVain/article/details/136013909) 的图很不错，事实上拿的是 queries 输入的那个 transformer 的输出。
 
-![Stage 2 for BLIP2](https://Axi404.github.io/picx-images-hosting/BLIP2-2.8s38guiqkx.png)
+![Stage 2 for BLIP2](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/BLIP2-2.8s38guiqkx.png)
 
 Stage-1 和正常的 ALBEF 区别不大，之后 stage-2 把输出过 MLP 送给 LLM，再进行训练。本质上假如没有 Stage-2，那么就是一个 ALBEF，而假如没有 stage-1，则是一种新的范式。那么能否抛开 stage-1 呢？毕竟 stage-2 也是一个完整的训练流程，而且也是多模态的，但是实验表明不行。一种理解是，在 Q-former 里面之所以要引入一个文本编码器，目的就是通过 stage-1 的各种任务，让图像端的 Q-former 和文本对齐，换句话说，这个 token 输入给后面的 LLM 的时候，模型说的是人话，而不是图像话，毕竟后面跟的 MLP 只是为了统一维度，本身与文本类似的语言表征，还是在 Q-former 里面进行建模的。比起来能够将两个模型拼起来，我觉得还是这个 align 的启发更大一些。
 
@@ -195,7 +195,7 @@ Stage-1 和正常的 ALBEF 区别不大，之后 stage-2 把输出过 MLP 送给
 
 论文链接：[https://arxiv.org/pdf/2304.08485](https://arxiv.org/pdf/2304.08485)
 
-![The pipeline of LLava](https://Axi404.github.io/picx-images-hosting/LLava.9rjbu0lhr3.png)
+![The pipeline of LLava](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/LLava.9rjbu0lhr3.png)
 
 LLava 比较简单，主要是提出了一种只使用 GPT 的文字功能，就可以生成高质量 caption 的方法，简单来说，对于具有 captions 和 bounding boxes 的内容来说，其实际上具有更多的信息量可以挖掘，所以可以生成一些高质量的 hard task。
 
@@ -211,7 +211,7 @@ LLava 比较简单，主要是提出了一种只使用 GPT 的文字功能，就
 
 论文链接：[https://arxiv.org/pdf/2212.06817](https://arxiv.org/pdf/2212.06817)
 
-![The pipeline of RT-1](https://Axi404.github.io/picx-images-hosting/RT-1.4uav067pyb.png)
+![The pipeline of RT-1](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/RT-1.4uav067pyb.png)
 
 RT-1 讲实话结构并不是很好，但是一是在于数据量大，二是在于在实体跑起来了，于是的话，参考价值也挺高。简单概述一下结构，是用卷积 + FiLM 来进行的文本和图像的融合，文本编码器的输出用来作为 FiLM 的参数，然后调制卷积。之后获得 Tokens 再过 TokenLearner，输入进一个 transformer 里面，获得最后的自由度。
 
@@ -225,7 +225,7 @@ RT-1 讲实话结构并不是很好，但是一是在于数据量大，二是在
 
 论文链接：[https://arxiv.org/pdf/2307.15818](https://arxiv.org/pdf/2307.15818)
 
-![The pipeline of RT-2](https://Axi404.github.io/picx-images-hosting/RT-2.4xugxw0so5.png)
+![The pipeline of RT-2](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/RT-2.4xugxw0so5.png)
 
 RT-2 的结构就十分的合理了，使用一个大的 transformer（其实也就是 LLM）接收文本和图像的编码输入，之后获得特殊的 token 用来表示动作，就可以直接进行控制了。这种操作使得其可以同时使用多模态的数据以及机器人的数据，所以说 scale up 的效果非常不错，剩下的就不需要过多赘述了，就是正常的训练。
 
@@ -237,7 +237,7 @@ RT-2 的结构就十分的合理了，使用一个大的 transformer（其实也
 
 论文链接：[https://arxiv.org/pdf/2210.03094](https://arxiv.org/pdf/2210.03094)
 
-![The pipeline of VIMA](https://Axi404.github.io/picx-images-hosting/VIMA.pf9o2ajvu.png)
+![The pipeline of VIMA](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/VIMA.pf9o2ajvu.png)
 
 VIMA 也算是比较早期的工作了，没有使用 LLM，但是是有一定的可取之处的。首先是在于使用 object token，object token 的生成在使用 Mask R-CNN 之后包含图像信息即 ViT 编码之后的结果以及 bounding box，可以说同时包含了物体和位置信息，之后还储存了一些历史信息，可以进行长任务。虽然说 RT-2 也可以上下文理解，但是 VIMA 直接使用原本的信息，肯定表征更多一些。
 
@@ -251,7 +251,7 @@ VIMA 也算是比较早期的工作了，没有使用 LLM，但是是有一定�
 
 论文链接：[https://arxiv.org/pdf/2204.01691](https://arxiv.org/pdf/2204.01691)
 
-![The pipeline of SayCan](https://Axi404.github.io/picx-images-hosting/SayCan.7p3j5ymwpy.png)
+![The pipeline of SayCan](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/SayCan.7p3j5ymwpy.png)
 
 SayCan 可以说是在做这种规划任务里面比较早的了，但是也存在一些问题。首先大概的流程就是，先把需求提出来，这个时候模型本身存在一个动作空间，那么 LLM 就可以从这个动作空间里面给出不同的推荐，但是一个问题在于，由于 LLM 不清楚当前的情况，所以说可能无法很好地给出能够执行的结果，这个时候可以使用另一个模型，或者说是一个价值函数，来去评判在当前情况下这些动作的价值。那么这个价值函数是使用了环境信息的，价值大模型的推荐结合在一起，就生成了一个布置合理，而且可以完成的动作。
 
@@ -265,7 +265,7 @@ SayCan 可以说是在做这种规划任务里面比较早的了，但是也存�
 
 论文链接：[https://arxiv.org/pdf/2201.07207](https://arxiv.org/pdf/2201.07207)
 
-![The pipeline of Language Models as Zero-Shot Planners](https://Axi404.github.io/picx-images-hosting/lmzsp.syvls3mlc.png)
+![The pipeline of Language Models as Zero-Shot Planners](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/lmzsp.syvls3mlc.png)
 
 这篇文章也是在 planning 领域的内容，某种程度上也可以说是 low fruit，甚至说不需要任何的训练，就是纯粹的 prompt，不过目测感觉还是要经过一些 finetune 的。
 
@@ -279,7 +279,7 @@ SayCan 可以说是在做这种规划任务里面比较早的了，但是也存�
 
 论文链接：[https://arxiv.org/pdf/2303.03378](https://arxiv.org/pdf/2303.03378)
 
-![The pipeline of PaLM-E](https://Axi404.github.io/picx-images-hosting/PaLM-E.4cktbl6cde.png)
+![The pipeline of PaLM-E](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/PaLM-E.4cktbl6cde.png)
 
 PaLM-E 可以说就是就是对于上述种种猜想的一个实际的体现，也就是说一方面仅仅通过多模态的 prompt 进行输入，这里面的输入包括文字/环境/图片，也就是全部的模态，之后输出的是 high-level 的 planning，再由其他的执行器去完成 low-level policy。
 
@@ -291,7 +291,7 @@ PaLM-E 可以说就是就是对于上述种种猜想的一个实际的体现，�
 
 论文链接：[https://arxiv.org/pdf/2311.17842](https://arxiv.org/pdf/2311.17842)
 
-![The pipeline of ViLA](https://Axi404.github.io/picx-images-hosting/ViLA.60u68rwmjs.png)
+![The pipeline of ViLA](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/ViLA.60u68rwmjs.png)
 
 讲实话，我不是很理解 prompt 类型的工具，不过确实一些这种类型的工作可以有非常好的性能。总体来说，ViLA 输出的也是 high-level 的 policy。大概的流程就是输入当前的图像以及任务，还有历史上已经完成的任务，然后交给 gpt-4v，使用 CoT 分析一下当前的场面，然后结合分析给出动作，再交给执行器。
 
@@ -301,7 +301,7 @@ PaLM-E 可以说就是就是对于上述种种猜想的一个实际的体现，�
 
 论文链接：[https://arxiv.org/pdf/2403.08248](https://arxiv.org/pdf/2403.08248)
 
-![The pipeline of CoPa](https://Axi404.github.io/picx-images-hosting/CoPa.5fkimh268l.png)
+![The pipeline of CoPa](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/CoPa.5fkimh268l.png)
 
 CoPa 的工程感更足，把大量的模型结合在一起。总的来说首先是一个物体抓取，接下来是路径规划。对物体抓取，CoPa 给出了一个从粗到细的分割流程，具体还是使用 SAM 和 gpt 配合，最后筛选出来一个抓取的细节部位，然后用抓取姿势的生成器生成姿势。就有点类似于把锅拿起来，需要握住的是锅把一样。接下来是一个路径的规划，这里面也是先识别了各种物体的位姿，然后将这些内容画在图上，估计这种选择是因为不信任大模型的数学能力，反而是图像比较直观，容易理解。之后通过这种细粒度的指示，大模型就可以给出更加合理的建议，类似于之前是将锤子放在钉子上，现在可以是将锤子和钉子对齐，而且根据识别的位姿，或许可以精确到距离。然后交给执行器。
 

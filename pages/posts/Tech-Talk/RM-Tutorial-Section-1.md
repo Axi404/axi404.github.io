@@ -2,7 +2,7 @@
 title: RoboMaster 视觉组第一次培训
 excerpt: 关于 C++ 的快速入门以及基础概念讲解。
 date: 2024-07-10 00:00:00+0000
-image: https://Axi404.github.io/picx-images-hosting/cover.4qr92gfedz.jpg
+image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.4qr92gfedz.jpg
 categories:
     - 'Tech Talk'
 tags:
@@ -36,7 +36,7 @@ top: 1       # You can add weight to some posts to override the default sorting 
 
 目前计划中，视觉组的基础培训主要包括以下安排：
 
-![](https://Axi404.github.io/picx-images-hosting/timeline.2krugonqmx.png)
+![](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/timeline.2krugonqmx.png)
 
 ## 格式
 

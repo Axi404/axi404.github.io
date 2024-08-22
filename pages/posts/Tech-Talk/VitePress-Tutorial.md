@@ -2,7 +2,7 @@
 title: VitePress 贡献指南 & 建站指南
 excerpt: 如何对于 VitePress 项目进行贡献，快速看懂项目结构，并构建自己的项目。
 date: 2024-07-03 00:00:00+0000
-image: https://Axi404.github.io/picx-images-hosting/cover.5xakb259g9.jpg
+image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.5xakb259g9.jpg
 categories:
     - 'Tech Talk'
 tags:

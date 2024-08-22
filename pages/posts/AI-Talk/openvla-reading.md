@@ -2,7 +2,7 @@
 title: OpenVLA 代码笔记
 excerpt: OpenVLA 纯小白代码阅读记录。
 date: 2024-07-23 09:00:00+0800
-image: https://Axi404.github.io/picx-images-hosting/cover.4jo170syo0.jpg
+image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.4jo170syo0.jpg
 categories:
     - 'AI Talk'
 tags:

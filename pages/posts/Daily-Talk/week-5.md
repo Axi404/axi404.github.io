@@ -2,7 +2,7 @@
 title: 周记 Week5
 excerpt: 2024-07-29 ~ 2024-08-04.
 date: 2024-07-31 04:58:00+0800
-image: https://Axi404.github.io/picx-images-hosting/cover.32hw59qv95.jpg
+image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.32hw59qv95.jpg
 categories:
     - 'Daily Talk'
 tags:
