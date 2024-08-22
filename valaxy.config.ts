@@ -65,7 +65,7 @@ export default defineConfig<ThemeConfig>({
   addons: [
     addonWaline({
       comment: true,
-      serverURL: 'https://waline-t-iota.vercel.app/',
+      serverURL: 'https://waline-ez0elemii-axi404s-projects.vercel.app/',
       emoji: [
         '//unpkg.com/@waline/emojis@1.0.1/weibo',
         '//unpkg.com/@waline/emojis@1.0.1/bilibili',
