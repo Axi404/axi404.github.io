@@ -197,3 +197,42 @@ sudo apt install linux-headers-6.8.0-40-generic linux-image-6.8.0-40-generic lin
 再次重启，正常进入正常的系统，恢复。
 
 需要注意的是，越早设置这些内容，与本文档的对齐程度最高，本人的安装流程为，正常安装系统（将全部硬盘空间都挂在在 `/` 下）并设置语言为中文，进入系统之后更换语言为英文（因为不然的话输入法的安装比较麻烦），重启，将文件夹变为英文名，再重启，连接网络，`sudo apt update` 以及 `sudo apt upgrade`，最后就开始安装显卡驱动 `sudo ubuntu-drivers autoinstall` 并 `reboot` 重启。 
+
+## GPT API 调用显示 Unknown scheme for proxy URL
+
+在使用 GPT API 的时候，正常的发送 request，显示：
+
+<details>
+    <summary> GPT API 报错信息</summary>
+    ValueError: Unable to determine SOCKS version from socks://127.0.0.1:7890/
+</details>
+
+但是此时我已经将全部的代理关闭了，更不要说后续要需要开启代理才可以连接 `https://api.openai.com/v1`，经过检查之后，大概是因为自己的网络环境太过于乱七八糟：
+
+```bash
+env | grep -i proxy
+```
+
+可以查看到究竟是哪个环境出现了问题，之后正常使用 bash 或者 python 程序都可以进行修改，本人是发现 `ALL_PROXY` 出现问题：
+
+::: code-group
+
+```bash
+unset ALL_PROXY
+unset all_proxy
+
+env | grep -i proxy
+
+export ALL_PROXY="http://127.0.0.1:7890"
+export all_proxy="http://127.0.0.1:7890"
+```
+
+```python
+import os
+os.environ['ALL_PROXY'] = 'http://127.0.0.1:7890'
+os.environ['all_proxy'] = 'http://127.0.0.1:7890'
+```
+
+:::
+
+重点其实在于找到哪个有问题，并且进行覆盖，`unset` 是严谨起见，其实无所谓。
