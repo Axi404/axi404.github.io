@@ -5,8 +5,10 @@ date: 2024-07-08 00:00:00+0000
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.5fkimf6u7r.png
 categories:
     - 'Daily Talk'
+    - Dresses
 tags:
     - 'Daily Talk'
+    - Dresses
 ---
 
 本人女装收集，欢迎欣赏。原有大约 200 余张，不过大多为同一姿势连拍，或未达到分享标准，在此给出本人较为喜欢的照片。

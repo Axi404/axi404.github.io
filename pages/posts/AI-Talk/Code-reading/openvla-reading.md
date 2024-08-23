@@ -5,6 +5,7 @@ date: 2024-07-23 09:00:00+0800
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.4jo170syo0.jpg
 categories:
     - 'AI Talk'
+    - 'Code Reading'
 tags:
     - 'Tech Talk'
     - LLM

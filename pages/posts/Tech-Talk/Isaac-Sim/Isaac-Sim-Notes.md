@@ -5,6 +5,7 @@ date: 2024-08-19 09:20:00+0800
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.1seyyy61ak.png
 categories:
     - 'Tech Talk'
+    - 'Isaac Sim'
 tags:
     - 'Tech Talk'
     - 'Embodied AI'

@@ -5,6 +5,7 @@ date: 2024-08-16 20:51:00+0800
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.175bcndq2f.jpg
 categories:
     - 'Tech Talk'
+    - 'MISCs'
 tags:
     - 'Tech Talk'
     - VPN

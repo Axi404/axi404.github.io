@@ -5,6 +5,7 @@ date: 2024-08-17 17:30:00+0800
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.7sn53ohkwb.jpg
 categories:
     - 'Tech Talk'
+    - 'MISCs'
 tags:
     - 'Tech Talk'
     - Bug Report

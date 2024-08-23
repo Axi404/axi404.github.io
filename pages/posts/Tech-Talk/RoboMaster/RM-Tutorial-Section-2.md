@@ -5,6 +5,7 @@ date: 2024-07-17 00:00:00+0000
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.5fkimh32iy.png
 categories:
     - 'Tech Talk'
+    - 'RoboMaster'
 tags:
     - 'Tech Talk'
     - RoboMaster

@@ -5,6 +5,7 @@ date: 2024-08-08 22:34:00+0800
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.7w6r1e925a.jpg
 categories:
     - 'AI Talk'
+    - 'LLM Talk'
 tags:
     - 'AI Talk'
     - LLM

@@ -5,9 +5,11 @@ date: 2024-08-03 22:17:00+0800
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.2veo9u2s19.PNG
 categories:
     - 'Daily Talk'
+    - Memoirs
 tags:
     - 'Daily Talk'
     - RoboMaster
+    - Memoir
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

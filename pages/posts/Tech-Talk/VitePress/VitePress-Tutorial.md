@@ -5,8 +5,10 @@ date: 2024-08-23 10:56:00+0000
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.5xakb259g9.jpg
 categories:
     - 'Tech Talk'
+    - 'VitePress'
 tags:
     - 'Tech Talk'
+    - 'VitePress'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

@@ -5,8 +5,11 @@ date: 2024-07-02 00:00:00+0000
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.8l00ld9mjs.jpg
 categories:
     - 'Tech Talk'
+    - 'Git & Github'
 tags:
     - 'Tech Talk'
+    - 'Github Action'
+    - 'Github Pages'
 top: 1
 ---
 

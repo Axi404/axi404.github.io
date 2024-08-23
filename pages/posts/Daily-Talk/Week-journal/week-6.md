@@ -5,8 +5,10 @@ date: 2024-08-12 03:18:00+0800
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.1vykwo22je.png
 categories:
     - 'Daily Talk'
+    - 'Weekly Journal'
 tags:
     - 'Daily Talk'
+    - 'Weekly Journal'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 

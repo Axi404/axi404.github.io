@@ -5,8 +5,10 @@ date: 2024-07-03 00:00:00+0000
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.3gobw4w1xg.jpg
 categories:
     - 'Tech Talk'
+    - 'Git & Github'
 tags:
     - 'Tech Talk'
+    - 'Git'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
