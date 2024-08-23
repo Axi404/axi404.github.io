@@ -207,15 +207,15 @@ from omni.isaac.core import World
 from omni.isaac.core.objects import DynamicCuboid
 
 world = World()
-world.scene.add_default_ground_plane()
-cube1 =  world.scene.add(
-    DynamicCuboid(
-        prim_path="/World/cube1",
-        name="cube1",
-        position=np.array([0, 0, 1.0]),
-        scale=np.array([0.5015, 0.5015, 0.5015]),
-        color=np.array([0, 0, 1.0]),
-    ))
+world.scene.add_default_ground_plane() # [!code ++]
+cube1 =  world.scene.add( # [!code ++]
+    DynamicCuboid( # [!code ++]
+        prim_path="/World/cube1", # [!code ++]
+        name="cube1", # [!code ++]
+        position=np.array([0, 0, 1.0]), # [!code ++]
+        scale=np.array([0.5015, 0.5015, 0.5015]), # [!code ++]
+        color=np.array([0, 0, 1.0]), # [!code ++]
+    )) # [!code ++]
 
 while simulation_app.is_running():
     world.step(render=True)
@@ -233,6 +233,7 @@ simulation_app = SimulationApp({"headless": False}) # we can also run as headles
 
 from omni.isaac.core import World
 from omni.isaac.core.objects import DynamicCuboid
+from omni.isaac.franka import Franka # [!code ++]
 
 world = World()
 world.scene.add_default_ground_plane()
@@ -244,14 +245,15 @@ cube1 =  world.scene.add(
         scale=np.array([0.5015, 0.5015, 0.5015]),
         color=np.array([0, 0, 1.0]),
     ))
-franka = world.scene.add(Franka(prim_path="/World/Franka", name="franka"))
+franka = world.scene.add(Franka(prim_path="/World/Franka", name="franka")) # [!code ++]
 
-world.reset()
-franka.gripper.set_joint_positions(franka.gripper.joint_opened_positions)
+world.reset() # [!code ++]
+franka.gripper.set_joint_positions(franka.gripper.joint_opened_positions) # [!code ++]
 
 while simulation_app.is_running():
     world.step(render=True)
 ```
+
 
 
 
