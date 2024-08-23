@@ -1,7 +1,7 @@
 ---
 title: 奇奇怪怪的 Bug 集散地
 excerpt: 平时遇到的奇怪代码问题，记录并整理。
-date: 2024-08-17 17:30:00+0800
+date: 2024-08-24 01:16:00+0800
 image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.7sn53ohkwb.jpg
 categories:
     - 'Tech Talk'
@@ -237,3 +237,60 @@ os.environ['all_proxy'] = 'http://127.0.0.1:7890'
 :::
 
 重点其实在于找到哪个有问题，并且进行覆盖，`unset` 是严谨起见，其实无所谓。
+
+## AnyGrasp 配置踩坑
+
+最近正在配置 AnyGrasp，在这里记录一下遇到的问题。我的环境为 Ubuntu 22.04, CUDA 12.1, cudnn 9.3.0。
+
+首先就是需要安装一个 MinkowskiEngine，本身 AnyGrasp 已经是无数年前的工作了，所以说一些依赖都比较老，包括这个 `MinkowskiEngine` 也已经年久失修了，不支持 CUDA 12.1。
+
+按照正常的流程，为：
+
+```bash
+pip install torch ninja
+export MAX_JOBS=2
+pip install -U MinkowskiEngine --install-option="--blas=openblas" -v --no-deps
+```
+
+但是会出现报错，其核心问题为 `error: namespace "thrust" has no member "device"`，本质上还是年久失修，和 CUDA 12.X 不兼容了。
+
+根据仓库里的 [Issue#543](https://github.com/NVIDIA/MinkowskiEngine/issues/543) 可以找到对于我适用的方法，即在四个不同的文件中添加 `#include`：
+
+:::code-group
+```cpp{1}
+// src/convolution_kernel.cuh
+#include <thrust/execution_policy.h>
+```
+```cpp{1}
+// src/coordinate_map_gpu.cu
+#include <thrust/unique.h>
+#include <thrust/remove.h>
+```
+```cpp{1}
+// src/spmm.cu
+#include <thrust/execution_policy.h>
+#include <thrust/reduce.h> 
+#include <thrust/sort.h>
+```
+```cpp{1}
+// src/3rdparty/concurrent_unordered_map.cuh
+#include <thrust/execution_policy.h>
+```
+:::
+
+之后再次 `python setup.py install` 即可。编译的过程中爆了好多个 warning，不过最终还是有惊无险。
+
+之后就需要运行 `pip install -r requirements.txt` 了，然而会出现 sklearn 过期的情况，输出为 `The 'sklearn' PyPI package is deprecated, use 'scikit-learn'`。这个问题乍一看比较好解决，但是实际上并不简单，因为 sklearn 并非 `requirements.txt` 里面提供的，而是属于 AnyGrasp，所以你不能直接修改。
+
+尝试了一下之后发现，可以通过 `export SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True` 来解决，这个环境只要能跑这一个程序就足够了，具体为什么将来可以开一个文章讲讲。
+
+最后是使用 AnyGrasp 需要 Key，而这个 Key 需要生成，因此需要使用 `./license_checker -f`，而因为 Ubuntu 22.04，这个也会报错，一个是缺少 `libcrypto.so.1.1`，一个是 `sh: 1: ifconfig: not found`。
+
+```bash
+# to solve libcrypto.so.1.1 issue
+find / -name libcrypto.so.1.1
+# for example found a libcrypto.so.1.1 from cuda
+sudo ln -s /usr/local/cuda-12.1/nsight-systems-2023.1.2/host-linux-x64/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.1
+# to solve ifconfig issue
+sudo apt install net-tools
+```
