@@ -164,7 +164,7 @@ echo /home/`whoami`/.local/share/ov/pkg/isaac-sim-4.1.0
 
 但是假如不是，可以进入 Isaac Sim 软件，随便点击一个上方栏的 Isaac Examples，并且 Open Containing Folder 即可。
 
-<img src="https://pic.axi404.top/image-8.7sn53ofmza.webp" alt="alt text" style="display: block; margin: 0 auto; zoom: 100%;">
+<img src="https://pic.axi404.top/image-8.7sn53ofmza.webp" alt="" style="display: block; margin: 0 auto; zoom: 100%;">
 
 例如 hello world 这个 example，这个文件夹应该在 `isaac-sim-4.1.0/exts/omni.isaac.examples/omni/isaac/examples/hello_world` 中，以下全部的操作视作在 `isaac-sim-4.1.0` 下进行。
 

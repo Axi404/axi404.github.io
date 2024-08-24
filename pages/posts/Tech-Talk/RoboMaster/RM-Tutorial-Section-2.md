@@ -40,11 +40,11 @@ Markdown 的详细语法见 [Markdown 官网文档](https://markdown.com.cn/)，
 
 通过在 VSCode 的拓展栏进行搜索，可以很轻易地找到 VSCode 的 SSH 插件：
 
-![alt text](https://pic.axi404.top/SSH_1.4cktbl78ng.webp)
+![](https://pic.axi404.top/SSH_1.4cktbl78ng.webp)
 
 启用插件之后，点击左下角的打开远程窗口，选择连接到主机即可：
 
-![alt text](https://pic.axi404.top/SSH_2.3k7xtuqmx9.webp)
+![](https://pic.axi404.top/SSH_2.3k7xtuqmx9.webp)
 
 在服务器的租用界面中，一般会提供 SSH 的指令，其格式为 `ssh -p port user@address`，之后按照提升输入密码即可。
 
