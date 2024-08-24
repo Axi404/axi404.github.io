@@ -2,7 +2,7 @@
 title: RoboMaster 视觉组第一次培训
 excerpt: 关于 C++ 的快速入门以及基础概念讲解。
 date: 2024-07-10 00:00:00+0000
-image: https://pic.axi404.top/cover.4qr92gfedz.jpg
+image: https://pic.axi404.top/120560837_p1.webp
 categories:
     - 'Tech Talk'
     - 'RoboMaster'
@@ -37,7 +37,7 @@ top: 1       # You can add weight to some posts to override the default sorting 
 
 目前计划中，视觉组的基础培训主要包括以下安排：
 
-![](https://pic.axi404.top/timeline.2krugonqmx.png)
+![](https://pic.axi404.top/timeline.2krugonqmx.webp)
 
 ## 格式
 

@@ -2,7 +2,7 @@
 title: 周记 Week1 
 excerpt: 2024-07-01 ~ 2024-07-07.
 date: 2024-07-08 00:00:00+0000
-image: https://pic.axi404.top/cover.32hw59q8u9.jpg
+image: https://pic.axi404.top/108617873_p0.webp
 categories:
     - 'Daily Talk'
     - 'Weekly Journal'

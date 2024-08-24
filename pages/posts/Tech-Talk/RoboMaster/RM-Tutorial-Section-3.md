@@ -2,7 +2,7 @@
 title: RoboMaster 视觉组第三次培训
 excerpt: 关于使用虚拟机操作 Linux（Ubuntu）系统。
 date: 2024-08-13 16:12:00+0800
-image: https://pic.axi404.top/cover.1lbr3ilppr.png
+image: https://pic.axi404.top/cover.1lbr3ilppr.webp
 categories:
     - 'Tech Talk'
     - 'RoboMaster'

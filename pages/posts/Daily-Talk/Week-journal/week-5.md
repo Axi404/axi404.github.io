@@ -2,7 +2,7 @@
 title: 周记 Week5
 excerpt: 2024-07-29 ~ 2024-08-04.
 date: 2024-07-31 04:58:00+0800
-image: https://pic.axi404.top/cover.32hw59qv95.jpg
+image: https://pic.axi404.top/120209956_p0.webp
 categories:
     - 'Daily Talk'
     - 'Weekly Journal'

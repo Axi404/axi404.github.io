@@ -2,7 +2,7 @@
 title: 奇奇怪怪的 Bug 集散地
 excerpt: 平时遇到的奇怪代码问题，记录并整理。
 date: 2024-08-24 01:16:00+0800
-image: https://pic.axi404.top/cover.7sn53ohkwb.jpg
+image: https://pic.axi404.top/117648512_p0.webp
 categories:
     - 'Tech Talk'
     - 'MISCs'

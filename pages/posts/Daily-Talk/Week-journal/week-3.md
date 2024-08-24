@@ -2,7 +2,7 @@
 title: 周记 Week3
 excerpt: 2024-07-15 ~ 2024-07-21.
 date: 2024-07-23 03:35:00+0800
-image: https://pic.axi404.top/cover.6pnfssmauo.jpg
+image: https://pic.axi404.top/103816463_p1.webp
 categories:
     - 'Daily Talk'
     - 'Weekly Journal'
@@ -123,7 +123,7 @@ Choker 搭配上长发确实有一番韵味，但是一是本人不想露脸，�
 
 同时腿环还是比较有趣的，有一张比较昏暗的照片可以给大家一看，但是由于本人可能腿比较细一些，所以腿环没有勒肉感，不是很涩。
 
-<img src="https://pic.axi404.top/腿环.6pnfssmauq.jpg" style="display: block; margin: 0 auto; zoom: 20%;">
+<img src="https://pic.axi404.top/腿环.6pnfssmauq.webp" style="display: block; margin: 0 auto; zoom: 20%;">
 
 完整的内容等待我买的熨烫机和裤子到了之后，再来尝试吧。
 

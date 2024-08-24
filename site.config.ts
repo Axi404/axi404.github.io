@@ -5,7 +5,7 @@ export default defineSiteConfig({
   title: 'Axi\'s Blog',
   url: 'https://axi404.top/',
   author: {
-    avatar: 'https://pic.axi404.top/avatar.6t71qqiv1e.png',
+    avatar: 'https://pic.axi404.top/avatar.6t71qqiv1e.webp',
     name: '阿汐',
   },
   pageSize: 20,

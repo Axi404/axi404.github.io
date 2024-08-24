@@ -2,7 +2,7 @@
 title: 周记 Week2
 excerpt: 2024-07-08 ~ 2024-07-14.
 date: 2024-07-16 00:05:05+0800
-image: https://pic.axi404.top/cover.9kg3yl1bei.jpg
+image: https://pic.axi404.top/cover.9kg3yl1bei.webp
 categories:
     - 'Daily Talk'
     - 'Weekly Journal'

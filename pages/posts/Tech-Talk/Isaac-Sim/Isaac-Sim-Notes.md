@@ -2,7 +2,7 @@
 title: Isaac Sim 踩坑日记
 excerpt: 关于 Isaac Sim，注定还有一段漫长的路。
 date: 2024-08-19 09:20:00+0800
-image: https://pic.axi404.top/cover.1seyyy61ak.png
+image: https://pic.axi404.top/cover.1seyyy61ak.webp
 categories:
     - 'Tech Talk'
     - 'Isaac Sim'
@@ -93,7 +93,7 @@ Build cuda_12.1.r12.1/compiler.32415258_0
 
 就像是之前说到的一样，Isaac 的 omniverse 下的一个 App，所以说在安装 Isaac 之前要先安装 omniverse-launcher，也是比较简单的，在官网 [https://www.nvidia.com/en-us/omniverse/download/](https://www.nvidia.com/en-us/omniverse/download/) 进行安装就好。进入下载页面之前会要求输入一些个人信息，随意写一下就好，理论来说 nvidia 账号中已经包含了这些内容，所以会自动填写。
 
-![Download omniverse-launcher](https://pic.axi404.top/image.6bh01xbi8d.png)
+![Download omniverse-launcher](https://pic.axi404.top/image.6bh01xbi8d.webp)
 
 下载下来之后是一个 `.AppImage` 的文件，按照我的惯例，就直接运行了：
 
@@ -108,11 +108,11 @@ sudo chmod +x omniverse-launcher-linux.AppImage
 
 运行之后产生登录页面，本质上还是 nvidia 账号，点击 `LOG IN` 之后会跳转到网页，输入帐号密码登录即可。然后同意若干的协议，进入如下界面：
 
-![Path Selection](https://pic.axi404.top/image-1.3yedkpxp1r.png)
+![Path Selection](https://pic.axi404.top/image-1.3yedkpxp1r.webp)
 
 这些路径按照默认配置即可。选择确认，进入主界面：
 
-![Main page](https://pic.axi404.top/image-2.b8tx71wjz.png)
+![Main page](https://pic.axi404.top/image-2.b8tx71wjz.webp)
 
 其中比较重要的是 `Library`/`Exchange`/`Nucleus`，第一个是已经安装的内容的管理，第二个是安装内容的途径，第三个是一种中央数据库和协作引擎。
 
@@ -120,11 +120,11 @@ sudo chmod +x omniverse-launcher-linux.AppImage
 
 进入 Exchange 进行安装，首先安装 cache，搜索之后下拉版本，选择 `2023.1.0`，并点击 install 即可。
 
-![Install cache](https://pic.axi404.top/image-3.5j44k6uwi9.png)
+![Install cache](https://pic.axi404.top/image-3.5j44k6uwi9.webp)
 
 然后点击 Nucleus，选择 Add local Nucleus Service：
 
-![Add local Nucleus Service](https://pic.axi404.top/image-4.6pnfssjt3l.png)
+![Add local Nucleus Service](https://pic.axi404.top/image-4.6pnfssjt3l.webp)
 
 会要求设置 path 以及 admin account，自行设置即可。
 
@@ -134,19 +134,19 @@ sudo chmod +x omniverse-launcher-linux.AppImage
 
 在 Nucleus 下载完毕之后，可以找到两个本地的服务：
 
-![Nucleus](https://pic.axi404.top/image-5.1hs55sqt5e.png)
+![Nucleus](https://pic.axi404.top/image-5.1hs55sqt5e.webp)
 
 其中选择 Settings，可以在网页中看到如下内容：
 
 > 值得注意的是，在第二次或者以后启动的时候，可能会出现进入其 Settings 链接 `http://localhost:3080/` 之后为一片白色的情况，而 Cache 没有正确启动，导致后续的程序无法运行，解决方法之一是，可以进入其子窗口 `http://localhost:3080/cache`，再点击上方的 `Apps`，之后 `Restart all` 即可。
 
-![Nucleus Settings](https://pic.axi404.top/image-6.8hgenp35zo.png)
+![Nucleus Settings](https://pic.axi404.top/image-6.8hgenp35zo.webp)
 
 假如出现问题，如显示 Stop 或者 Error，请检查之前说的版本问题。假如 cache 版本不对，重新卸载并且安装，然后点击 Launch 即可。
 
 选择文件夹图标的内容，可以在网页中看到如下的内容：
 
-![Nucleus content](https://pic.axi404.top/image-7.3gobw4wbh1.png)
+![Nucleus content](https://pic.axi404.top/image-7.3gobw4wbh1.webp)
 
 均确认无误之后，可以在 Library 中选择 Isaac Sim 并且点击 Launch。
 
@@ -164,7 +164,7 @@ echo /home/`whoami`/.local/share/ov/pkg/isaac-sim-4.1.0
 
 但是假如不是，可以进入 Isaac Sim 软件，随便点击一个上方栏的 Isaac Examples，并且 Open Containing Folder 即可。
 
-<img src="https://pic.axi404.top/image-8.7sn53ofmza.png" alt="alt text" style="display: block; margin: 0 auto; zoom: 100%;">
+<img src="https://pic.axi404.top/image-8.7sn53ofmza.webp" alt="alt text" style="display: block; margin: 0 auto; zoom: 100%;">
 
 例如 hello world 这个 example，这个文件夹应该在 `isaac-sim-4.1.0/exts/omni.isaac.examples/omni/isaac/examples/hello_world` 中，以下全部的操作视作在 `isaac-sim-4.1.0` 下进行。
 
