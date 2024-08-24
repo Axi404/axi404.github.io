@@ -18,6 +18,9 @@ export default defineConfig<ThemeConfig>({
       description:"2",
       images: [
         "https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/119323491_p0.4uav0b030o.jpg",
+        "https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/121329673_p1.9kg41lo6jc.jpg",
+        "https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/121319294_p0.3k7xwvjds8.jpg",
+        "https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/121247340_p0.7zqd25gaja.png",
       ]
     },
     nav: [
