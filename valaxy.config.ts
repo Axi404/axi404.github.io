@@ -14,13 +14,24 @@ export default defineConfig<ThemeConfig>({
     
     home: {
       title:"Miao",
-      headline:"1",
-      description:"2",
+      headline:"Axi's Blog",
+      description:"你好，许久不见。",
       images: [
-        "https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/119323491_p0.4uav0b030o.jpg",
-        "https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/121329673_p1.9kg41lo6jc.jpg",
-        "https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/121319294_p0.3k7xwvjds8.jpg",
-        "https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/121247340_p0.7zqd25gaja.png",
+        "https://Axi404.github.io/picx-images-hosting/93141573_p0.2yyab9cv16.jpg",
+        "https://Axi404.github.io/picx-images-hosting/89538671_p0.45hljv1rmd.jpg",
+        "https://Axi404.github.io/picx-images-hosting/89538619_p0.6t71u7usy8.jpg",
+        "https://Axi404.github.io/picx-images-hosting/89538584_p0.969obf8m4s.jpg",
+        "https://Axi404.github.io/picx-images-hosting/89124199_p0.13lpin0fex.jpg",
+        "https://Axi404.github.io/picx-images-hosting/121319294_p0.8l00p4e5u0.jpg",
+        "https://Axi404.github.io/picx-images-hosting/121247340_p0.2yyab9cv0l.png",
+        "https://Axi404.github.io/picx-images-hosting/116528965_p0.8s38kk0b8p.jpg",
+        "https://Axi404.github.io/picx-images-hosting/99783862_p0.2rv2ftqpk3.jpg",
+        "https://Axi404.github.io/picx-images-hosting/93142145_p0.77dhl333rv.png",
+        "https://Axi404.github.io/picx-images-hosting/93141803_p3.6f0m3cmi0i.jpg",
+        "https://Axi404.github.io/picx-images-hosting/93141803_p2.6bh05mtfak.jpg",
+        "https://Axi404.github.io/picx-images-hosting/93141803_p1.92q2dpfjc3.jpg",
+        "https://Axi404.github.io/picx-images-hosting/93141803_p0.ic1wc5z17.jpg",
+        "https://Axi404.github.io/picx-images-hosting/93141612_p0.54xox14iok.jpg",
       ]
     },
     nav: [
