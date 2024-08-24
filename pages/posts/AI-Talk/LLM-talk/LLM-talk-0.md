@@ -2,7 +2,7 @@
 title: LLM Talk 0
 excerpt: 在 LLM 之前，我看过的一些论文/思考/推荐。
 date: 2024-08-01 19:41:00+0800
-image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.64ds6hpiyc.jpg
+image: https://pic.axi404.top/cover.64ds6hpiyc.jpg
 categories:
     - 'AI Talk'
     - 'LLM Talk'

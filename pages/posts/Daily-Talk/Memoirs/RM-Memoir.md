@@ -2,7 +2,7 @@
 title: RoboMaster 回忆录
 excerpt: 我的 RM 故事。
 date: 2024-08-03 22:17:00+0800
-image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.2veo9u2s19.PNG
+image: https://pic.axi404.top/cover.2veo9u2s19.PNG
 categories:
     - 'Daily Talk'
     - Memoirs

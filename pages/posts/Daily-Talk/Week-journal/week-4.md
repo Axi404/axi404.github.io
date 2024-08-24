@@ -2,7 +2,7 @@
 title: 周记 Week4
 excerpt: 2024-07-22 ~ 2024-07-28.
 date: 2024-07-29 03:35:00+0800
-image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.5c0worbhnk.jpg
+image: https://pic.axi404.top/cover.5c0worbhnk.jpg
 categories:
     - 'Daily Talk'
     - 'Weekly Journal'
@@ -88,9 +88,9 @@ top: 1       # You can add weight to some posts to override the default sorting 
 暂时来看，本人腿型还算不错，所以，还算不错：
 
 <hairy-image-group col="400px" row="400px" loading = "lazy">
-  <hairy-image fit="cover" loading = "lazy" src="https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/女装1.6m3tv2tgyq.jpg" />
-  <hairy-image fit="cover" loading = "lazy" src="https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/女装2.7zqcz44izo.jpg" />
-  <hairy-image fit="cover" loading = "lazy" src="https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/女装3.8vmueke7fp.jpg" />
+  <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/女装1.6m3tv2tgyq.jpg" />
+  <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/女装2.7zqcz44izo.jpg" />
+  <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/女装3.8vmueke7fp.jpg" />
 </hairy-image-group>
 
 某种程度上来说，这也确实可以说是我的伪街初体验，虽然距离裙子还差不少，但是我不会化妆，所以那种还是暂且搁置吧。

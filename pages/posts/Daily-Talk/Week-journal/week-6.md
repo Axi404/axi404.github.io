@@ -2,7 +2,7 @@
 title: 周记 Week6
 excerpt: 2024-08-05 ~ 2024-08-11.
 date: 2024-08-12 03:18:00+0800
-image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.1vykwo22je.png
+image: https://pic.axi404.top/cover.1vykwo22je.png
 categories:
     - 'Daily Talk'
     - 'Weekly Journal'

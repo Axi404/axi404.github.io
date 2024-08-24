@@ -2,7 +2,7 @@
 title: Obsidian 快速上手指南
 excerpt: Obsidian 快速上手，概念辨析 & 基础使用。
 date: 2024-07-06 00:00:00+0000
-image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.1ovd18do97.jpg
+image: https://pic.axi404.top/cover.1ovd18do97.jpg
 categories:
     - 'Tech Talk'
     - Obsidian
@@ -58,7 +58,7 @@ Obsidian 的插件安装分为使用插件市场进行安装或者手动安装�
 
 在插件市场中找到自己心仪的插件，并且点击安装即可，十分的简单。
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/image.2obgeegff0.png)
+![alt text](https://pic.axi404.top/image.2obgeegff0.png)
 
 在这里笔者推荐一款笔者最常用的插件，即 `Easy Typing`，这个插件可以帮助你进行快速的格式化文档，使得你的文档规范统一。`Easy Typing` 可以十分便捷的创建属于自己知识库的文本规范，同时可以对一些符号的输出进行自动的补全，比如：
 

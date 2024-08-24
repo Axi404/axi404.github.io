@@ -2,7 +2,7 @@
 title: "Github Actions and Pages 教程"
 excerpt: 关于 Actions 与 Pages 的教程，暨 CSBAOYANDDL 技术分享
 date: 2024-07-02 00:00:00+0000
-image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.8l00ld9mjs.jpg
+image: https://pic.axi404.top/cover.8l00ld9mjs.jpg
 categories:
     - 'Tech Talk'
     - 'Git & Github'
@@ -40,7 +40,7 @@ Github Actions 是一个持续集成和持续部署（CI/CD）平台，它允许
 
 让我们回顾一下这些教程说的内容，首先，在自己的账户中创建一个仓库，这个仓库的名字需要是 `username.github.io`，对于笔者来说，也就是创建一个名为 `Axi404.github.io` 的仓库。
 
-<img src="https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/githubio_create.4917dtqb1l.png" alt="create github.io" style="display: block; margin: 0 auto; zoom: 50%;">
+<img src="https://pic.axi404.top/githubio_create.4917dtqb1l.png" alt="create github.io" style="display: block; margin: 0 auto; zoom: 50%;">
 
 然后在其中使用某些模板或者其他的内容进行进一步操作。这看上去确实正规，但是不免让人产生了怀疑，那么我的仓库名是不是只能叫做 `username.github.io` 呢？
 
@@ -125,17 +125,17 @@ git push
 
 之后前往 `Github` 上面，依次添加 `Setting -> Pages -> None -> main -> save`，完成设置，流程可以如下所示：
 
-<img src="https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/github_pages.51e2vk6wru.png" alt="github pages setting" style="display: block; margin: 0 auto; zoom: 50%;">
+<img src="https://pic.axi404.top/github_pages.51e2vk6wru.png" alt="github pages setting" style="display: block; margin: 0 auto; zoom: 50%;">
 
 不难发现后方的名为 `/(root)` 的选项，即你的 `index.html` 所在的目录，我们这里使用默认的根目录即可，后续我们会知道，使用自定义的 Github Actions 也可以做到相同的效果。
 
 在点击 save 之后可以点击上方的 Actions 看到一个 deployment 的 action 正在 `queue` 或者正在 `Pending`，等待部署结束即可。
 
-<img src="https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/actions_start.45m1pt4yo.png" alt="github actions pending" style="display: block; margin: 0 auto; zoom: 50%;">
+<img src="https://pic.axi404.top/actions_start.45m1pt4yo.png" alt="github actions pending" style="display: block; margin: 0 auto; zoom: 50%;">
 
 此时再次回到 Pages 的界面，可以看到页面已经部署，并且给出了 url 链接。
 
-<img src="https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/pages_deploy_ready.9gwi0tjazu.png" alt="github pages ready" style="display: block; margin: 0 auto; zoom: 50%;">
+<img src="https://pic.axi404.top/pages_deploy_ready.9gwi0tjazu.png" alt="github pages ready" style="display: block; margin: 0 auto; zoom: 50%;">
 
 之后再次进行的部署流程会比这个简单很多，只需要在修改了内容之后重新 commit 并且 push 即可，剩下的内容 Github Actions 会帮助你完成，这是得力于这个 Action 对你的 push 操作的检测（被触发）。
 

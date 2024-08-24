@@ -2,7 +2,7 @@
 title: VitePress 贡献指南 & 建站指南
 excerpt: 如何对于 VitePress 项目进行贡献，快速看懂项目结构，并构建自己的项目。
 date: 2024-08-23 10:56:00+0000
-image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.5xakb259g9.jpg
+image: https://pic.axi404.top/cover.5xakb259g9.jpg
 categories:
     - 'Tech Talk'
     - 'VitePress'
@@ -61,7 +61,7 @@ VitePress 是一个基于 Vite 的静态网页生成器，它使用 Vue 作为�
 
 在 [Git 官网](https://git-scm.com/) 选择下载 Windows 版本并按照提示进行安装。
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/download_git.3goby6c027.png)
+![alt text](https://pic.axi404.top/download_git.3goby6c027.png)
 
 在安装中需要注意的是：
 
@@ -94,19 +94,19 @@ cat ~/.ssh/id_ed25519.pub
 
 进入本仓库的 [Github 主页](https://github.com/SurviveXJTU/SurviveXJTU.github.io)，点击 `Fork` 按钮，即可将本仓库 Fork 到自己的 Github 账号下。
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/fork_1.1e8ja4df0x.png)
+![alt text](https://pic.axi404.top/fork_1.1e8ja4df0x.png)
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/fork_2.5mnqjy3nte.png)
+![alt text](https://pic.axi404.top/fork_2.5mnqjy3nte.png)
 
 Fork 操作本质上是复制了一份本仓库到自己的账号下，并在自己的账号下享有修改的权限，同时可以比较自己账号下的仓库与上游仓库之间的更改差别，Fork后的仓库可以在自己账号的 Repositories 中看到。
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/find_fork.45m3svfps.png)
+![alt text](https://pic.axi404.top/find_fork.45m3svfps.png)
 
 ### 克隆仓库
 
 在 Fork 完成之后，在自己 Fork 的仓库中，找到并点击 `< > Code` 按钮，之后点击 `SSH` 按钮，并复制链接。
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/gain_ssh.m0632d03.png)
+![alt text](https://pic.axi404.top/gain_ssh.m0632d03.png)
 
 在本地找到适合保存本项目的文件夹，右键资源管理器，点击 `在终端中打开`，并进行克隆操作。
 
@@ -226,11 +226,11 @@ git push origin main
 
 假如说进行了成功的提交，可以注意到，自己的仓库中应显示如 `1 commit ahead of` 的字样。点击 `Contribute` 并点击 `Open pull request` 即可发起一个 Pull Request，并等待管理员进行审核。
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/pr_1.ic1uo3ql1.png)
+![alt text](https://pic.axi404.top/pr_1.ic1uo3ql1.png)
 
 请确保 PR 的 title 中表意明确，同时 description 中清晰描述了自己添加的内容，之后点击 `Create pull request` 即可，管理员在收到内容之后会进行审查并给出 `comment` 或直接将你的 PR Merge 进主分支，即完成了贡献。
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/pr_2.2rv2e5oh1y.png)
+![alt text](https://pic.axi404.top/pr_2.2rv2e5oh1y.png)
 
 ## VitePress 快速建站
 

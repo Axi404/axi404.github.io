@@ -2,7 +2,7 @@
 title: RoboMaster 视觉组第二次培训
 excerpt: 关于 SSH 以及 CMake 的基础讲解。
 date: 2024-07-17 00:00:00+0000
-image: https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/cover.5fkimh32iy.png
+image: https://pic.axi404.top/cover.5fkimh32iy.png
 categories:
     - 'Tech Talk'
     - 'RoboMaster'
@@ -40,11 +40,11 @@ Markdown 的详细语法见 [Markdown 官网文档](https://markdown.com.cn/)，
 
 通过在 VSCode 的拓展栏进行搜索，可以很轻易地找到 VSCode 的 SSH 插件：
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/SSH_1.4cktbl78ng.png)
+![alt text](https://pic.axi404.top/SSH_1.4cktbl78ng.png)
 
 启用插件之后，点击左下角的打开远程窗口，选择连接到主机即可：
 
-![alt text](https://cdn.statically.io/gh/Axi404/picx-images-hosting@master/SSH_2.3k7xtuqmx9.png)
+![alt text](https://pic.axi404.top/SSH_2.3k7xtuqmx9.png)
 
 在服务器的租用界面中，一般会提供 SSH 的指令，其格式为 `ssh -p port user@address`，之后按照提升输入密码即可。
 
