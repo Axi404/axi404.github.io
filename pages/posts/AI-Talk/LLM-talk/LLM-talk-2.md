@@ -2,7 +2,7 @@
 title: LLM Talk 2
 excerpt: 从一些工作中扫过。
 date: 2024-08-16 10:00:00+0800
-image: https://pic.axi404.top/cover.2veo9u2fuj.webp
+image: https://pic.axi404.top/111334049_p0.4qr981bmqf.webp
 categories:
     - 'AI Talk'
     - 'LLM Talk'
