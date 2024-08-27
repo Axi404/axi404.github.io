@@ -68,7 +68,7 @@ sudo update-alternatives --display g++
 之后再次运行，获得输出：
 
 
-<details style="width: 1000px; word-wrap: break-word;">
+<details>
   <summary>CUDA 安装成功输出</summary>
     <p>===========</p>
     <p>= Summary =</p>
