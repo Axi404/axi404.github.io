@@ -46,6 +46,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials': RouteRecordInfo<'/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials', '/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes': RouteRecordInfo<'/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes', '/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/ImageBed': RouteRecordInfo<'/posts/Tech-Talk/MISCs/ImageBed', '/posts/Tech-Talk/MISCs/ImageBed', Record<never, never>, Record<never, never>>,
+    '/posts/Tech-Talk/MISCs/Solution-for-GPT': RouteRecordInfo<'/posts/Tech-Talk/MISCs/Solution-for-GPT', '/posts/Tech-Talk/MISCs/Solution-for-GPT', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/Strange-Bugs': RouteRecordInfo<'/posts/Tech-Talk/MISCs/Strange-Bugs', '/posts/Tech-Talk/MISCs/Strange-Bugs', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/vpn-setting': RouteRecordInfo<'/posts/Tech-Talk/MISCs/vpn-setting', '/posts/Tech-Talk/MISCs/vpn-setting', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/Obsidian/Obsidian-Tutorial': RouteRecordInfo<'/posts/Tech-Talk/Obsidian/Obsidian-Tutorial', '/posts/Tech-Talk/Obsidian/Obsidian-Tutorial', Record<never, never>, Record<never, never>>,

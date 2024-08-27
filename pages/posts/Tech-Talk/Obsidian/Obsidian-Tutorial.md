@@ -2,7 +2,7 @@
 title: Obsidian 快速上手指南
 excerpt: Obsidian 快速上手，概念辨析 & 基础使用。
 date: 2024-07-06 00:00:00+0000
-image: https://pic.axi404.top/cover.1ovd18do97.webp
+image: https://pic.axi404.top/121740647_p0.51e3161g4l.webp
 categories:
     - 'Tech Talk'
     - Obsidian
