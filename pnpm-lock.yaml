@@ -18,8 +18,8 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0(typescript@5.5.4)(valaxy@0.19.2(@babel/parser@7.25.4)(@types/markdown-it@14.1.2)(@types/node@22.5.0)(async-validator@4.2.5)(axios@1.7.5)(postcss@8.4.41)(rollup@4.21.1)(typescript@5.5.4))
       valaxy-theme-hairy:
-        specifier: 1.2.6
-        version: 1.2.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
+        specifier: 1.2.7
+        version: 1.2.7(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4))
       valaxy-theme-yun:
         specifier: 0.19.1
         version: 0.19.1
@@ -3812,8 +3812,8 @@ packages:
     peerDependencies:
       valaxy: latest
 
-  valaxy-theme-hairy@1.2.6:
-    resolution: {integrity: sha512-xB4ksIUwALkQbNZPfs/2dKdgboHauxbetENzFLmCq+04Evj47EOFmxhJHFe8f9+betcUiwIKjA3Ruk68J73rSQ==}
+  valaxy-theme-hairy@1.2.7:
+    resolution: {integrity: sha512-Pki17er2MjeQMcxt2vrmgFYbr6zbLEPzAqiu4mxOjN9DnmQVmvcDWcoDM+UtxpbNasuQL/dEWTyPV2jsKddgmA==}
 
   valaxy-theme-yun@0.19.1:
     resolution: {integrity: sha512-rOOV+wAwn0Su0xKI5Ic8nwo5THtKzc8Tx20RVWf2wObh+DVk5fUpetDf0qjSb9Ir/gbHmibttiY3e7+3CJs7XA==}
@@ -8452,7 +8452,7 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  valaxy-theme-hairy@1.2.6(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)):
+  valaxy-theme-hairy@1.2.7(typescript@5.5.4)(vue@3.4.38(typescript@5.5.4)):
     dependencies:
       '@docsearch/css': 3.6.1
       '@iconify-json/ant-design': 1.1.17
