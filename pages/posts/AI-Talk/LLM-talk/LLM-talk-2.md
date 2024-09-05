@@ -1,8 +1,8 @@
 ---
 title: LLM Talk 2
 excerpt: 从一些工作中扫过。
-date: 2024-08-16 10:00:00+0800
-image: https://pic.axi404.top/111334049_p0.4qr981bmqf.webp
+date: 2024-09-05 15:40:00+0800
+image: https://pic.axi404.top/122142508_p0.6ik8ibaq1n.webp
 categories:
     - 'AI Talk'
     - 'LLM Talk'
@@ -165,3 +165,11 @@ MOO 的 pipeline 也很简单，本身甚至可以说设置了一个 hard task�
 ![The pipeline of MOKA](https://pic.axi404.top/MOKA.86tkujoiiw.webp)
 
 MOKA 的思路其实本质上和 CoPa 以及 PIVOT 是十分类似的，都是使用 Prompt-based 的 VLM，通过将不同的选择 annotate 到图像上，并且让模型进行选择，从而进行路径的规划。MOKA 等于说是希望通过若干的点标注，让模型学会如何去完成动作。所以流程上也是首先先找到需要操作的物体，然后再采样抓握点以及路径点之类的，最后结束。甚至说虽然 MOKA 里面没有明说，但是实际上其对于抓握点进行 filter，并且通过 filter 获得抓握姿态，这个流程实际上和 CoPa 可以说是一模一样，只是说 MOKA 希望通过路径点来完成动作，而 CoPa 则希望通过向量来完成动作。
+
+## RoboPoint
+
+论文链接：[https://arxiv.org/pdf/2406.10721](https://arxiv.org/pdf/2406.10721)
+
+![The pipeline of RoboPoint](https://pic.axi404.top/image.7egpxqs4ur.webp)
+
+RoboPoint 这篇论文可以说也是很简单粗暴，也算是大力出奇迹了，大概就是去做一个 point grounding 的一个模型。事实上我并不认为这种模型算是真正的具身智能的模型，而是纯粹的 perception 的模型。具体来说，因为这个模型只具有一些 grounding 能力，而即使是输出 high-level policy 的 ViLA，其输出的 plan 也是包含机器人相关的规划，并且应该具有像是 SayCan 一样的 awareness，类似于机器人能做什么，不能做什么。这一篇的 pipeline 里面貌似就是只是单纯的输出点的坐标，用 point grounding/bbox grounding/VQA 来训练了一个 13B 的模型，而且效果也没有很显著，或者似乎可以说是 MOKA 的一种 one step 的 end2end 版本。
