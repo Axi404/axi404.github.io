@@ -1,7 +1,7 @@
 ---
 title: 'Paper Reading: Embodied AI'
 excerpt: 从一些 Embodied AI 相关工作中扫过。
-date: 2024-09-05 15:40:00+0800
+date: 2024-09-09 01:23:00+0800
 image: https://pic.axi404.top/122142508_p0.6ik8ibaq1n.webp
 categories:
     - 'AI Talk'

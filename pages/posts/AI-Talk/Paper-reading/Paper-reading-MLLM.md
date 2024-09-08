@@ -1,7 +1,7 @@
 ---
 title: 'Paper Reading: MLLM'
 excerpt: 一些和多模态相关的论文阅读，从 CLIP 开始，向后延伸。
-date: 2024-08-08 22:34:00+0800
+date: 2024-09-09 01:22:00+0800
 image: https://pic.axi404.top/121653445_p0.6pnfycmxcu.webp
 categories:
     - 'AI Talk'

@@ -1,7 +1,7 @@
 ---
 title: Paper Reading 0
 excerpt: 在方向中探索之前，更加基础的一些内容，课程/书籍推荐以及基础论文阅读。
-date: 2024-08-01 19:41:00+0800
+date: 2024-09-09 01:21:00+0800
 image: https://pic.axi404.top/109168028_p0.webp
 categories:
     - 'AI Talk'

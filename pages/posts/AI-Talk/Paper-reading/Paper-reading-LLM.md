@@ -1,7 +1,7 @@
 ---
 title: 'Paper Reading: LLM'
 excerpt: 从 BOW 到 GPT，一些 Paper Reading。
-date: 2024-08-08 22:34:00+0800
+date: 2024-09-09 01:24:00+0800
 image: https://pic.axi404.top/121653445_p0.6pnfycmxcu.webp
 categories:
     - 'AI Talk'
@@ -13,8 +13,6 @@ tags:
     - 'Embodied AI'
 top: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
-
-
 
 ## BOW
 
