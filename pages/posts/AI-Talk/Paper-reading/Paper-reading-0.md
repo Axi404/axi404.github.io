@@ -1,11 +1,11 @@
 ---
-title: LLM Talk 0
+title: Paper Reading 0
 excerpt: 在 LLM 之前，我看过的一些论文/思考/推荐。
 date: 2024-08-01 19:41:00+0800
 image: https://pic.axi404.top/109168028_p0.webp
 categories:
     - 'AI Talk'
-    - 'LLM Talk'
+    - 'Paper Reading'
 tags:
     - 'AI Talk'
     - LLM

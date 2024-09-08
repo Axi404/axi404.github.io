@@ -1,11 +1,11 @@
 ---
-title: LLM Talk 2
+title: Paper Reading 2
 excerpt: 从一些工作中扫过。
 date: 2024-09-05 15:40:00+0800
 image: https://pic.axi404.top/122142508_p0.6ik8ibaq1n.webp
 categories:
     - 'AI Talk'
-    - 'LLM Talk'
+    - 'Paper Reading'
 tags:
     - 'AI Talk'
     - LLM

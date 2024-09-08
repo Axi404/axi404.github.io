@@ -1,11 +1,11 @@
 ---
-title: LLM Talk 1
+title: Paper Reading 1
 excerpt: 从 BOW 到 Embodied AI，一些 insight 与思考。
 date: 2024-08-08 22:34:00+0800
 image: https://pic.axi404.top/121653445_p0.6pnfycmxcu.webp
 categories:
     - 'AI Talk'
-    - 'LLM Talk'
+    - 'Paper Reading'
 tags:
     - 'AI Talk'
     - LLM
