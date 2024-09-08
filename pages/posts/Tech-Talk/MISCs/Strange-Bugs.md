@@ -1,7 +1,7 @@
 ---
 title: 奇奇怪怪的 Bug 集散地
 excerpt: 平时遇到的奇怪代码问题，记录并整理。
-date: 2024-08-24 01:16:00+0800
+date: 2024-09-06 11:49:00+0800
 image: https://pic.axi404.top/117648512_p0.webp
 categories:
     - 'Tech Talk'
@@ -181,7 +181,20 @@ pip3 install torch torchvision torchaudio
 
 因为 Ubuntu 20.04 的若干的内容已经不再支持，使用起来最新的一些软件基本上全是报错，比较经典的就是 `GLIBC 2.3.1` 以及 `libssl.so.3` 等内容，而前者的安装十分的麻烦，所以干脆直接安装三系统。
 
-三系统的安装不是很困难，使用之前安装 Ubuntu 20.04 的 EFI 分区作为挂载点就好，之后在系统的 GRUB 界面就可以看到三个系统了。
+三系统的安装不是很困难，将新创建的 EFI 分区作为引导器就好（理论来说，全部的系统都可以使用同一个 EFI 分区，但是我之前安装的时候，当时太过于稚嫩，胡乱操作出现过问题，现在不太敢尝试，所以没有踩过坑，在这里不作为介绍的方法），之后在系统的 GRUB 界面就可以看到三个系统了。
+
+一个常见的问题在于，如何切换 Grub。比如说我之前已经给我的 Ubuntu 20.04 的 Grub 安装了一个主题，而安装了新的系统之后，这个 Grub 会被新系统的 Grub 覆盖掉，那么应该如何处理呢。
+
+假如说按照上述的方法，那么你在进入系统的时候其实是可以看到自己的之前的系统的，进入之前的系统之后，可以运行：
+
+```bash
+sudo update-grub
+lsblk
+# 输出中可以找到 MOUNTPOINTS 为 /boot/efi 的项，记住其 NAME
+sudo grub-install /dev/nvme0n1p1 # 以 nvme0n1p1 为例
+```
+
+之后重启即可。
 
 Ubuntu 22.04 有一个比较经典的问题，就是安装显卡驱动之后，会导致无线网卡消失，按照正常的流程进行操作之后，运行 `sudo ubuntu-drivers autoinstall` 并且重启，再次进入默认的系统之后，就会发现网卡消失了。
 
@@ -294,3 +307,44 @@ sudo ln -s /usr/local/cuda-12.1/nsight-systems-2023.1.2/host-linux-x64/libcrypto
 # to solve ifconfig issue
 sudo apt install net-tools
 ```
+
+## Ubuntu22.04 搜狗输入法无法输出中文
+
+众所周知，在 Ubuntu 系统中，假如说在安装的时候选择了中文作为语言（一般来说我在写教程的时候会推荐这么做，之后再把中文换回英文，而把输入法留下来），那么你的电脑中会包含一个 Ubuntu 的默认的输入法，然而不说这个输入法不是很符合中国人的说话习惯，其也很难根据你的打字来学习你的打字习惯。一般来说唯一的解决方案就是使用搜狗输入法。
+
+具体的方法如下：
+
+前往 [搜狗输入法的官网](https://shurufa.sogou.com/) 并且下载 `Linux个人版`，这时候就会开始下载搜狗输入法的 `.deb` 包，并且进入搜狗输入法的教程界面。然而虽然说一般情况下这个教程是好用的，但是在 Ubuntu 22.04 的时候，或许需要额外进行一些操作，以下从头来讲。
+
+首先需要安装 fcitx：
+
+```bash
+sudo apt install fcitx
+```
+
+之后进入设置中的区域和语言（Region & Language），选择 Manage Installed Languages，在 Keyboard input method system 中选择 `Fcitx 4`。当然，假如说你本身没有配置过中文，需要先在 Install/Remove Languages 中选择简体中文并且点击 `Apply`：
+
+<div class="flex grid-cols-2">
+<div>
+
+![](https://pic.axi404.top/image.ic2bux3q4.webp)
+</div>
+<div>
+
+![](https://pic.axi404.top/image.8hgf6x8yun.webp)
+</div>
+</div>
+
+之后再安装一些依赖并且删除 ibus。
+
+```bash
+sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2
+sudo apt install libgsettings-qt1
+sudo apt remove --purge ibus
+```
+
+之后 `reboot` 重启电脑，应该就会出现搜狗输入法了。假如没有的话，点击输入法，选择 `配置` 或者 `Configure`，添加点击加号并且搜索搜狗输入法（sogoupinyin）进行添加。保险起见，可以把别的输入法都按一遍减号来删除。
+
+![](https://pic.axi404.top/image.64dspq5v6e.webp)
+
+此时搜狗输入法就安装好了。其中主要的坑在于，安装依赖并且删除 ibus 这一步骤，在 [搜狗输入法自己的教程](https://shurufa.sogou.com/linux/guide) 中没有给出。
