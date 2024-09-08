@@ -21,7 +21,6 @@ export default defineConfig<ThemeConfig>({
         "https://pic.axi404.top/89538671_p0.45hljv1rmd.webp",
         "https://pic.axi404.top/89538619_p0.6t71u7usy8.webp",
         "https://pic.axi404.top/89538584_p0.969obf8m4s.webp",
-        "https://pic.axi404.top/89124199_p0.13lpin0fex.webp",
         "https://pic.axi404.top/121319294_p0.8l00p4e5u0.webp",
         "https://pic.axi404.top/121247340_p0.2yyab9cv0l.webp",
         "https://pic.axi404.top/116528965_p0.8s38kk0b8p.webp",
@@ -32,6 +31,7 @@ export default defineConfig<ThemeConfig>({
         "https://pic.axi404.top/93141803_p1.92q2dpfjc3.webp",
         "https://pic.axi404.top/93141803_p0.ic1wc5z17.webp",
         "https://pic.axi404.top/93141612_p0.54xox14iok.webp",
+        // "https://pic.axi404.top/89124199_p0.13lpin0fex.webp",
       ]
     },
     nav: [
