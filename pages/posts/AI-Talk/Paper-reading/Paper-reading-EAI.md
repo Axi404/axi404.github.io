@@ -1,6 +1,6 @@
 ---
-title: Paper Reading 2
-excerpt: 从一些工作中扫过。
+title: 'Paper Reading: Embodied AI'
+excerpt: 从一些 Embodied AI 相关工作中扫过。
 date: 2024-09-05 15:40:00+0800
 image: https://pic.axi404.top/122142508_p0.6ik8ibaq1n.webp
 categories:
@@ -16,7 +16,107 @@ top: 1       # You can add weight to some posts to override the default sorting 
 
 ## 前言
 
-在代表性工作之余，也有必要阅读一些其他的内容，这当然也需要总结，所以新开设一个章节，记录在这里。
+Embodied AI 是一个比较新的领域，而且可能横跨的任务也很多，在这方面做的事情来说，可能一些和具身智能具有比较高相关度的 perception 任务，也都会放在其中。
+
+## RT-1
+
+论文链接：[https://arxiv.org/pdf/2212.06817](https://arxiv.org/pdf/2212.06817)
+
+![The pipeline of RT-1](https://pic.axi404.top/RT-1.4uav067pyb.webp)
+
+RT-1 讲实话结构并不是很好，但是一是在于数据量大，二是在于在实体跑起来了，于是的话，参考价值也挺高。简单概述一下结构，是用卷积 + FiLM 来进行的文本和图像的融合，文本编码器的输出用来作为 FiLM 的参数，然后调制卷积。之后获得 Tokens 再过 TokenLearner，输入进一个 transformer 里面，获得最后的自由度。
+
+这种架构在当下貌似已经不流行了，所以说一下局限性，也就当作是 insight 了。一是在数据量巨大的情况下，多模态基本就是撑死胆大的饿死胆小的，这种复杂的结构，本质上还是担心模型的表征能力不强，或者模型没有能力输出自由度这种级别的信息，但是显然从后面来看实在是多虑了，transformer 确实有大一统的潜力。二也是在于，这种设计其实封死了后面的拓展性。机器人的数据肯定是稀少的，遥想当初 VLMo 就是通过引入单一的视觉和文本数据来进行 scale，而 RT-1 则是完全不给除了自由度之外的数据留活路了，于是后面就很难再进行拓展了。
+
+参考资料：
+
+- RT-1 - [https://zhuanlan.zhihu.com/p/652897511](https://zhuanlan.zhihu.com/p/652897511)
+
+## RT-2
+
+论文链接：[https://arxiv.org/pdf/2307.15818](https://arxiv.org/pdf/2307.15818)
+
+![The pipeline of RT-2](https://pic.axi404.top/RT-2.4xugxw0so5.webp)
+
+RT-2 的结构就十分的合理了，使用一个大的 transformer（其实也就是 LLM）接收文本和图像的编码输入，之后获得特殊的 token 用来表示动作，就可以直接进行控制了。这种操作使得其可以同时使用多模态的数据以及机器人的数据，所以说 scale up 的效果非常不错，剩下的就不需要过多赘述了，就是正常的训练。
+
+参考资料：
+
+- RT-2 - [https://zhuanlan.zhihu.com/p/651670131](https://zhuanlan.zhihu.com/p/651670131)
+
+## VIMA
+
+论文链接：[https://arxiv.org/pdf/2210.03094](https://arxiv.org/pdf/2210.03094)
+
+![The pipeline of VIMA](https://pic.axi404.top/VIMA.pf9o2ajvu.webp)
+
+VIMA 也算是比较早期的工作了，没有使用 LLM，但是是有一定的可取之处的。首先是在于使用 object token，object token 的生成在使用 Mask R-CNN 之后包含图像信息即 ViT 编码之后的结果以及 bounding box，可以说同时包含了物体和位置信息，之后还储存了一些历史信息，可以进行长任务。虽然说 RT-2 也可以上下文理解，但是 VIMA 直接使用原本的信息，肯定表征更多一些。
+
+一个 insight 是 object token 肯定是一种很好的方式。以往的多模态输入都是先图像后文本，object token 将两个交叉在一起，肯定会有更好的效果，也更加将图像融入了文本的体系里面，是否有更加优雅的方式来进行 object token 的生成或许会是一个问题。
+
+参考资料：
+
+- VIMA - [https://zhuanlan.zhihu.com/p/659016759](https://zhuanlan.zhihu.com/p/659016759)
+
+## SayCan
+
+论文链接：[https://arxiv.org/pdf/2204.01691](https://arxiv.org/pdf/2204.01691)
+
+![The pipeline of SayCan](https://pic.axi404.top/SayCan.7p3j5ymwpy.webp)
+
+SayCan 可以说是在做这种规划任务里面比较早的了，但是也存在一些问题。首先大概的流程就是，先把需求提出来，这个时候模型本身存在一个动作空间，那么 LLM 就可以从这个动作空间里面给出不同的推荐，但是一个问题在于，由于 LLM 不清楚当前的情况，所以说可能无法很好地给出能够执行的结果，这个时候可以使用另一个模型，或者说是一个价值函数，来去评判在当前情况下这些动作的价值。那么这个价值函数是使用了环境信息的，价值大模型的推荐结合在一起，就生成了一个布置合理，而且可以完成的动作。
+
+这里面的 insight 其实不多，或者说显而易见，想要让 LLM 去参与到动作的生成，固然其本来就具有一定的规划能力，但是这种能力在没有现场情况的了解下是施展不开的，于是可以简单地使用价值函数来作为一种当前情况的引入，本身需要训练的东西也很少，可以说是十分的轻量化。
+
+参考资料：
+
+- SayCan - [https://zhuanlan.zhihu.com/p/655418399](https://zhuanlan.zhihu.com/p/655418399)
+
+## Language Models as Zero-Shot Planners
+
+论文链接：[https://arxiv.org/pdf/2201.07207](https://arxiv.org/pdf/2201.07207)
+
+![The pipeline of Language Models as Zero-Shot Planners](https://pic.axi404.top/lmzsp.syvls3mlc.webp)
+
+这篇文章也是在 planning 领域的内容，某种程度上也可以说是 low fruit，甚至说不需要任何的训练，就是纯粹的 prompt，不过目测感觉还是要经过一些 finetune 的。
+
+大概的思路就是，先让一个模型给出一些计划，然后这些计划通过另一个模型翻译成在 action set 里面的最接近的内容，然后执行。唯一不多的 insight 在于 LLM 通过 high-level 的交互就可以进行近似输出。
+
+参考资料：
+
+- Language Models as Zero-Shot Planners - [https://zhuanlan.zhihu.com/p/656399047](https://zhuanlan.zhihu.com/p/656399047)
+
+## PaLM-E
+
+论文链接：[https://arxiv.org/pdf/2303.03378](https://arxiv.org/pdf/2303.03378)
+
+![The pipeline of PaLM-E](https://pic.axi404.top/PaLM-E.4cktbl6cde.webp)
+
+PaLM-E 可以说就是就是对于上述种种猜想的一个实际的体现，也就是说一方面仅仅通过多模态的 prompt 进行输入，这里面的输入包括文字/环境/图片，也就是全部的模态，之后输出的是 high-level 的 planning，再由其他的执行器去完成 low-level policy。
+
+参考资料：
+
+- PaLM-E - [https://zhuanlan.zhihu.com/p/662935514](https://zhuanlan.zhihu.com/p/662935514)
+
+## ViLA
+
+论文链接：[https://arxiv.org/pdf/2311.17842](https://arxiv.org/pdf/2311.17842)
+
+![The pipeline of ViLA](https://pic.axi404.top/ViLA.60u68rwmjs.webp)
+
+讲实话，我不是很理解 prompt 类型的工具，不过确实一些这种类型的工作可以有非常好的性能。总体来说，ViLA 输出的也是 high-level 的 policy。大概的流程就是输入当前的图像以及任务，还有历史上已经完成的任务，然后交给 gpt-4v，使用 CoT 分析一下当前的场面，然后结合分析给出动作，再交给执行器。
+
+个人感觉 prompt 类型的工作实际上还是解决任务，而没有带来比较振奋人心的 insight（当然，CoT 这种属于出色的 prompt 工作），这毫无疑问是令人沮丧的，但是确实也刷新了性能，并且有效利用了那些已经性能很好的工作。
+
+## CoPa
+
+论文链接：[https://arxiv.org/pdf/2403.08248](https://arxiv.org/pdf/2403.08248)
+
+![The pipeline of CoPa](https://pic.axi404.top/CoPa.5fkimh268l.webp)
+
+CoPa 的工程感更足，把大量的模型结合在一起。总的来说首先是一个物体抓取，接下来是路径规划。对物体抓取，CoPa 给出了一个从粗到细的分割流程，具体还是使用 SAM 和 gpt 配合，最后筛选出来一个抓取的细节部位，然后用抓取姿势的生成器生成姿势。就有点类似于把锅拿起来，需要握住的是锅把一样。接下来是一个路径的规划，这里面也是先识别了各种物体的位姿，然后将这些内容画在图上，估计这种选择是因为不信任大模型的数学能力，反而是图像比较直观，容易理解。之后通过这种细粒度的指示，大模型就可以给出更加合理的建议，类似于之前是将锤子放在钉子上，现在可以是将锤子和钉子对齐，而且根据识别的位姿，或许可以精确到距离。然后交给执行器。
+
+一个 insight 是对于细粒度信息的追求，很多时候直接的训练不能获得到这么细粒的信息，而 VLM 也不具有这种表征能力，所以说这种用其他模型的表征方式或许确实无法替代。
 
 ## PointLLM
 
