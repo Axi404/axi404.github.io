@@ -42,6 +42,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/Daily-Talk/Week-journal/week-6': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-6', '/posts/Daily-Talk/Week-journal/week-6', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Week-journal/week-7': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-7', '/posts/Daily-Talk/Week-journal/week-7', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Week-journal/week-8': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-8', '/posts/Daily-Talk/Week-journal/week-8', Record<never, never>, Record<never, never>>,
+    '/posts/Daily-Talk/Week-journal/week-9': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-9', '/posts/Daily-Talk/Week-journal/week-9', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/Git-and-Github/Git-Tutorial': RouteRecordInfo<'/posts/Tech-Talk/Git-and-Github/Git-Tutorial', '/posts/Tech-Talk/Git-and-Github/Git-Tutorial', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials': RouteRecordInfo<'/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials', '/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes': RouteRecordInfo<'/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes', '/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes', Record<never, never>, Record<never, never>>,
