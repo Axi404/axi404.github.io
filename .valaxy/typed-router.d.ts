@@ -32,6 +32,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/AI-Talk/Paper-reading/Paper-reading-0': RouteRecordInfo<'/posts/AI-Talk/Paper-reading/Paper-reading-0', '/posts/AI-Talk/Paper-reading/Paper-reading-0', Record<never, never>, Record<never, never>>,
     '/posts/AI-Talk/Paper-reading/Paper-reading-EAI': RouteRecordInfo<'/posts/AI-Talk/Paper-reading/Paper-reading-EAI', '/posts/AI-Talk/Paper-reading/Paper-reading-EAI', Record<never, never>, Record<never, never>>,
     '/posts/AI-Talk/Paper-reading/Paper-reading-LLM': RouteRecordInfo<'/posts/AI-Talk/Paper-reading/Paper-reading-LLM', '/posts/AI-Talk/Paper-reading/Paper-reading-LLM', Record<never, never>, Record<never, never>>,
+    '/posts/AI-Talk/Paper-reading/Paper-reading-Meta': RouteRecordInfo<'/posts/AI-Talk/Paper-reading/Paper-reading-Meta', '/posts/AI-Talk/Paper-reading/Paper-reading-Meta', Record<never, never>, Record<never, never>>,
     '/posts/AI-Talk/Paper-reading/Paper-reading-MLLM': RouteRecordInfo<'/posts/AI-Talk/Paper-reading/Paper-reading-MLLM', '/posts/AI-Talk/Paper-reading/Paper-reading-MLLM', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Dresses/Dress-Collections': RouteRecordInfo<'/posts/Daily-Talk/Dresses/Dress-Collections', '/posts/Daily-Talk/Dresses/Dress-Collections', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Memoirs/RM-Memoir': RouteRecordInfo<'/posts/Daily-Talk/Memoirs/RM-Memoir', '/posts/Daily-Talk/Memoirs/RM-Memoir', Record<never, never>, Record<never, never>>,
