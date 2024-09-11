@@ -31,7 +31,6 @@ export default defineConfig<ThemeConfig>({
         "https://pic.axi404.top/93141803_p1.92q2dpfjc3.webp",
         "https://pic.axi404.top/93141803_p0.ic1wc5z17.webp",
         "https://pic.axi404.top/93141612_p0.54xox14iok.webp",
-        // "https://pic.axi404.top/89124199_p0.13lpin0fex.webp",
       ]
     },
     nav: [
@@ -56,14 +55,19 @@ export default defineConfig<ThemeConfig>({
         icon: 'i-material-symbols-monitor-heart',
       },
       {
+        text: 'Github',
+        link: 'https://github.com/Axi404',
+        icon: 'i-ri-github-fill',
+      },
+      {
         text: 'CV',
         link: 'https://axi404.github.io/cv/',
         icon: 'i-ri-sd-card-mini-fill',
       },
       {
-        text: 'Github',
-        link: 'https://github.com/Axi404',
-        icon: 'i-ri-github-fill',
+        text: 'SurviveXJTU',
+        link: 'https://survivexjtu.github.io/',
+        icon: 'i-ri-sd-card-mini-fill',
       },
     ],
     footer: {
