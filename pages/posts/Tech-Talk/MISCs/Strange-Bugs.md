@@ -1,7 +1,7 @@
 ---
 title: 奇奇怪怪的 Bug 集散地
 excerpt: 平时遇到的奇怪代码问题，记录并整理。
-date: 2024-09-06 11:49:00+0800
+date: 2024-09-20 23:44:00+0800
 image: https://pic.axi404.top/117648512_p0.webp
 categories:
     - 'Tech Talk'
@@ -30,28 +30,26 @@ top: 1       # You can add weight to some posts to override the default sorting 
 
 问题出现在，对于任何一个全新的最小安装的 Ubuntu 20.04 系统，在使用 runfile 的时候，均会报错，并说明在 `/var/log/nvidia-installer.log` 中可以看到详情，为：
 
-<details style="width: 1000px; word-wrap: break-word;">
-  <summary>报错信息 `/var/log/cuda-installer.log`</summary>
+```txt
+-> Error.
+ERROR: An error occurred while performing the step: "Checking to see whether the nvidia kernel module was successfully built". See /var/log/nvidia-installer.log for details.
+-> The command `cd ./kernel; /usr/bin/make -k -j16  NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.15.0-117-generic/build" SYSOUT="/lib/modules/5.15.0-117-generic/build" NV_KERNEL_MODULES="nvidia"` failed with the following output:
 
-    -> Error.
-    ERROR: An error occurred while performing the step: "Checking to see whether the nvidia kernel module was successfully built". See /var/log/nvidia-installer.log for details.
-    -> The command `cd ./kernel; /usr/bin/make -k -j16  NV_EXCLUDE_KERNEL_MODULES="" SYSSRC="/lib/modules/5.15.0-117-generic/build" SYSOUT="/lib/modules/5.15.0-117-generic/build" NV_KERNEL_MODULES="nvidia"` failed with the following output:
-
-    make[1]: Entering directory '/usr/src/linux-headers-5.15.0-117-generic'
-    warning: the compiler differs from the one used to build the kernel
-    The kernel was built by: gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
-    You are using:           cc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
-    MODPOST /tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers
-    ERROR: modpost: GPL-incompatible module nvidia.ko uses GPL-only symbol 'rcu_read_unlock_strict'
-    make[2]: *** [scripts/Makefile.modpost:133: /tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers] Error 1
-    make[2]: *** Deleting file '/tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers'
-    make[2]: Target '__modpost' not remade because of errors.
-    make[1]: *** [Makefile:1830: modules] Error 2
-    make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-117-generic'
-    make: *** [Makefile:82: modules] Error 2
-    ERROR: The nvidia kernel module was not created.
-    ERROR: Installation has failed.  Please see the file '/var/log/nvidia-installer.log' for details.  You may find suggestions on fixing installation problems in the README available on the Linux driver download page at www.nvidia.com.
-</details>
+make[1]: Entering directory '/usr/src/linux-headers-5.15.0-117-generic'
+warning: the compiler differs from the one used to build the kernel
+The kernel was built by: gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+You are using:           cc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+MODPOST /tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers
+ERROR: modpost: GPL-incompatible module nvidia.ko uses GPL-only symbol 'rcu_read_unlock_strict'
+make[2]: *** [scripts/Makefile.modpost:133: /tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers] Error 1
+make[2]: *** Deleting file '/tmp/selfgz3405/NVIDIA-Linux-x86_64-530.30.02/kernel/Module.symvers'
+make[2]: Target '__modpost' not remade because of errors.
+make[1]: *** [Makefile:1830: modules] Error 2
+make[1]: Leaving directory '/usr/src/linux-headers-5.15.0-117-generic'
+make: *** [Makefile:82: modules] Error 2
+ERROR: The nvidia kernel module was not created.
+ERROR: Installation has failed.  Please see the file '/var/log/nvidia-installer.log' for details.  You may find suggestions on fixing installation problems in the README available on the Linux driver download page at www.nvidia.com.
+```
 
 经过检查，发现问题其实很简单，是因为 g++ 等版本为 9，太高了，设置为 7 即可。
 
@@ -68,26 +66,21 @@ sudo update-alternatives --display g++
 之后再次运行，获得输出：
 
 
-<details>
-  <summary>CUDA 安装成功输出</summary>
-    <p>===========</p>
-    <p>= Summary =</p>
-    <p>===========</p>
-
-    Driver:   Not Selected
-    Toolkit:  Installed in /usr/local/cuda-12.1/
-
-    Please make sure that
-    -   PATH includes /usr/local/cuda-12.1/bin
-    -   LD_LIBRARY_PATH includes /usr/local/cuda-12.1/lib64, or, add /usr/local/cuda-12.1/lib64 to /etc/ld.so.conf and run ldconfig as root
-
-    To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-12.1/bin
-    ***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 530.00 is required for CUDA 12.1 functionality to work.
-    To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
-        sudo <CudaInstaller>.run --silent --driver
-
-    Logfile is /var/log/cuda-installer.log
-</details>
+```txt
+===========
+= Summary =
+===========
+Driver:   Not Selected
+Toolkit:  Installed in /usr/local/cuda-12.1/
+Please make sure that
+-   PATH includes /usr/local/cuda-12.1/bin
+-   LD_LIBRARY_PATH includes /usr/local/cuda-12.1/lib64, or, add /usr/local/cuda-12.1/lib64 to /etc/ld.so.conf and run ldconfig as root
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-12.1/bin
+***WARNING: Incomplete installation! This installation did not install the CUDA Driver. A driver of version at least 530.00 is required for CUDA 12.1 functionality to work.
+To install the driver using this installer, run the following command, replacing <CudaInstaller> with the name of this run file:
+    sudo <CudaInstaller>.run --silent --driver
+Logfile is /var/log/cuda-installer.log
+```
 
 设置环境变量：
 
@@ -255,17 +248,43 @@ os.environ['all_proxy'] = 'http://127.0.0.1:7890'
 
 最近正在配置 AnyGrasp，在这里记录一下遇到的问题。我的环境为 Ubuntu 22.04, CUDA 12.1, cudnn 9.3.0。
 
-首先就是需要安装一个 MinkowskiEngine，本身 AnyGrasp 已经是无数年前的工作了，所以说一些依赖都比较老，包括这个 `MinkowskiEngine` 也已经年久失修了，不支持 CUDA 12.1。
+:::info
+之前其实写过一版，但是感觉不是很详细，至少照着看是不能无痛安装的，所以说换了一个新的，并且重新写一下。
+:::
 
-按照正常的流程，为：
+首先先给出 AnyGrasp 的 Github 仓库链接：[https://github.com/graspnet/anygrasp_sdk](https://github.com/graspnet/anygrasp_sdk)，其中的 `Installation` 部分给出了简略的安装步骤，但是因为其依赖的 MinkowskiEngine 已经年久失修，所以需要一些额外的操作。
+
+先配置一个 conda 环境：
 
 ```bash
-pip install torch ninja
-export MAX_JOBS=2
-pip install -U MinkowskiEngine --install-option="--blas=openblas" -v --no-deps
+conda create -n anygrasp python=3.10
+conda install openblas-devel -c anaconda
+pip install torch 'numpy<1.23' ninja
 ```
 
-但是会出现报错，其核心问题为 `error: namespace "thrust" has no member "device"`，本质上还是年久失修，和 CUDA 12.X 不兼容了。
+接下来可以开始配置第一步，也就是 MinkowskiEngine：
+
+```bash
+git clone https://github.com/NVIDIA/MinkowskiEngine.git
+cd MinkowskiEngine
+```
+
+根据经验来说，需要配置以下的环境变量：
+
+```bash
+export CXX=c++
+export CUDA_HOME=/usr/local/cuda-12.1
+export MAX_JOBS=2
+export SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
+```
+
+其中后两者，`MAX_JOBS` 是 CUDA: Out of memory 的 Issue，`SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True` 是 sklearn 过期的 Issue。假如说之后执行安装操作：
+
+```bash
+python setup.py install --blas_include_dirs=${CONDA_PREFIX}/include --blas=openblas 
+```
+
+首先可能存在的报错，核心问题为 `error: namespace "thrust" has no member "device"`，本质上还是年久失修，和 CUDA 12.X 不兼容了。
 
 根据仓库里的 [Issue#543](https://github.com/NVIDIA/MinkowskiEngine/issues/543) 可以找到对于我适用的方法，即在四个不同的文件中添加 `#include`：
 
@@ -291,11 +310,70 @@ pip install -U MinkowskiEngine --install-option="--blas=openblas" -v --no-deps
 ```
 :::
 
-之后再次 `python setup.py install` 即可。编译的过程中爆了好多个 warning，不过最终还是有惊无险。
+之后可能会有报错 `ModuleNotFoundError: No module named 'distutils.msvccompiler'`，那么执行 `pip install "setuptools <65"`。
 
-之后就需要运行 `pip install -r requirements.txt` 了，然而会出现 sklearn 过期的情况，输出为 `The 'sklearn' PyPI package is deprecated, use 'scikit-learn'`。这个问题乍一看比较好解决，但是实际上并不简单，因为 sklearn 并非 `requirements.txt` 里面提供的，而是属于 AnyGrasp，所以你不能直接修改。
+之后再次安装，也会有报错：
 
-尝试了一下之后发现，可以通过 `export SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True` 来解决，这个环境只要能跑这一个程序就足够了，具体为什么将来可以开一个文章讲讲。
+```txt
+Traceback (most recent call last):
+  File "/home/gaoning/miniconda3/envs/anygrasp/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 2105, in _run_ninja_build
+    subprocess.run(
+  File "/home/gaoning/miniconda3/envs/anygrasp/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['ninja', '-v', '-j', '2']' returned non-zero exit status 1.
+```
+
+可以编辑 `setup.py`：
+
+```python{9}
+setup(
+    name="MinkowskiEngine",
+    version=find_version("MinkowskiEngine", "__init__.py"),
+    install_requires=["torch", "numpy"],
+    packages=["MinkowskiEngine", "MinkowskiEngine.utils", "MinkowskiEngine.modules"],
+    package_dir={"MinkowskiEngine": "./MinkowskiEngine"},
+    ext_modules=ext_modules,
+    include_dirs=[str(SRC_PATH), str(SRC_PATH / "3rdparty"), *include_dirs],
+    cmdclass={"build_ext": BuildExtension.with_options(use_ninja=False)},
+    author="Christopher Choy",
+    author_email="chrischoy@ai.stanford.edu",
+    ...,
+)
+
+```
+
+将 `use_ninja` 设置为 `False`，之后再次执行，就没问题了。
+
+之后安装 `anygrasp_sdk`：
+
+```bash
+git clone https://github.com/graspnet/anygrasp_sdk.git
+cd anygrasp_sdk
+pip install -r requirements.txt
+```
+
+之后安装 `pointnet2`：
+
+```bash
+cd pointnet2
+python setup.py install
+```
+
+在这一过程中还可能出现一个比较罕见的问题：
+
+```txt
+gcc: fatal error: cannot execute ‘cc1plus’: execvp: No such file or directory
+compilation terminated.
+error: command '/usr/bin/gcc' failed with exit code 1
+```
+
+一般来说直接 `sudo apt install build-essential` 就已经可以了，但是我的问题不止于此，检查之后发现，可能是因为 `gcc --version` 和 `g++ --version` 两个的版本不一样。使用：
+
+```bash
+sudo apt install gcc-12 g++-12
+```
+
+之后正常安装即可。
 
 最后是使用 AnyGrasp 需要 Key，而这个 Key 需要生成，因此需要使用 `./license_checker -f`，而因为 Ubuntu 22.04，这个也会报错，一个是缺少 `libcrypto.so.1.1`，一个是 `sh: 1: ifconfig: not found`。
 
