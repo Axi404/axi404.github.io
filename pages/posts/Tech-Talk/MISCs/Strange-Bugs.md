@@ -14,7 +14,9 @@ top: 1       # You can add weight to some posts to override the default sorting 
 
 ## 前言
 
-平时遇到一些奇怪的代码问题，记录并整理。
+平时遇到一些奇怪的代码问题，记录并整理，内容如下：
+
+[[toc]]
 
 ## 博客渲染超时
 
@@ -359,6 +361,8 @@ cd pointnet2
 python setup.py install
 ```
 
+值得一提的是，在安装 pointnet2 的过程中依然可能出现 `Command '['ninja', '-v', '-j', '2']'` 的报错，解决方法同上，依然是修改 `setup.py` 中的 `setup()` 函数的传参。
+
 在这一过程中还可能出现一个比较罕见的问题：
 
 ```txt
@@ -367,7 +371,7 @@ compilation terminated.
 error: command '/usr/bin/gcc' failed with exit code 1
 ```
 
-一般来说直接 `sudo apt install build-essential` 就已经可以了，但是我的问题不止于此，检查之后发现，可能是因为 `gcc --version` 和 `g++ --version` 两个的版本不一样。使用：
+一般来说直接 `sudo apt install build-essential` 就已经可以了，但是我的问题不止于此，因为系统里的 `gcc` 和 `g++` 都没问题。检查之后发现，这是因为 pointnet2 的编译过程中涉及了使用 `gcc` 并且调用 `g++` 的操作，而 `gcc` 大概率调用同版本的 `g++`，可能是因为 `gcc --version` 和 `g++ --version` 两个的版本不一样，所以就导致了这个问题。使用指定版本的 `sudo apt install` 进行重新安装（版本在 `Ubuntu 22.04` 可以是 12）：
 
 ```bash
 sudo apt install gcc-12 g++-12
@@ -385,6 +389,8 @@ sudo ln -s /usr/local/cuda-12.1/nsight-systems-2023.1.2/host-linux-x64/libcrypto
 # to solve ifconfig issue
 sudo apt install net-tools
 ```
+
+同时运行 `./lincense_checker -f` 之后输出的机器码，大概率最后以 `%` 结尾，这个因为在输出的时候没有添加换行提示符（Python 的 `print()` 自带换行符，而写这个程序的编程语言有可能不带），提交不包含 `%` 的内容到申请表中即可，另，邮箱需要使用教育邮箱。
 
 ## Ubuntu22.04 搜狗输入法无法输出中文
 
