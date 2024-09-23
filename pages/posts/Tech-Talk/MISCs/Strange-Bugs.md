@@ -448,4 +448,12 @@ sudo vim /etc/default/grub
 
 并且修改其中的 `GRUB_ENABLE_OS_PROBER=true`，并再次更新 `sudo grub-mkconfig -o /boot/grub/grub.cfg`，就没问题了。
 
-另一个问题在于发现重启之后进入 Ubuntu 的时候总是会十分的缓慢，这个检查了一下之后发现是因为我之前把 Ubuntu 20.04 使用的 swap 给格式化成 EndeavorOS 使用的 swap 了，因此 UUID 变了，需要进行修改，在 Ubuntu 中进行：
+另一个问题在于发现重启之后进入 Ubuntu 的时候总是会十分的缓慢，这个检查了一下之后发现是因为我之前把 Ubuntu 20.04 使用的 swap 给格式化成 EndeavorOS 使用的 swap 了，因此 UUID 变了，每次启动的时候会为了寻找 swap 而等好久，需要进行修改，在 Ubuntu 中进行：
+
+```bash
+sudo blkid
+sudo vim /etc/fstab
+sudo update-initramfs -u -k all
+```
+
+其中 vim 的部分可以在其中找到自己的 swap 分区的 UUID 并且进行修改，而后使用 `update-initramfs` 来更新全部的内核。
