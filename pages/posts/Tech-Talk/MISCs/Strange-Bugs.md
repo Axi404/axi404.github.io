@@ -432,3 +432,20 @@ sudo apt remove --purge ibus
 ![](https://pic.axi404.top/image.64dspq5v6e.webp)
 
 此时搜狗输入法就安装好了。其中主要的坑在于，安装依赖并且删除 ibus 这一步骤，在 [搜狗输入法自己的教程](https://shurufa.sogou.com/linux/guide) 中没有给出。
+
+## EndeavorOS 安装导致的多系统不兼容问题
+
+在此之后我有尝试过使用 EndeavorOS，出于想要使用 ArchLinux 的想法，当然，在这个过程中还是出现了一些问题。我的 Ubuntu 22.04 是在 EndeavorOS 之前安装的，里面包含我目前进行科研所需要使用的一切环境以及内容，而 Arch 只是作为自己的日常使用，我为此删除了之前安装的 Ubuntu 20.04，但是也因此导致了不少的问题。
+
+首先就是在安装了 EndeavorOS 之后，Grub 无法找到 Ubuntu 的引导，这自然是因为 EndeavorOS 的引导替换了我本来使用的 Ubuntu 引导，但是按理来说不会出现这个问题，因为不同的系统我都是分配了不同的 EFI 分区的，就算有的安装会刷这个分区，在我的电脑里面按理来说也不会出现问题才对。
+
+经过了检查之后发现是一个比较简单的问题，需要更新 GRUB 以检测所有操作系统：
+
+```bash
+sudo pacman -S os-prober
+sudo vim /etc/default/grub
+```
+
+并且修改其中的 `GRUB_ENABLE_OS_PROBER=true`，并再次更新 `sudo grub-mkconfig -o /boot/grub/grub.cfg`，就没问题了。
+
+另一个问题在于发现重启之后进入 Ubuntu 的时候总是会十分的缓慢，这个检查了一下之后发现是因为我之前把 Ubuntu 20.04 使用的 swap 给格式化成 EndeavorOS 使用的 swap 了，因此 UUID 变了，需要进行修改，在 Ubuntu 中进行：
