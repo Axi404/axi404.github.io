@@ -291,23 +291,19 @@ python setup.py install --blas_include_dirs=${CONDA_PREFIX}/include --blas=openb
 根据仓库里的 [Issue#543](https://github.com/NVIDIA/MinkowskiEngine/issues/543) 可以找到对于我适用的方法，即在四个不同的文件中添加 `#include`：
 
 :::code-group
-```cpp{1}
-// src/convolution_kernel.cuh
+```cpp [src/convolution_kernel.cuh]
 #include <thrust/execution_policy.h>
 ```
-```cpp{1}
-// src/coordinate_map_gpu.cu
+```cpp [src/coordinate_map_gpu.cu]
 #include <thrust/unique.h>
 #include <thrust/remove.h>
 ```
-```cpp{1}
-// src/spmm.cu
+```cpp [src/spmm.cu]
 #include <thrust/execution_policy.h>
 #include <thrust/reduce.h> 
 #include <thrust/sort.h>
 ```
-```cpp{1}
-// src/3rdparty/concurrent_unordered_map.cuh
+```cpp [src/3rdparty/concurrent_unordered_map.cuh]
 #include <thrust/execution_policy.h>
 ```
 :::
