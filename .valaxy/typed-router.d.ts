@@ -54,6 +54,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/Tech-Talk/Git-and-Github/Git-Tutorial': RouteRecordInfo<'/posts/Tech-Talk/Git-and-Github/Git-Tutorial', '/posts/Tech-Talk/Git-and-Github/Git-Tutorial', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials': RouteRecordInfo<'/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials', '/posts/Tech-Talk/Git-and-Github/Github-Actions-and-Pages-Tutorials', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes': RouteRecordInfo<'/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes', '/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes', Record<never, never>, Record<never, never>>,
+    '/posts/Tech-Talk/MISCs/anygrasp': RouteRecordInfo<'/posts/Tech-Talk/MISCs/anygrasp', '/posts/Tech-Talk/MISCs/anygrasp', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/ImageBed': RouteRecordInfo<'/posts/Tech-Talk/MISCs/ImageBed', '/posts/Tech-Talk/MISCs/ImageBed', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/LittleSkills': RouteRecordInfo<'/posts/Tech-Talk/MISCs/LittleSkills', '/posts/Tech-Talk/MISCs/LittleSkills', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/Strange-Bugs': RouteRecordInfo<'/posts/Tech-Talk/MISCs/Strange-Bugs', '/posts/Tech-Talk/MISCs/Strange-Bugs', Record<never, never>, Record<never, never>>,
