@@ -1,7 +1,7 @@
 ---
 title: 大一回忆录
 excerpt: 我的大一生活。
-date: 2024-09-16 12:26:00+0800
+date: 2024-10-03 10:47:00+0800
 image: https://pic.axi404.top/79517973_p0.5q7dcwefjd.webp
 categories:
     - 'Daily Talk'
