@@ -59,6 +59,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/Tech-Talk/MISCs/ImageBed': RouteRecordInfo<'/posts/Tech-Talk/MISCs/ImageBed', '/posts/Tech-Talk/MISCs/ImageBed', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/LittleSkills': RouteRecordInfo<'/posts/Tech-Talk/MISCs/LittleSkills', '/posts/Tech-Talk/MISCs/LittleSkills', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/Strange-Bugs': RouteRecordInfo<'/posts/Tech-Talk/MISCs/Strange-Bugs', '/posts/Tech-Talk/MISCs/Strange-Bugs', Record<never, never>, Record<never, never>>,
+    '/posts/Tech-Talk/MISCs/torch': RouteRecordInfo<'/posts/Tech-Talk/MISCs/torch', '/posts/Tech-Talk/MISCs/torch', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/vpn-setting': RouteRecordInfo<'/posts/Tech-Talk/MISCs/vpn-setting', '/posts/Tech-Talk/MISCs/vpn-setting', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/Obsidian/Obsidian-Tutorial': RouteRecordInfo<'/posts/Tech-Talk/Obsidian/Obsidian-Tutorial', '/posts/Tech-Talk/Obsidian/Obsidian-Tutorial', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/RoboMaster/RM-Tutorial-Section-1': RouteRecordInfo<'/posts/Tech-Talk/RoboMaster/RM-Tutorial-Section-1', '/posts/Tech-Talk/RoboMaster/RM-Tutorial-Section-1', Record<never, never>, Record<never, never>>,
