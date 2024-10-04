@@ -37,13 +37,50 @@ sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra # 安
 sudo pacman -S vim git zsh yay
 ```
 
+当然之后也需要按照惯例配置以下 git，在这里就不进行赘述了。
+
+除此之外需要注意的是，正常安装之后，可能会导致找不到之前你安装的其他系统，这个其实就是因为 grub 里面默认关闭了 `os-prober`，没啥大不了的：
+
+```bash
+sudo pacman -S os-prober
+sudo vim /etc/default/grub
+```
+
+进行修改
+
+```txt
+# Probing for other operating systems is disabled for security reasons. Read
+# documentation on GRUB_DISABLE_OS_PROBER, if still want to enable this
+# functionality install os-prober and uncomment to detect and include other
+# operating systems.
+#GRUB_DISABLE_OS_PROBER=false // [!code --]
+GRUB_DISABLE_OS_PROBER=false // [!code ++]
+GRUB_EARLY_INITRD_LINUX_STOCK=''
+```
+
+之后重新生成 Grub 即可：
+
+```bash
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ## 软件安装
 
 正如上述说的，安装了 `yay`，所以说可以安装一些常用的软件了：
 
 ```bash
+sudo pacman -S code
 yay -S nextchat-bin rustdesk-bin linuxqq wechat-uos-qt google-chrome obsidian
 ```
+
+介绍一下：
+
+- **nextchat-bin**：一个调用 GPT API 的软件。
+- **rustdesk-bin**：私有的远程桌面。
+- **linuxqq**：QQ。 
+- **wechat-uos-qt**：微信。
+- **google-chrome**：chrome 浏览器。
+- **obsidian**：知识库类型的笔记软件。
 
 ## 一些自己使用的内容
 
@@ -52,6 +89,16 @@ yay -S nextchat-bin rustdesk-bin linuxqq wechat-uos-qt google-chrome obsidian
 因为缺少了一些基本的配置，GNOME 一上来的使用体验并不是很好，包括说没有悬浮托盘，以及无法使用 `Ctrl+Alt+T` 打开 Console，以及我在使用 `Super+L` 的时候的锁屏，直接就黑屏了，没有办法再打开。
 
 进入设置->键盘->键盘快捷键，在系统中禁用锁定屏幕，并且在自定义快捷键中增加命令 `kgx` 并快捷键 `Ctrl+Alt+T`，增加命令 `systemctl suspend` 并快捷键 `Super+L`，其中名称可以任选。
+
+### 悬浮托盘
+
+也不知道叫什么比较好，应该是类似于悬浮托盘或者小图标，这在最新的 GNOME 里面并不存在，所以说需要进行安装，基本的思路是安装 [GNOME 插件](https://extensions.gnome.org/extension/615/appindicator-support/)，在里面引导并安装 [GNOME Shell 集成](https://chromewebstore.google.com/detail/gnome-shell-%E9%9B%86%E6%88%90/gphhapmejobijbbhgpjhcjognlahblep)，然后安装 `gnome-browser-connector`：
+
+```bash
+sudo pacman -S gnome-browser-connector
+```
+
+这时候插件应该就可以 turn on 了，没啥问题，直接开启。
 
 ### ZSH
 
