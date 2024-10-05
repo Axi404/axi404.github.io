@@ -168,6 +168,20 @@ nvm install node
 npm install -g pnpm
 ```
 
+可能会出现提示，`tput: unknown terminal "xterm-256color"`，输入以下来解决：
+
+```bash
+echo "export TERMINFO=/usr/share/terminfo" >> ~/.zshrc
+source ~/.zshrc
+```
+
+可能会出现 `nvm install node` 包括 `nvm ls-remote` 的时候都输出 `N/A`，输入以下来解决：
+
+```bash
+echo "export NVM_NODEJS_ORG_MIRROR=http://nodejs.org/dist " >> ~/.zshrc
+source ~/.zshrc
+```
+
 ### Anaconda
 
 因为需要使用 Python，于是说安装了 `anaconda`：
@@ -177,3 +191,11 @@ yay -S anaconda
 source /opt/anaconda/bin/activate root
 conda init zsh
 ```
+
+之后执行 `clear` 会出现一些问题，输出 `terminals database is inaccessible`，是因为 `clear` 和 conda 的指令出现了冲突，可以执行：
+
+```bash
+sudo mv $CONDA_PREFIX/bin/clear $CONDA_PREFIX/bin/clear_old
+```
+
+来解决这个问题。
