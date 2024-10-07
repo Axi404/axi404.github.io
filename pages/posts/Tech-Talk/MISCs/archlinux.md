@@ -199,3 +199,18 @@ sudo mv $CONDA_PREFIX/bin/clear $CONDA_PREFIX/bin/clear_old
 ```
 
 来解决这个问题。
+
+### ToDesk
+
+因为之前使用的 rustdesk 使用的是同学的服务器，所以说要做好替代的准备，于是安装了 ToDesk：
+
+```bash
+yay -S todesk-bin
+```
+
+但是在打开之后，会发现网络出错，这是因为没有开它的一些服务，所以需要执行以下指令：
+
+```bash
+sudo systemctl enable todeskd.service
+sudo systemctl start todeskd.service
+```
