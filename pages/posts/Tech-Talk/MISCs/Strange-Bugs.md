@@ -1,7 +1,7 @@
 ---
 title: 奇奇怪怪的 Bug 集散地
 excerpt: 平时遇到的奇怪代码问题，记录并整理。
-date: 2024-09-21 09:41:00+0800
+date: 2024-10-24 07:14:00+0800
 image: https://pic.axi404.top/117648512_p0.webp
 categories:
     - 'Tech Talk'
@@ -937,3 +937,11 @@ cmake ..
 make -j8
 sudo make install
 ```
+
+## Windows 新电脑配置
+
+最近换了新电脑，于是在新电脑里面配置了 Git 以及 Github，还是按照我自己一贯的方法，详情见 [西安交大生存指南贡献指南](https://survivexjtu.github.io/%E5%89%8D%E8%A8%80/%E8%B4%A1%E7%8C%AE%E6%8C%87%E5%8D%97.html)，但是出现了一些 Bugs。
+
+首先第一件事情就是使用 Git 的时候，在配置了密钥之后，SSH 还是会卡死，这个问题是因为 Git 版本导致的。我之前使用的是 `2.45.2` 版本，而现在已经变成了 `2.47.0`，不知道为什么就出现了这个问题。版本在 Git 的官网找不到，但是可以在 Git for Windows 的 [Github Releases 界面](https://github.com/git-for-windows/git/releases) 找到。
+
+然后就是在使用浏览器的时候，起因是因为我在使用 ToDesk 的时候，不知道操作了什么，有的时候会让电脑的 Web 相关的界面变得模糊，有点像是重影，这一现象可以通过关闭浏览器的硬件加速（或者叫做图形化 xxx）解决，但是 Wallpaper Engine 同样使用 Web 框架，暂时没找到对应的选项，其视频加速选项貌似不是。暂时不清楚是 CPU 问题还是电脑或者系统问题，希望将来的更新可以解决。
