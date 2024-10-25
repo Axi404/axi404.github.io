@@ -123,7 +123,7 @@ top: 1       # You can add weight to some posts to override the default sorting 
 
 不过遗憾的是，这一表格的投稿人很多，但是给出建议的群友，向来只有不几个，我也因此甚至自己请教了大量的前辈们，并且尝试给出自己的意见。也正是因为这个原因，加之以时间的流逝，和真正的保研的临近，这一表格后来也就慢慢被荒废了。
 
-接下来便是最近设计的又一创举，也是受到了广泛的传播，并且拿下了一百多个 star，也就是本人实现并维护的 [cs-baoyan-ddl](https://cs-baoyan.github.io/cs-baoyan-ddl/)。
+接下来便是最近设计的又一创举，也是受到了广泛的传播，并且拿下了一百多个 star，也就是本人实现并维护的 [cs-baoyan-ddl](https://cs-baoyan.github.io/CS-BAOYAN-DDL/)。
 
 起因是因为几位活跃群友在群中的讨论，想要构建一个项目，酷似 [ccfddl](https://ccfddl.github.io/)，可以实现对于夏令营截止日期的统计，而我看到了这一想法之后，由于之前对于网页制作稍有经验，并且更关键的是精通面向 GPT 的编程，因此只是短短的两个小时时间，这个网页便被搭建起来了，同时被我挂到了 Github Pages 上。
 

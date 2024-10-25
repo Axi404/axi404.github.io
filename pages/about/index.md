@@ -26,7 +26,7 @@ waline: true
   - 创作学科复习资料。
   - 维护《人工智能自学指南》，旨在为人工智能初学者提供快速入门的途径。
   - 更新《学点没用的》月刊，旨在为 CS/AI 领域学生/从业者提供可能不属于自己领域的优质教程，用于拓展知识面。
-- [CSBAOYANDDL](https://cs-baoyan.github.io/cs-baoyan-ddl/)：CS BAOYAN DDL 是计算机专业保研相关的 ccfddl-like 的 ddl 网站，统计计算机专业保研的夏令营/预推免信息。本项目在 [CS-BAOYAN](https://github.com/CS-BAOYAN) 名下，即计算机保研交流群（绿群）名下。
+- [CSBAOYANDDL](https://cs-baoyan.github.io/CS-BAOYAN-DDL/)：CS BAOYAN DDL 是计算机专业保研相关的 ccfddl-like 的 ddl 网站，统计计算机专业保研的夏令营/预推免信息。本项目在 [CS-BAOYAN](https://github.com/CS-BAOYAN) 名下，即计算机保研交流群（绿群）名下。
 - 其他：同时，我还活跃在 [XiStudyGroup](https://github.com/XiStudyGroup) 以及 [CS-BAOYAN](https://github.com/CS-BAOYAN) 两个群组中，并作为 owner 维护其中的项目，更多的更新可以 follow 我的 [Github 账号](https://github.com/Axi404)，或者相关组织。
 
 在休闲的部分，我正在致力于学习一些前端技巧，例如 JS 以及 Vue，开发自己的博客是一件令人激动的事情，然而我尚且在准备中。
