@@ -1,7 +1,7 @@
 ---
 title: 'Paper Reading: Embodied AI'
 excerpt: 从一些 Embodied AI 相关工作中扫过。
-date: 2024-09-09 01:23:00+0800
+date: 2024-10-26 05:06:00+0800
 image: https://pic.axi404.top/122142508_p0.6ik8ibaq1n.webp
 categories:
     - 'AI Talk'
@@ -273,3 +273,15 @@ MOKA 的思路其实本质上和 CoPa 以及 PIVOT 是十分类似的，都是�
 ![The pipeline of RoboPoint](https://pic.axi404.top/image.7egpxqs4ur.webp)
 
 RoboPoint 这篇论文可以说也是很简单粗暴，也算是大力出奇迹了，大概就是去做一个 point grounding 的一个模型。事实上我并不认为这种模型算是真正的具身智能的模型，而是纯粹的 perception 的模型。具体来说，因为这个模型只具有一些 grounding 能力，而即使是输出 high-level policy 的 ViLA，其输出的 plan 也是包含机器人相关的规划，并且应该具有像是 SayCan 一样的 awareness，类似于机器人能做什么，不能做什么。这一篇的 pipeline 里面貌似就是只是单纯的输出点的坐标，用 point grounding/bbox grounding/VQA 来训练了一个 13B 的模型，而且效果也没有很显著，或者似乎可以说是 MOKA 的一种 one step 的 end2end 版本。
+
+## GR-1
+
+论文链接：[https://arxiv.org/abs/2312.13139](https://arxiv.org/abs/2312.13139)
+
+![The pipeline of GR-1](https://pic.axi404.top/image.26lhazlhda.webp)
+
+GR-1 可以说是一个很不错的经典工作了，用了十分直接的方法，效果也很不错。具体来说先在人类数据上训练，然后放到机器人数据里面进行 fine-tune。执行的 Task 有两个，一个是预测图片（多张图片，也可以说是视频），一个是预测动作，见下图。
+
+![](https://pic.axi404.top/image.6f0oktcu0x.webp)
+
+这里面令我比较疑惑（也是因为我不是很懂）的是，既然在预训练的时候是没有状态的输入以及动作的输出的，那这两个编码器和解码器应该在那时候如何处理，是直接 blind 掉吗，那岂不是会导致一种 bias 存在。但是除此之外还是很好理解的，说白了就是 world model 的思想，通过预测视频来预测未来，从而认为模型可以 train 出来对于世界如何运作的理解，然后在这个基础上进行微调。从数据的角度来看，这种使用视频预测的策略确实很不错，因为只要存在一个文字视频对（应该不少），那么就可以大量地进行 scaling up。不过实验里面有所欠缺，以及我比较希望看到的现象，不是单纯的提点，而是假如说存在这样一个情况：人类示教视频中进行了一个动作，而这个动作是并不在机器人的数据里面，但是在实验中机器人可以执行，而且几乎是从 0 到比较高的一个成功率，那么就很能体现 scaling up 的意义了。因为加入的大量人类视频数据里面学习到的 skill 可以 transfer 到机器人的动作能力中。毕竟人类数据很多，而且录制起来也很简单，这就会成为一种未来。
