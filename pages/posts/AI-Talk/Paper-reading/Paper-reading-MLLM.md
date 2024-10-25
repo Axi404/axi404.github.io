@@ -21,7 +21,7 @@ Noting 的是，全部的内容都是直接基于论文阅读的，参考资料�
 
 ## CLIP
 
-论文链接：[https://arxiv.org/pdf/2103.00020](https://arxiv.org/pdf/2103.00020)
+论文链接：[https://arxiv.org/abs/2103.00020](https://arxiv.org/abs/2103.00020)
 
 ![The pipeline of CLIP](https://pic.axi404.top/CLIP.7ljx88ttzm.webp)
 
@@ -39,7 +39,7 @@ CLIP 在某种程度上也可以说是一个开山之作，虽然说对多模态
 
 ## ViLT
 
-论文链接：[https://arxiv.org/pdf/2102.03334](https://arxiv.org/pdf/2102.03334)
+论文链接：[https://arxiv.org/abs/2102.03334](https://arxiv.org/abs/2102.03334)
 
 ![The pipeline of ViLT](https://pic.axi404.top/ViLT.67xe47irzd.webp)
 
@@ -58,7 +58,7 @@ ViLT 也算是比较经典的多模态领域的工作了，这里面需要说的
 
 ## ALBEF
 
-论文链接：[https://arxiv.org/pdf/2107.07651](https://arxiv.org/pdf/2107.07651)
+论文链接：[https://arxiv.org/abs/2107.07651](https://arxiv.org/abs/2107.07651)
 
 ![The pipeline of ALBEF](https://pic.axi404.top/ALBEF.1ovd18db0t.webp)
 
@@ -74,7 +74,7 @@ ViLT 也算是比较经典的多模态领域的工作了，这里面需要说的
 
 ## VLMo
 
-论文链接：[https://arxiv.org/pdf/2111.02358](https://arxiv.org/pdf/2111.02358)
+论文链接：[https://arxiv.org/abs/2111.02358](https://arxiv.org/abs/2111.02358)
 
 ![The pipeline of VLMo](https://pic.axi404.top/VLMo.6t71qid8a3.webp)
 
@@ -94,7 +94,7 @@ VLMo 也可以说是一个比较经典的工作，其中提出的主要就是 Mo
 
 ## BLIP
 
-论文链接：[https://arxiv.org/pdf/2201.12086](https://arxiv.org/pdf/2201.12086)
+论文链接：[https://arxiv.org/abs/2201.12086](https://arxiv.org/abs/2201.12086)
 
 ![The pipeline of BLIP](https://pic.axi404.top/BLIP.3d4pyf3l73.webp)
 
@@ -112,7 +112,7 @@ BLIP 的重点在于，ALBEF 只关注到了 MLM 生成的高质量，然后就�
 
 ## CoCa
 
-论文链接：[https://arxiv.org/pdf/2205.01917](https://arxiv.org/pdf/2205.01917)
+论文链接：[https://arxiv.org/abs/2205.01917](https://arxiv.org/abs/2205.01917)
 
 ![The pipeline of CoCa](https://pic.axi404.top/CoCa.41xzifr47n.webp)
 
@@ -128,7 +128,7 @@ CoCa 可以说和 ALBEF 十分的相似，基本上就是和 ALBEF 一模一样�
 
 ## BEiT V3
 
-论文链接：[https://arxiv.org/pdf/2208.10442](https://arxiv.org/pdf/2208.10442)
+论文链接：[https://arxiv.org/abs/2208.10442](https://arxiv.org/abs/2208.10442)
 
 ![The pipeline of BEiT V3](https://pic.axi404.top/BEiT_V3.8l00lewl5a.webp)
 
@@ -142,7 +142,7 @@ CoCa 可以说和 ALBEF 十分的相似，基本上就是和 ALBEF 一模一样�
 
 ## BLIP2
 
-论文链接：[https://arxiv.org/pdf/2301.12597](https://arxiv.org/pdf/2301.12597)
+论文链接：[https://arxiv.org/abs/2301.12597](https://arxiv.org/abs/2301.12597)
 
 虽然说名字叫做 BLIP2，但是实际上感觉模型的结构上区别还是很大的，只是说任务比较类似而已。
 
@@ -162,7 +162,7 @@ Stage-1 和正常的 ALBEF 区别不大，之后 stage-2 把输出过 MLP 送给
 
 ## LLava
 
-论文链接：[https://arxiv.org/pdf/2304.08485](https://arxiv.org/pdf/2304.08485)
+论文链接：[https://arxiv.org/abs/2304.08485](https://arxiv.org/abs/2304.08485)
 
 ![The pipeline of LLava](https://pic.axi404.top/LLava.9rjbu0lhr3.webp)
 

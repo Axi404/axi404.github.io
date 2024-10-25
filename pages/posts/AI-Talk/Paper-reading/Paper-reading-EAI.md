@@ -20,7 +20,7 @@ Embodied AI 是一个比较新的领域，而且可能横跨的任务也很多�
 
 ## RT-1
 
-论文链接：[https://arxiv.org/pdf/2212.06817](https://arxiv.org/pdf/2212.06817)
+论文链接：[https://arxiv.org/abs/2212.06817](https://arxiv.org/abs/2212.06817)
 
 ![The pipeline of RT-1](https://pic.axi404.top/RT-1.4uav067pyb.webp)
 
@@ -34,7 +34,7 @@ RT-1 讲实话结构并不是很好，但是一是在于数据量大，二是在
 
 ## RT-2
 
-论文链接：[https://arxiv.org/pdf/2307.15818](https://arxiv.org/pdf/2307.15818)
+论文链接：[https://arxiv.org/abs/2307.15818](https://arxiv.org/abs/2307.15818)
 
 ![The pipeline of RT-2](https://pic.axi404.top/RT-2.4xugxw0so5.webp)
 
@@ -46,7 +46,7 @@ RT-2 的结构就十分的合理了，使用一个大的 transformer（其实也
 
 ## VIMA
 
-论文链接：[https://arxiv.org/pdf/2210.03094](https://arxiv.org/pdf/2210.03094)
+论文链接：[https://arxiv.org/abs/2210.03094](https://arxiv.org/abs/2210.03094)
 
 ![The pipeline of VIMA](https://pic.axi404.top/VIMA.pf9o2ajvu.webp)
 
@@ -60,7 +60,7 @@ VIMA 也算是比较早期的工作了，没有使用 LLM，但是是有一定�
 
 ## SayCan
 
-论文链接：[https://arxiv.org/pdf/2204.01691](https://arxiv.org/pdf/2204.01691)
+论文链接：[https://arxiv.org/abs/2204.01691](https://arxiv.org/abs/2204.01691)
 
 ![The pipeline of SayCan](https://pic.axi404.top/SayCan.7p3j5ymwpy.webp)
 
@@ -74,7 +74,7 @@ SayCan 可以说是在做这种规划任务里面比较早的了，但是也存�
 
 ## Language Models as Zero-Shot Planners
 
-论文链接：[https://arxiv.org/pdf/2201.07207](https://arxiv.org/pdf/2201.07207)
+论文链接：[https://arxiv.org/abs/2201.07207](https://arxiv.org/abs/2201.07207)
 
 ![The pipeline of Language Models as Zero-Shot Planners](https://pic.axi404.top/lmzsp.syvls3mlc.webp)
 
@@ -88,7 +88,7 @@ SayCan 可以说是在做这种规划任务里面比较早的了，但是也存�
 
 ## PaLM-E
 
-论文链接：[https://arxiv.org/pdf/2303.03378](https://arxiv.org/pdf/2303.03378)
+论文链接：[https://arxiv.org/abs/2303.03378](https://arxiv.org/abs/2303.03378)
 
 ![The pipeline of PaLM-E](https://pic.axi404.top/PaLM-E.4cktbl6cde.webp)
 
@@ -100,7 +100,7 @@ PaLM-E 可以说就是就是对于上述种种猜想的一个实际的体现，�
 
 ## ViLA
 
-论文链接：[https://arxiv.org/pdf/2311.17842](https://arxiv.org/pdf/2311.17842)
+论文链接：[https://arxiv.org/abs/2311.17842](https://arxiv.org/abs/2311.17842)
 
 ![The pipeline of ViLA](https://pic.axi404.top/ViLA.60u68rwmjs.webp)
 
@@ -110,7 +110,7 @@ PaLM-E 可以说就是就是对于上述种种猜想的一个实际的体现，�
 
 ## CoPa
 
-论文链接：[https://arxiv.org/pdf/2403.08248](https://arxiv.org/pdf/2403.08248)
+论文链接：[https://arxiv.org/abs/2403.08248](https://arxiv.org/abs/2403.08248)
 
 ![The pipeline of CoPa](https://pic.axi404.top/CoPa.5fkimh268l.webp)
 
@@ -120,7 +120,7 @@ CoPa 的工程感更足，把大量的模型结合在一起。总的来说首先
 
 ## PointLLM
 
-论文链接：[https://arxiv.org/pdf/2308.16911](https://arxiv.org/pdf/2308.16911)
+论文链接：[https://arxiv.org/abs/2308.16911](https://arxiv.org/abs/2308.16911)
 
 ![The pipeline of PointLLM](https://pic.axi404.top/PointLLM.13lpexj2yz.webp)
 
@@ -128,7 +128,7 @@ PointLLM 可以是说十分标志的工作了，属于是中规中矩，但是�
 
 ## EmbodiedGPT
 
-论文链接：[https://arxiv.org/pdf/2305.15021](https://arxiv.org/pdf/2305.15021)
+论文链接：[https://arxiv.org/abs/2305.15021](https://arxiv.org/abs/2305.15021)
 
 ![The pipeline of EmbodiedGPT](https://pic.axi404.top/EmbodiedGPT.9kg3ykzkji.webp)
 
@@ -138,7 +138,7 @@ EmbodiedGPT 也是一篇比较符合直觉的工作，但是不是那么的极�
 
 ## RT-Trajectory
 
-论文链接：[https://arxiv.org/pdf/2311.01977](https://arxiv.org/pdf/2311.01977)
+论文链接：[https://arxiv.org/abs/2311.01977](https://arxiv.org/abs/2311.01977)
 
 ![The pipeline of RT-Trajectory](https://pic.axi404.top/RT-Trajectory.7w6r1e9adp.webp)
 
@@ -146,7 +146,7 @@ RT-Trajectory 是一个输出 low-level policy 的模型，使用了 RT-1 的框
 
 ## Im2Flow2Act
 
-论文链接：[https://arxiv.org/pdf/2407.15208](https://arxiv.org/pdf/2407.15208)
+论文链接：[https://arxiv.org/abs/2407.15208](https://arxiv.org/abs/2407.15208)
 
 ![The pipeline of Im2Flow2Act](https://pic.axi404.top/Im2Flow2Act.3nrjrkj1kx.webp)
 
@@ -164,7 +164,7 @@ Im2Flow2Act 算是一篇比较有意思的工作，本身应该是 ATM 的后续
 
 ## LLARVA
 
-论文链接：[https://arxiv.org/pdf/2406.11815](https://arxiv.org/pdf/2406.11815)
+论文链接：[https://arxiv.org/abs/2406.11815](https://arxiv.org/abs/2406.11815)
 
 ![The pipeline of LLARVA](https://pic.axi404.top/LLARVA.175bcnc5ok.webp)
 
@@ -176,7 +176,7 @@ LLARVA 相较于之前的工作，可以说也是一个比较符合直觉的工�
 
 ## ATM
 
-论文链接：[https://arxiv.org/pdf/2401.00025](https://arxiv.org/pdf/2401.00025)
+论文链接：[https://arxiv.org/abs/2401.00025](https://arxiv.org/abs/2401.00025)
 
 ![The pipeline of ATM](https://pic.axi404.top/ATM.wihjhwxip.webp)
 
@@ -190,7 +190,7 @@ LLARVA 相较于之前的工作，可以说也是一个比较符合直觉的工�
 
 ## Track2Act
 
-论文链接：[https://arxiv.org/pdf/2405.01527](https://arxiv.org/pdf/2405.01527)
+论文链接：[https://arxiv.org/abs/2405.01527](https://arxiv.org/abs/2405.01527)
 
 ![DiT of Track2Act](https://pic.axi404.top/Track2Act.231ss3lu4u.webp)
 
@@ -202,7 +202,7 @@ LLARVA 相较于之前的工作，可以说也是一个比较符合直觉的工�
 
 ## Extreme Cross-Embodiment
 
-论文链接：[https://arxiv.org/pdf/2402.19432](https://arxiv.org/pdf/2402.19432)
+论文链接：[https://arxiv.org/abs/2402.19432](https://arxiv.org/abs/2402.19432)
 
 ![The pipeline of Extreme Cross-Embodiment](https://pic.axi404.top/Extreme-Cross-Embodiment.70a9lxzlxc.webp)
 
@@ -212,7 +212,7 @@ LLARVA 相较于之前的工作，可以说也是一个比较符合直觉的工�
 
 ## ECoT
 
-论文链接：[https://arxiv.org/pdf/2407.08693](https://arxiv.org/pdf/2407.08693)
+论文链接：[https://arxiv.org/abs/2407.08693](https://arxiv.org/abs/2407.08693)
 
 ![The pipeline of ECoT](https://pic.axi404.top/ECoT.45m1rgbst.webp)
 
@@ -220,7 +220,7 @@ ECoT 这篇文章其实算是中规中矩，就是正常的 CoT，但是加入�
 
 ## VoxPoser
 
-论文链接：[https://arxiv.org/pdf/2307.05973](https://arxiv.org/pdf/2307.05973)
+论文链接：[https://arxiv.org/abs/2307.05973](https://arxiv.org/abs/2307.05973)
 
 ![The pipeline of VoxPoser](https://pic.axi404.top/VoxPoser.8ad6s9hl8y.webp)
 
@@ -228,7 +228,7 @@ VoxPoser 这一篇其实我不太理解，其本身是通过 LLM 以及 VLM 获�
 
 ## MOO
 
-论文链接：[https://arxiv.org/pdf/2303.00905](https://arxiv.org/pdf/2303.00905)
+论文链接：[https://arxiv.org/abs/2303.00905](https://arxiv.org/abs/2303.00905)
 
 ![The pipeline of MOO](https://pic.axi404.top/MOO.175bcnc5op.webp)
 
@@ -238,13 +238,13 @@ MOO 的 pipeline 也很简单，本身甚至可以说设置了一个 hard task�
 
 ## ChatGPT for Robotics
 
-论文链接：[https://arxiv.org/pdf/2306.17582](https://arxiv.org/pdf/2306.17582)
+论文链接：[https://arxiv.org/abs/2306.17582](https://arxiv.org/abs/2306.17582)
 
 本身可以理解为使用 ChatGPT 去做机器人的一个发散性的思考，同时提出了诸如 PromptCraft 之类的工具。
 
 ## PIVOT
 
-论文链接：[https://arxiv.org/pdf/2402.07872](https://arxiv.org/pdf/2402.07872)
+论文链接：[https://arxiv.org/abs/2402.07872](https://arxiv.org/abs/2402.07872)
 
 ![The pipeline of PIVOT](https://pic.axi404.top/PIVOT.2krugon7pm.webp)
 
@@ -252,7 +252,7 @@ MOO 的 pipeline 也很简单，本身甚至可以说设置了一个 hard task�
 
 ## Code As Policies
 
-论文链接：[https://arxiv.org/pdf/2209.07753](https://arxiv.org/pdf/2209.07753)
+论文链接：[https://arxiv.org/abs/2209.07753](https://arxiv.org/abs/2209.07753)
 
 <img src="https://pic.axi404.top/Code-As-Policies.3k7xtupyus.webp" alt="The pipeline of Code As Policies" style="display: block; margin: 0 auto; zoom: 100%;">
 
@@ -260,7 +260,7 @@ MOO 的 pipeline 也很简单，本身甚至可以说设置了一个 hard task�
 
 ## MOKA
 
-论文链接：[https://arxiv.org/pdf/2403.03174](https://arxiv.org/pdf/2403.03174)
+论文链接：[https://arxiv.org/abs/2403.03174](https://arxiv.org/abs/2403.03174)
 
 ![The pipeline of MOKA](https://pic.axi404.top/MOKA.86tkujoiiw.webp)
 
@@ -268,7 +268,7 @@ MOKA 的思路其实本质上和 CoPa 以及 PIVOT 是十分类似的，都是�
 
 ## RoboPoint
 
-论文链接：[https://arxiv.org/pdf/2406.10721](https://arxiv.org/pdf/2406.10721)
+论文链接：[https://arxiv.org/abs/2406.10721](https://arxiv.org/abs/2406.10721)
 
 ![The pipeline of RoboPoint](https://pic.axi404.top/image.7egpxqs4ur.webp)
 
