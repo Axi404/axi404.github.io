@@ -19,7 +19,7 @@ codeHeightLimit: 300
 
 ### 安装软件
 
-- 下载软件 NextChat，网址是：`NextChat_2.15.6_x64-setup.exe`。
+- 下载软件 NextChat，网址是 [https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases)。
 
 <img src="https://pic.axi404.top/image.1hs7tvsckm.webp" alt="image" style="zoom: 50%;"/>
 
