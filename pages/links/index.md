@@ -47,8 +47,15 @@ waline: true
       name: '小树',
       url: 'https://blog.juniortree.com',
       image: 'https://pic.axi404.top/xiaoshu.7sn53widtv.webp',
-      color: '#e9546b',
+      color: '#f6aaae',
       desc: '「妳突然對我説 七里香的名字很美」',
+    },
+    {
+      name: 'liangbm3\'s blog',
+      url: 'https://liangbm3.top/',
+      image: 'https://liangbm3.top/img/lbm.jpg',
+      color: '#ffe4e6',
+      desc: 'Bug producer and Environmental Engineer',
     },
   ]"
 />
