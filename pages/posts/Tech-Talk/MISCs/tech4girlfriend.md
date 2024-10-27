@@ -2,7 +2,7 @@
 title: 给乐小姐的教程
 excerpt: 给女朋友的教程，所以从计算机完全零基础出发，教授一些学习生活中常用的技能。
 date: 2024-10-28 05:49:00+0800
-image: https://pic.axi404.top/86616238_p0.3yeek84471.webp
+image: https://pic.axi404.top/120378889_p0.9kg4why5mh.webp
 categories:
     - 'Tech Talk'
     - 'MISCs'
