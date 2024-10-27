@@ -38,14 +38,14 @@ waline: true
   :links="[
     {
       name: '主治医师李大华',
-      url: 'https://ilovebread.buzz',
+      url: 'https://daju233.vercel.app/',
       image: 'https://pic.axi404.top/Assyrian.4qr92oh1mq.webp',
       color: '#e9546b',
       desc: '何地才是樂土，讓競爭做指數。',
     },
     {
       name: '小树',
-      url: 'https://blog.juniortree.com',
+      url: 'https://duckk.org/',
       image: 'https://pic.axi404.top/xiaoshu.7sn53widtv.webp',
       color: '#f6aaae',
       desc: '「妳突然對我説 七里香的名字很美」',
