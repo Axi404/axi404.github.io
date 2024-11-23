@@ -51,11 +51,13 @@ NextChat 是一个开源项目，可以直接在 NextChat 中使用 GPT API，�
 
 这些 GPT 转发站都是我随手收集来的，假如有站主或者其他同学有其他的转发站想要推荐或者推广，也可以在下面留言，我会进行更新，本身不支持充值，按照价格以及站名字典序排序。本人只是进行信息收集，大家在充值的过程中需要小心转发站跑路的可能性，本人已经进行了警告，不负任何责任。以下格式为，\[网址，汇率（美元 : 人民币）\]。
 
-- [https://api.kksj.org/](https://api.kksj.org/)，1 : 0.9。
-- [https://api.gptai.cc/](https://api.gptai.cc/)，1 : 1.5。
-- [https://api.nekoapi.com/](https://api.nekoapi.com/)，1 : 1.5。
-- [https://gpt.0kk.top/](https://gpt.0kk.top/)，1 : 1.5。
-- [https://api.oneabc.org/](https://api.oneabc.org/)，1 : 2.1。
-- [https://aigcbest.top/](https://aigcbest.top/)，1 : 3。
-- [https://aium.cc/](https://aium.cc/)，1 : 3.5。
-- [https://sg.uiuiapi.com/](https://sg.uiuiapi.com/)，1 : 3.37。
+| 网址 | 汇率 |
+| --- | --- |
+| [https://api.kksj.org/](https://api.kksj.org/) | 1 : 0.9 |
+| [https://api.gptai.cc/](https://api.gptai.cc/) | 1 : 1.5 |
+| [https://api.nekoapi.com/](https://api.nekoapi.com/) | 1 : 1.5 |
+| [https://gpt.0kk.top/](https://gpt.0kk.top/) | 1 : 1.5 |
+| [https://api.oneabc.org/](https://api.oneabc.org/) | 1 : 2.1 |
+| [https://aigcbest.top/](https://aigcbest.top/) | 1 : 3 |
+| [https://aium.cc/](https://aium.cc/) | 1 : 3.5 |
+| [https://sg.uiuiapi.com/](https://sg.uiuiapi.com/) | 1 : 3.37 |
