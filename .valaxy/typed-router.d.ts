@@ -66,6 +66,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes': RouteRecordInfo<'/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes', '/posts/Tech-Talk/Isaac-Sim/Isaac-Sim-Notes', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/anygrasp': RouteRecordInfo<'/posts/Tech-Talk/MISCs/anygrasp', '/posts/Tech-Talk/MISCs/anygrasp', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/archlinux': RouteRecordInfo<'/posts/Tech-Talk/MISCs/archlinux', '/posts/Tech-Talk/MISCs/archlinux', Record<never, never>, Record<never, never>>,
+    '/posts/Tech-Talk/MISCs/gpt_collection': RouteRecordInfo<'/posts/Tech-Talk/MISCs/gpt_collection', '/posts/Tech-Talk/MISCs/gpt_collection', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/ImageBed': RouteRecordInfo<'/posts/Tech-Talk/MISCs/ImageBed', '/posts/Tech-Talk/MISCs/ImageBed', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/LittleSkills': RouteRecordInfo<'/posts/Tech-Talk/MISCs/LittleSkills', '/posts/Tech-Talk/MISCs/LittleSkills', Record<never, never>, Record<never, never>>,
     '/posts/Tech-Talk/MISCs/Strange-Bugs': RouteRecordInfo<'/posts/Tech-Talk/MISCs/Strange-Bugs', '/posts/Tech-Talk/MISCs/Strange-Bugs', Record<never, never>, Record<never, never>>,
