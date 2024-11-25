@@ -12,15 +12,15 @@
   },
   "dependencies": {
     "valaxy": "0.19.2",
-    "valaxy-addon-meting": "^0.1.3",
+    "valaxy-addon-meting": "^0.1.4",
     "valaxy-addon-waline": "^0.2.0",
     "valaxy-theme-hairy": "1.2.7",
     "valaxy-theme-yun": "0.19.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
-    "eslint": "^8.57.0",
-    "typescript": "^5.5.4"
+    "eslint": "^8.57.1",
+    "typescript": "^5.7.2"
   },
   "pnpm": {
     "peerDependencyRules": {

@@ -11,3 +11,5 @@ tags:
     - 'Weekly Journal'
 top: 1
 ---
+
+可以说这一周是一个全新的开始了。
