@@ -57,5 +57,12 @@ waline: true
       color: '#ffe4e6',
       desc: 'Bug producer and Environmental Engineer',
     },
+    {
+      name: 'FrenchPicnic',
+      url: 'https://frenchpicnic.github.io/',
+      image: 'https://frenchpicnic.github.io/images/kawa.jpg',
+      color: '#ffa500',
+      desc: 'There\'s no undo and there\'s no repeat. Can\'t go back to how we used to be.',
+    },
   ]"
 />
