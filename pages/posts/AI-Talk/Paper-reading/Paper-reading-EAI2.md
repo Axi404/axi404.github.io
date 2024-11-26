@@ -1,7 +1,7 @@
 ---
 title: 'Paper Reading: Embodied AI 2'
 excerpt: 从一些 Embodied AI 相关工作中扫过。
-date: 2024-10-28 06:59:00+0800
+date: 2024-11-26 09:57:00+0800
 image: https://pic.axi404.top/118143618_p0.7p3lcyb9vq.webp
 categories:
     - 'AI Talk'
@@ -49,3 +49,11 @@ HPT 是 Kaiming He 团队在具身领域的新作，可以说是很直接也很�
 论文链接：[https://arxiv.org/abs/2410.10803](https://arxiv.org/abs/2410.10803)
 
 这篇文章其实也很直接，说白了就是一篇对于 DP3 的 Scaling up 的论文。里面提出了一种 iDP3，也就是一个 improved 的方法，但是其实就是一些 trick 的集合，在这里也进行一下介绍。第一个就是 camera centric 的 point cloud 输入，这个应该是利好数据预处理的，而且 scaling up 也比较简单；然后就是下采样少一些，这个其实也可以拓展思考一下，其实是不是可以进行上采用呢，用一些模型对点云进行超分；然后就是把视觉编码器的 MLP 变成卷积，这个应该是经验之谈，可以让输出更加平滑，也可以得到更多的编码内容；以及预测更长时间，这个自然会更好。最后从结果来看，Scaling up 的结果很好，皆大欢喜。
+
+## Surfer
+
+论文链接：[https://arxiv.org/abs/2306.11335](https://arxiv.org/abs/2306.11335)
+
+![Surfer](https://pic.axi404.top/Surfer.8adam0a9tq.webp)
+
+这篇论文里面主要提出了一个 World Model，
