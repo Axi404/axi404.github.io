@@ -55,6 +55,11 @@ export default defineConfig<ThemeConfig>({
         icon: 'i-material-symbols-monitor-heart',
       },
       {
+        text: 'Web Navigation',
+        link: '/navs/',
+        icon: 'i-material-symbols-monitor-heart',
+      },
+      {
         text: 'Github',
         link: 'https://github.com/Axi404',
         icon: 'i-ri-github-fill',

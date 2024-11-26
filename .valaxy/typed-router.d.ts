@@ -27,6 +27,7 @@ declare module 'vue-router/auto-routes' {
     '/categories/': RouteRecordInfo<'/categories/', '/categories', Record<never, never>, Record<never, never>>,
     '/categories/[...its]': RouteRecordInfo<'/categories/[...its]', '/categories/:its(.*)', { its: ParamValue<true> }, { its: ParamValue<false> }>,
     '/links/': RouteRecordInfo<'/links/', '/links', Record<never, never>, Record<never, never>>,
+    '/navs/': RouteRecordInfo<'/navs/', '/navs', Record<never, never>, Record<never, never>>,
     '/page/[page]': RouteRecordInfo<'/page/[page]', '/page/:page', { page: ParamValue<true> }, { page: ParamValue<false> }>,
     '/posts/AI-Talk/Code-reading/openvla-reading': RouteRecordInfo<'/posts/AI-Talk/Code-reading/openvla-reading', '/posts/AI-Talk/Code-reading/openvla-reading', Record<never, never>, Record<never, never>>,
     '/posts/AI-Talk/Paper-reading/Paper-reading-0': RouteRecordInfo<'/posts/AI-Talk/Paper-reading/Paper-reading-0', '/posts/AI-Talk/Paper-reading/Paper-reading-0', Record<never, never>, Record<never, never>>,
