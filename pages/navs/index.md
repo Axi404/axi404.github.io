@@ -27,7 +27,7 @@ waline: true
       name: 'RMVision-001',
       url: 'https://xjtu-rmv.github.io/',
       image: 'https://pic.axi404.top/ec03f7734704669b3cb0ec9cb3b2c743525c05da.jpg@240w_240h_1c_1s_!web-avatar-space-header.6bh3wu99ow.webp',
-      color: '#FFE4E6',
+      color: '#323232',
       desc: '西安交大视觉组教程。',
     },
     {
@@ -66,6 +66,13 @@ waline: true
 <hairy-links 
   :links="[
     {
+      name: 'Github',
+      url: 'https://github.com/',
+      image: 'https://github.com/favicon.ico',
+      color: '#171515',
+      desc: '代码仓库。',
+    },
+    {
       name: '蜜柑计划',
       url: 'https://mikanani.me/',
       image: 'https://mikanani.me/favicon.ico',
@@ -78,6 +85,27 @@ waline: true
       image: 'https://vcb-s.com/favicon.ico',
       color: '#CB938D',
       desc: '动漫资源修复发布。',
+    },
+    {
+      name: 'Anime Garden',
+      url: 'https://garden-fly.breadio.wiki/',
+      image: 'https://garden-fly.breadio.wiki/favicon.ico',
+      color: '#8E85A2',
+      desc: '追番，使用 torrent 下载。',
+    },
+    {
+      name: 'Pixiv',
+      url: 'https://www.pixiv.net/',
+      image: 'https://www.pixiv.net/favicon.ico',
+      color: '#0097FA',
+      desc: '二次元插画网站。',
+    },
+    {
+      name: '哔哩哔哩',
+      url: 'https://www.bilibili.com/',
+      image: 'https://www.bilibili.com/favicon.ico',
+      color: '#00A1D6',
+      desc: '视频平台。',
     },
   ]"
 />
@@ -117,7 +145,7 @@ waline: true
     {
       name: '1password',
       url: 'https://1password.com/zh-cn/password-generator/',
-      image: 'https:/pic.axi404.top/image.lvrlfbjhb.webp',
+      image: 'https://pic.axi404.top/image.lvrlfbjhb.webp',
       color: '#1A285E',
       desc: '生成复杂密码。',
     },
@@ -128,11 +156,38 @@ waline: true
       color: '#1A285E',
       desc: 'RPG Maker 存档在线修改。',
     },
+    {
+      name: 'simpletex',
+      url: 'https://simpletex.cn/',
+      image: 'https://simpletex.cn/favicon.ico',
+      color: '#2F9AB8',
+      desc: '公式编辑器/图像转公式。',
+    },
+    {
+      name: 'Chat with paper',
+      url: 'https://academic.chatwithpaper.org/',
+      image: 'https://academic.chatwithpaper.org/favicon.ico',
+      color: '#7FCFEC',
+      desc: '学术版 GPT 网页非盈利版。',
+    },
+    {
+      name: 'LeanCloud',
+      url: 'https://console.leancloud.app/apps/',
+      image: 'https://console.leancloud.app/favicon.ico',
+      color: '#2C97E8',
+      desc: 'BaaS 平台。',
+    },
+    {
+      name: 'GisCus',
+      url: 'https://giscus.app/zh-CN/',
+      image: 'https://giscus.app/favicon.ico',
+      color: '#010305',
+      desc: 'Github 托管评论。',
+    },
   ]"
 />
 
 ## 科研
-
 
 <hairy-links 
   :links="[
@@ -150,13 +205,75 @@ waline: true
       color: '#FF9800',
       desc: '每日刷论文。',
     },
+    {
+      name: 'Google Scholar',
+      url: 'https://scholar.google.com/',
+      image: 'https://scholar.google.com/favicon.ico',
+      color: '#A1C4FF',
+      desc: '谷歌学术搜索。',
+    },
+    {
+      name: 'Overleaf',
+      url: 'https://www.overleaf.com/project/',
+      image: 'https://www.overleaf.com/favicon.ico',
+      color: '#076732',
+      desc: '在线 LaTeX 编辑器。',
+    },
+    {
+      name: 'AutoDL',
+      url: 'https://www.autodl.com/',
+      image: 'https://www.autodl.com/favicon.png',
+      color: '#1F95FF',
+      desc: '租卡平台。',
+    },
+    {
+      name: 'ORCID',
+      url: 'https://orcid.org/',
+      image: 'https://orcid.org/assets/icons/favicon.ico',
+      color: '#A7CF39',
+      desc: '学术标识管理。',
+    },
   ]"
 />
 
-## Wikis
-
+## Wikis & Docs
 <hairy-links 
   :links="[
+    {
+      name: 'Isaac Sim 文档',
+      url: 'https://docs.omniverse.nvidia.com/py/isaacsim/source/extensions/omni.isaac.core/docs/index.html',
+      image: 'https://docs.omniverse.nvidia.com/py/isaacsim/_static/favicon.ico',
+      color: '#6EAD00',
+      desc: 'Isaac Sim Python API 文档。',
+    },
+    {
+      name: 'USD 文档',
+      url: 'https://docs.omniverse.nvidia.com/dev-guide/latest/programmer_ref/usd.html',
+      image: 'https://pic.axi404.top/image.5fkmipfo2v.webp',
+      color: '#000000',
+      desc: 'USD Python API 文档。',
+    },
+    {
+      name: 'PXR USD 文档',
+      url: 'https://docs.omniverse.nvidia.com/kit/docs/pxr-usd-api/latest/pxr.html',
+      image: 'https://docs.omniverse.nvidia.com/kit/docs/pxr-usd-api/latest/_static/favicon.ico',
+      color: '#6EAD00',
+      desc: 'PXR USD Python API 文档。',
+    },
+    {
+      name: 'MPLib 文档',
+      url: 'https://motion-planning-lib.readthedocs.io/latest/index.html',
+      image: 'https://motion-planning-lib.readthedocs.io/favicon.ico',
+      color: '#465158',
+      desc: 'MPLib Python API 文档。',
+    },
+    {
+      name: 'cuRobo 文档',
+      url: 'https://curobo.org/index.html',
+      image: 'https://pic.axi404.top/image.5fkmipfo2v.webp',
+      color: '#000000',
+      desc: 'cuRobo Python API 文档。',
+    },
     {
       name: 'CTF-Wiki',
       url: 'https://ctf-wiki.org/',
@@ -184,6 +301,34 @@ waline: true
       image: 'https://Axi404.github.io/picx-images-hosting/image.5j48f644e7.webp',
       color: '#1793D1',
       desc: 'Arch 维基百科。',
+    },
+  ]"
+/>
+
+## 资源
+
+<hairy-links 
+  :links="[
+    {
+      name: '清华大学开源软件镜像站',
+      url: 'https://mirrors.tuna.tsinghua.edu.cn/',
+      image: 'https://mirrors.tuna.tsinghua.edu.cn/static/img/logo-small-dark.png',
+      color: '#19B5FE',
+      desc: '清华大学开源软件镜像站。',
+    },
+    {
+      name: '欣辰宝库',
+      url: 'https://www.me83.com/',
+      image: 'https://www.me83.com/img/favicon.ico',
+      color: '#C5C5C5',
+      desc: '工科常见软件下载。',
+    },
+    {
+      name: 'GinsMooc',
+      url: 'https://ginnnnnn.top/mooc',
+      image: 'https://ginnnnnn.top/favicon.png',
+      color: '#217DFF',
+      desc: 'MOOC 部分答案资源。',
     },
   ]"
 />
