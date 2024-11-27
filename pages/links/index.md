@@ -64,5 +64,12 @@ waline: true
       color: '#ffa500',
       desc: 'There\'s no undo and there\'s no repeat. Can\'t go back to how we used to be.',
     },
+    {
+      name: '尚书’s blog',
+      url: 'https://tzr.icu/',
+      image: 'https://tzr.icu/img/ganyu_avatar.jpg',
+      color: '#66CCFF',
+      desc: '我们会在更光明的地方相遇',
+    },
   ]"
 />
