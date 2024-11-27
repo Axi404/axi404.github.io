@@ -114,6 +114,42 @@ waline: true
       color: '#613CE7',
       desc: '在线语音转文字。',
     },
+    {
+      name: '1password',
+      url: 'https://1password.com/zh-cn/password-generator/',
+      image: 'https:/pic.axi404.top/image.lvrlfbjhb.webp',
+      color: '#1A285E',
+      desc: '生成复杂密码。',
+    },
+    {
+      name: 'save editor',
+      url: 'https://www.saveeditonline.com/',
+      image: 'https://www.saveeditonline.com/favicon.ico',
+      color: '#1A285E',
+      desc: 'RPG Maker 存档在线修改。',
+    },
+  ]"
+/>
+
+## 科研
+
+
+<hairy-links 
+  :links="[
+    {
+      name: 'Arxiv',
+      url: 'https://arxiv.org/',
+      image: 'https://arxiv.org/static/browse/0.3.4/images/icons/favicon-32x32.png',
+      color: '#B31B1B',
+      desc: 'Arxiv 论文预印本平台。',
+    },
+    {
+      name: 'papers cool',
+      url: 'https://papers.cool/',
+      image: 'https://papers.cool/static/favicon.ico',
+      color: '#FF9800',
+      desc: '每日刷论文。',
+    },
   ]"
 />
 
