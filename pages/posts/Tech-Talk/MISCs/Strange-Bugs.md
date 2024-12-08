@@ -1,7 +1,7 @@
 ---
 title: 奇奇怪怪的 Bug 集散地
 excerpt: 平时遇到的奇怪代码问题，记录并整理。
-date: 2024-10-24 07:14:00+0800
+date: 2024-12-09 06:29:00+0800
 image: https://pic.axi404.top/117648512_p0.webp
 categories:
     - 'Tech Talk'
@@ -945,3 +945,12 @@ sudo make install
 首先第一件事情就是使用 Git 的时候，在配置了密钥之后，SSH 还是会卡死，这个问题是因为 Git 版本导致的。我之前使用的是 `2.45.2` 版本，而现在已经变成了 `2.47.0`，不知道为什么就出现了这个问题。版本在 Git 的官网找不到，但是可以在 Git for Windows 的 [Github Releases 界面](https://github.com/git-for-windows/git/releases) 找到。
 
 然后就是在使用浏览器的时候，起因是因为我在使用 ToDesk 的时候，不知道操作了什么，有的时候会让电脑的 Web 相关的界面变得模糊，有点像是重影，这一现象可以通过关闭浏览器的硬件加速（或者叫做图形化 xxx）解决，但是 Wallpaper Engine 同样使用 Web 框架，暂时没找到对应的选项，其视频加速选项貌似不是。暂时不清楚是 CPU 问题还是电脑或者系统问题，希望将来的更新可以解决。
+
+## SSH 登录实验室堡垒机报错
+
+在上海那边的实验室，登录并且操作集群需要使用堡垒机，在开通账号之后使用 SSH 即可，但是却出现了奇怪的报错，具体内容为 `no matching host key type found. Their offer: ssh-rsa`，一开始我还觉得是类似于服务器那边的一些配置我没有做好，但是详细了解之后发现，按理来说直接使用账号密码在内网中就可以登录，于是问了一下 IT，得到了解决方法，适用于同样报错内容的场景。在 `~/.ssh/config` 中添加以下内容：
+
+```txt
+HostKeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+```
