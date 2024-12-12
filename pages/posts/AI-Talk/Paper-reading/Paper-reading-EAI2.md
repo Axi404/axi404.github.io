@@ -56,4 +56,4 @@ HPT 是 Kaiming He 团队在具身领域的新作，可以说是很直接也很�
 
 ![Surfer](https://pic.axi404.top/Surfer.8adam0a9tq.webp)
 
-这篇论文里面主要提出了一个 World Model，
+这篇论文里面主要提出了一个 World Model，可以看出来，本身就是拿了两个现成的 Encoder 把任务以及图像进行了编码，然后预测下一次的 action 以及 frame。不过从 pipeline 来看，我其实确实不是很确定这个 next frame prediction 是否有效果。隔了一个网络然后来传梯度给 Action prediction module，本身是串行的，等于说加了一个模块以增加额外约束，这种方法肯定符合直觉，但是肯定拓展性以及潜力有限，监督信号还是本身加在输出 action 的模型本身会好，这种可以说是一种增加监督的 trick，但是不一定在更大规模的 scaling 中好用，毕竟效率不高，增加了一个开销很大的模型。
