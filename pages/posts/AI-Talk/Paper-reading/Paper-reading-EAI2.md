@@ -1,7 +1,7 @@
 ---
 title: 'Paper Reading: Embodied AI 2'
 excerpt: 从一些 Embodied AI 相关工作中扫过。
-date: 2024-11-26 09:57:00+0800
+date: 2024-12-13 18:32:00+0800
 image: https://pic.axi404.top/118143618_p0.7p3lcyb9vq.webp
 categories:
     - 'AI Talk'
@@ -60,7 +60,7 @@ HPT 是 Kaiming He 团队在具身领域的新作，可以说是很直接也很�
 
 ## ACT
 
-论文链接：[ https://arxiv.org/abs/2304.13705](https://arxiv.org/abs/2304.13705)
+论文链接：[https://arxiv.org/abs/2304.13705](https://arxiv.org/abs/2304.13705)
 
 ![ACT](https:/pic.axi404.top/image.eskdeuqyp.webp)
 
