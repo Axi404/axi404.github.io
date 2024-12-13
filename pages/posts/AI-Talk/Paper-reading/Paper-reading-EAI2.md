@@ -57,3 +57,11 @@ HPT 是 Kaiming He 团队在具身领域的新作，可以说是很直接也很�
 ![Surfer](https://pic.axi404.top/Surfer.8adam0a9tq.webp)
 
 这篇论文里面主要提出了一个 World Model，可以看出来，本身就是拿了两个现成的 Encoder 把任务以及图像进行了编码，然后预测下一次的 action 以及 frame。不过从 pipeline 来看，我其实确实不是很确定这个 next frame prediction 是否有效果。隔了一个网络然后来传梯度给 Action prediction module，本身是串行的，等于说加了一个模块以增加额外约束，这种方法肯定符合直觉，但是肯定拓展性以及潜力有限，监督信号还是本身加在输出 action 的模型本身会好，这种可以说是一种增加监督的 trick，但是不一定在更大规模的 scaling 中好用，毕竟效率不高，增加了一个开销很大的模型。
+
+## ACT
+
+论文链接：[ https://arxiv.org/abs/2304.13705](https://arxiv.org/abs/2304.13705)
+
+![ACT](https:/pic.axi404.top/image.eskdeuqyp.webp)
+
+这篇论文也是十分经典的论文了，使用了 CVAE 的结构来运行。按照说法，CVAE 也就是 conditional VAE，使用了 VAE，并且使用图像+joint position 作为解码器的输入。由于我没有看过 CVAE，但是大概猜测 conditional 在这个里面其实指的是 image 以及 joint position 在解码器的输入，而至于任务本身，就是重建输入到编码器里面的 action。本身论文里面有很多的细节，包括说在 VAE 编码器的时候只使用 joint position 以及在训练的时候使用 L1 损失而非 L2，在这里就不进行展开了。解码器的结构神似 DETR，包含一个编码器以及一个解码器，不过有必要指出的是，这里其实等于说一共有两个编码器，VAE 本身还有一个。ACT 可以说是比较优雅的 VAE 范式的解决方法，但是不得不说的是，VAE 甚至是传统 diffusion 的策略在当下来看都已经过时了，这种策略可能难以作为一个可以大量 scaling up 的一个策略存在，而且令我疑惑的一个点在于，之前的 VAE 以及 CVAE 因为需要生成图像的 diversity 因此一定需要采样这样一个分布，但是在 manipulation 任务里面，需要一个确定性的 policy 生成，采样一个分布并不重要。而且这样下去全部的信息不久都进入 condition 了吗，那 VAE encoder 的意义何在呢？我不是很理解。
