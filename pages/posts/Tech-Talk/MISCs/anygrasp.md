@@ -1,7 +1,7 @@
 ---
 title: Anygrasp 踩坑
 excerpt: 在 Ubuntu 22.04 以及 CUDA 12.1 下安装 Anygrasp。
-date: 2024-10-02 22:57:00+0800
+date: 2024-12-20 23:58:00+0800
 image: https://pic.axi404.top/86616238_p0.3yeek84471.webp
 categories:
     - 'Tech Talk'
@@ -106,6 +106,17 @@ setup(
 ```
 
 将 `use_ninja` 设置为 `False`，之后再次执行，就没问题了。
+
+Noting that，在 CUDA 12.4 安装的时候，出现了额外的报错，其内容为 `error: no instance of overloaded funcntion "std::__shared_ptr<_Tp>::_M_enable_shared_from this ..."`，一共会唤起若干的报错，但是本身都是围绕 __shared_ptr 以及 __to_address 的，具体为 overload。
+
+这个问题需要修改 `/usr/include/c++/12/bits/shared_ptr_base.h`（我是这个，Issue 中有人说是别的，为 `ptr_traits.h`），搜索并替换：
+
+```cpp
+auto __raw = __to_address(__r.get()); // [!code --]
+auto __raw = std::__to_address(__r.get()); // [!code ++]
+```
+
+之后照常安装即可。
 
 之后安装 `anygrasp_sdk`：
 
