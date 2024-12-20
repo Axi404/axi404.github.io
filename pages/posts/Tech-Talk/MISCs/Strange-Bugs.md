@@ -1,7 +1,7 @@
 ---
 title: 奇奇怪怪的 Bug 集散地
 excerpt: 平时遇到的奇怪代码问题，记录并整理。
-date: 2024-12-09 06:29:00+0800
+date: 2024-12-20 23:51:00+0800
 image: https://pic.axi404.top/117648512_p0.webp
 categories:
     - 'Tech Talk'
@@ -103,3 +103,36 @@ sudo update-initramfs -u -k all
 HostKeyAlgorithms +ssh-rsa
 PubkeyAcceptedKeyTypes +ssh-rsa
 ```
+
+## Pip/Conda 安装空间不够
+
+这个事情严格来说不能说是一个 Bug，但是算是程序里面的杂事，而且找了半天问题，所以也记录一下。本身的症状很简单，就是在 pip install 的时候输出了 `no space left on device`，问题已经写在脸上了，就是空间不够，问题是如何解决。
+
+我使用的是实验室的服务器，这个服务器是一堆人一起在使用。因为一些历史原因，我有 sudo 权限，所以 `cd home` 然后 `du -sh */` 了一下，扫了一圈大家的空间，确实有人一下子用了大几十个 GB 的空间。在这里有必要介绍一下服务器的使用礼仪，一般来说会有专门的数据盘，在这个里面被挂载在 `/ssd` 下面，而按理来说 `/home` 下面应该几乎没有东西才合理，不然容易出现各种的问题。
+
+既然如今已经出问题了，这些人一时半会联系不上，而且也不能指望他们。根据我们的数据盘叫做 ssd 来说，应该速度还可以，所以说干脆直接把环境全部迁移到 `/ssd` 下面。理解一下，整体需要迁移的包括 conda 的安装路径（我使用的是 miniconda），以及需要修改一下 pip install 的 cache。
+
+于是复制 conda，这里面我之前安装在了 `~` 下面，也就是先 `cp -r miniconda3 /ssd/gaoning`，然后 `vim .bashrc`：
+
+```bash
+...
+export PATH="/home/gaoning/miniconda3/bin:$PATH" # [!code --]
+export PATH="/ssd/gaoning/miniconda3/bin:$PATH" # [!code ++]
+```
+
+然后运行 `source ~/.bashrc`。确认没问题之后就可以 `rm -rf /home/gaoning/miniconda3` 了。然后就是 pip 的 cache，需要修改这个的默认目录。
+
+首先 `mkdir -p /ssd/gaoning/.pip_cache`，然后使用 `vim ~/.pip/pip.conf`，假如说之前没有这个文件（可能你之前没有操作过类似于设置 pip 的 index url 的操作），那就创建一个，然后写入：
+
+```txt
+[global]
+cache-dir = /ssd/gaoning/.pip_cache/
+```
+
+但是按照这个操作之后，发现还是有问题，很诡异。然后简单查了一下，就发现问题了，因为在下载的时候其实会使用默认的 TMP 目录，于是需要 `mkdir -p /ssd/gaoning/tmp`，之后 `vim ~/.bashrc`：
+
+```bash
+export TMPDIR=/ssd/gaoning/tmp
+```
+
+然后 `source ~/.bashrc`，之后就没有问题了。
