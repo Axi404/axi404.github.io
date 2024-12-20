@@ -1,7 +1,7 @@
 ---
 title: Anygrasp 踩坑
 excerpt: 在 Ubuntu 22.04 以及 CUDA 12.1 下安装 Anygrasp。
-date: 2024-12-20 23:58:00+0800
+date: 2024-12-21 00:15:00+0800
 image: https://pic.axi404.top/86616238_p0.3yeek84471.webp
 categories:
     - 'Tech Talk'
@@ -115,6 +115,8 @@ Noting that，在 CUDA 12.4 安装的时候，出现了额外的报错，其内�
 auto __raw = __to_address(__r.get()); // [!code --]
 auto __raw = std::__to_address(__r.get()); // [!code ++]
 ```
+
+然后还可能出现另一个错，是 `ld: cannot find -lopenblas: No such file or directory; collect2: error: ld returned 1 exit status`，这个则在安装了 `conda install openblas-devel -c anaconda` 之后，需要进行一次 cp，对于我来说，这个指令是 `cp /ssd/gaoning/miniconda3/envs/anygrasp/lib/libopenblas.so* /ssd/gaoning/miniconda3/envs/anygrasp/lib/python3.10/site-packages/torch/lib/.`。 
 
 之后照常安装即可。
 
