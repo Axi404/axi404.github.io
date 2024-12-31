@@ -58,6 +58,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/Daily-Talk/Week-journal/week-22': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-22', '/posts/Daily-Talk/Week-journal/week-22', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Week-journal/week-23': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-23', '/posts/Daily-Talk/Week-journal/week-23', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Week-journal/week-24': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-24', '/posts/Daily-Talk/Week-journal/week-24', Record<never, never>, Record<never, never>>,
+    '/posts/Daily-Talk/Week-journal/week-25': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-25', '/posts/Daily-Talk/Week-journal/week-25', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Week-journal/week-3': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-3', '/posts/Daily-Talk/Week-journal/week-3', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Week-journal/week-4': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-4', '/posts/Daily-Talk/Week-journal/week-4', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Week-journal/week-5': RouteRecordInfo<'/posts/Daily-Talk/Week-journal/week-5', '/posts/Daily-Talk/Week-journal/week-5', Record<never, never>, Record<never, never>>,
