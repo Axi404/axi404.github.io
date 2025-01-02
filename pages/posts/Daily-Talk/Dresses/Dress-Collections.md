@@ -34,6 +34,7 @@ tags:
   <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/48759bdc49189f95f1f79add6776eff.54xqgnplfp.webp" />
   <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/01.2h88iwykmw.webp" />
   <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/e15bf19e4bc75c97d586622e701563a.5q7e2yrsfq.webp" />
+  <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/Lolita.67xjfb7fhn.webp" />
 </hairy-image-group>
 
 <!-- <hairy-image-group col="400px" row="200px" loading = "lazy">
@@ -57,4 +58,5 @@ tags:
   <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/IMG_9485.5mnuef19r7.JPG" />
   <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/IMG_8714.2a54k1kpfa.jpg" />
   <hairy-image fit="cover" loading = "lazy" src="https://pic.axi404.top/IMG_9717.5c10l9m1l2.jpg" />
+  <hairy-image fit="cover" loading = "lazy" src="https://Axi404.github.io/picx-images-hosting/Lolita.3goh78niic.jpg" />
 </hairy-image-group> -->
