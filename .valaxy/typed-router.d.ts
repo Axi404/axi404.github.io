@@ -38,6 +38,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/AI-Talk/Paper-reading/Paper-reading-Meta': RouteRecordInfo<'/posts/AI-Talk/Paper-reading/Paper-reading-Meta', '/posts/AI-Talk/Paper-reading/Paper-reading-Meta', Record<never, never>, Record<never, never>>,
     '/posts/AI-Talk/Paper-reading/Paper-reading-MLLM': RouteRecordInfo<'/posts/AI-Talk/Paper-reading/Paper-reading-MLLM', '/posts/AI-Talk/Paper-reading/Paper-reading-MLLM', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Dresses/Dress-Collections': RouteRecordInfo<'/posts/Daily-Talk/Dresses/Dress-Collections', '/posts/Daily-Talk/Dresses/Dress-Collections', Record<never, never>, Record<never, never>>,
+    '/posts/Daily-Talk/End-of-year-Summary/2024': RouteRecordInfo<'/posts/Daily-Talk/End-of-year-Summary/2024', '/posts/Daily-Talk/End-of-year-Summary/2024', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Memoirs/RM-Memoir': RouteRecordInfo<'/posts/Daily-Talk/Memoirs/RM-Memoir', '/posts/Daily-Talk/Memoirs/RM-Memoir', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Memoirs/Uni-Memoir1': RouteRecordInfo<'/posts/Daily-Talk/Memoirs/Uni-Memoir1', '/posts/Daily-Talk/Memoirs/Uni-Memoir1', Record<never, never>, Record<never, never>>,
     '/posts/Daily-Talk/Memoirs/Uni-Memoir2': RouteRecordInfo<'/posts/Daily-Talk/Memoirs/Uni-Memoir2', '/posts/Daily-Talk/Memoirs/Uni-Memoir2', Record<never, never>, Record<never, never>>,
