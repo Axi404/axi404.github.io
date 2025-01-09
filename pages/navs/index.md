@@ -247,11 +247,11 @@ waline: true
       desc: 'Isaac Sim Python API 文档。',
     },
     {
-      name: 'OpenUSD 文档',
+      name: 'OpenUSD 官网',
       url: 'https://openusd.org/release/index.html',
       image: 'https://openusd.org/images/USDIcon.ico',
       color: '#7DD3F7',
-      desc: 'OpenUSD Python API 文档。',
+      desc: 'OpenUSD 官网。',
     },
     {
       name: 'USD 文档',
@@ -259,6 +259,20 @@ waline: true
       image: 'https://pic.axi404.top/image.5fkmipfo2v.webp',
       color: '#000000',
       desc: 'USD Python API 文档。',
+    },
+    {
+      name: 'OpenUSD 文档',
+      url: 'https://openusd.org/docs/api/index.html',
+      image: 'https://openusd.org/images/USDIcon.ico',
+      color: '#2091D0',
+      desc: 'OpenUSD  API 文档。',
+    },
+    {
+      name: 'UsdPhysics Schema 文档',
+      url: 'https://docs.omniverse.nvidia.com/kit/docs/omni_usd_schema_physics/latest/index.html',
+      image: 'https://pic.axi404.top/image.5fkmipfo2v.webp',
+      color: '#000000',
+      desc: 'UsdPhysics Schema API 文档。',
     },
     {
       name: 'PXR USD 文档',
