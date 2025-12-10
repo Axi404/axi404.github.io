@@ -1,0 +1,183 @@
+{
+  "friends": [
+    {
+      "id_name": "cf-links",
+      "desc": "Common links included in circle friends",
+      "link_list": [
+        {
+          "name": "主治医师李大华",
+          "link": "https://daju233.vercel.app/",
+          "avatar": "https://pic.axi404.top/Assyrian.4qr92oh1mq.webp",
+          "intro": "何地才是樂土，讓競爭做指數。"
+        },
+        {
+          "name": "小树",
+          "link": "https://www.juniortree.com/",
+          "avatar": "https://pic.axi404.top/xiaoshu.7sn53widtv.webp",
+          "intro": "「妳突然對我説 七里香的名字很美」"
+        },
+        {
+          "name": "FrenchPicnic",
+          "link": "https://frenchpicnic.github.io/",
+          "avatar": "https://frenchpicnic.github.io/images/avatar.jpg",
+          "intro": "There's no undo and there's no repeat. Can't go back to how we used to be."
+        },
+        {
+          "name": "失去理想的獾",
+          "link": "https://blog.cyaml.top/",
+          "avatar": "https://pic.axi404.top/image.2doybsqvb0.webp",
+          "intro": "数院樊振东的生活隙缝"
+        },
+        {
+          "name": "EPTansuo",
+          "link": "https://eptansuo.life/",
+          "avatar": "https://pic.axi404.top/HeadPortrait.5j4ahnr9r4.webp",
+          "intro": "生命不息，折腾不止"
+        },
+        {
+          "name": "WesKwong",
+          "link": "http://blog.weskwong.tech/",
+          "avatar": "https://weskwong-img-bed.obs.cn-east-3.myhuaweicloud.com/img/avatar_compressed.png",
+          "intro": "做人最紧要嘅就系开心"
+        },
+        {
+          "name": "沈君豪 Junhao Shen",
+          "link": "https://www.jhshen.cn/",
+          "avatar": "https://avatars.githubusercontent.com/u/88479555?v=4",
+          "intro": "I am Junhao Shen."
+        },
+        {
+          "name": "高焕昂 Huan-ang Gao",
+          "link": "https://c7w.tech/",
+          "avatar": "https://c7w.tech/_astro/me_2025_08.DerPOhxS_ZErm5W.webp",
+          "intro": "Ph. D. student @ CS & AIR, Tsinghua University."
+        },
+        {
+          "name": "Zoet’ Blog",
+          "link": "https://www.zoet.site/",
+          "avatar": "https://www.zoet.site/avatar2.png",
+          "intro": "互联网苦b | 欢迎致电 ∠(｀ω´)"
+        },
+        {
+          "name": "新世界的大门",
+          "link": "https://blog.xinshijiededa.men/",
+          "avatar": "https://raw.githubusercontent.com/OverflowCat/blog/test_a/imgs/avatar/xni.webp",
+          "intro": "因此幻想是世界，谁若懂得，谁就会歌唱"
+        },
+        {
+          "name": "Rui Wu",
+          "link": "https://github.com/IamB3ST",
+          "avatar": "https://pic.axi404.top/image.b95r8g84x.webp",
+          "intro": "CS Undergraduate @ Rutgers University"
+        },
+        {
+          "name": "Juanxi Tian",
+          "link": "https://tianshijing.github.io/",
+          "avatar": "https://pic.axi404.top/avatar.2ks6b3aiph.webp",
+          "intro": "RA @ CUHK"
+        },
+        {
+          "name": "LineXic书屋",
+          "link": "https://www.linexic.top/",
+          "avatar": "https://www.linexic.top/avatar.webp",
+          "intro": "难离难舍，想抱紧些"
+        },
+        {
+          "name": "Bertsin",
+          "link": "https://user-xixiboliya.github.io/",
+          "avatar": "https://user-xixiboliya.github.io/avatar/avatar.webp",
+          "intro": "神秘小天地"
+        },
+        {
+          "name": "寒夏摸鱼站",
+          "link": "https://blog.rainiar.top/",
+          "avatar": "https://gravatar.webp.se/avatar/1beae7b1b3ca799888552bfcf9930a4e",
+          "intro": "稀奇古怪技术集散地"
+        },
+        {
+          "name": "Arthals’ ink",
+          "link": "https://arthals.ink/",
+          "avatar": "https://cdn.arthals.ink/Arthals.png",
+          "intro": "所见高山远木，阔云流风；所幸岁月盈余，了无拘束"
+        },
+        {
+          "name": "Yutong’s Site",
+          "link": "https://www.lyt0112.com/",
+          "avatar": "https://www.lyt0112.com/favicon/favicon.ico",
+          "intro": "My compass is curiosity."
+        },
+        {
+          "name": "伏枥之间",
+          "link": "https://www.leehenry.top",
+          "avatar": "https://leehenry.top/friends/my-avatar-portrait.jpg",
+          "intro": "莫听穿林打叶声，何妨吟啸且徐行"
+        },
+        {
+          "name": "Yux Bao",
+          "link": "https://yux-bao.site",
+          "avatar": "https://yux-bao.site/avatar.webp",
+          "intro": "记录关于生活、技术"
+        },
+        {
+          "name": "小倪|BioEZ",
+          "link": "https://bioez.xyz",
+          "avatar": "https://bioez.xyz/upload/minni_spark.png",
+          "intro": "入口即化，生生不息。"
+        },
+        {
+          "name": "空と海-千代有希のブログ",
+          "link": "https://chiyoyuki.uk",
+          "avatar": "https://gravatar.com/avatar/ac3d325212c82a0bed5aac65b37da52e?s=1024",
+          "intro": "就算活著沒有意義，偶而還是會碰到好事的。"
+        },
+        {
+          "name": "石上三年Official",
+          "link": "https://blog.sssn.tech",
+          "avatar": "https://blog.sssn.tech/wp-content/uploads/2024/08/cropped-icon-1.jpg",
+          "intro": "什么时候才能变强"
+        },
+        {
+          "name": "YK’s Blog",
+          "link": "https://yipko.com",
+          "avatar": "https://yipko.com/img/me.jpg",
+          "intro": "Thoughts, stories and ideas."
+        },
+        {
+          "name": "开卷空间",
+          "link": "https://huang2202.github.io",
+          "avatar": "https://huang2202.github.io/img/nova.png",
+          "intro": "一个关于追寻北极星的Blog"
+        },
+        {
+          "name": "bighhliu",
+          "link": "https://bruoye-nountum.github.io/",
+          "avatar": "https://bruoye-nountum.github.io//img/world3.png",
+          "intro": "一个爱发牢骚的技术小白的blog"
+        }
+      ]
+    },
+    {
+      "id_name": "inactive-links",
+      "desc": "Inactive or rule-breaking friends",
+      "link_list": []
+    },
+    {
+      "id_name": "special-links",
+      "desc": "Other special links",
+      "link_list": [
+        {
+          "name": "虫洞",
+          "intro": "随机前往十年之约的成员博客",
+          "link": "https://www.foreverblog.cn/go.html",
+          "avatar": "/images/wormhole.png"
+        },
+        {
+          "name": "开往",
+          "intro": "随机前往开往的成员博客",
+          "link": "https://www.travellings.cn/go.html",
+          "avatar": "https://www.travellings.cn/assets/travelling.png"
+        }
+      ]
+    }
+  ]
+}
