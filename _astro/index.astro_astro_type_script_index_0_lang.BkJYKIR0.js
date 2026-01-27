@@ -1,0 +1,1 @@
+import{F as r}from"./friendCircle.JSuoFEn3.js";const e=document.querySelector('meta[name="fc-domain"]')?.getAttribute("content");if(e){const t=new r;t.init({private_api_url:`https://${e}/`,page_turning_number:10,error_img:"https://cravatar.cn/avatar/57d8260dfb55501c37dde588e7c3852c"}),t.load()}
