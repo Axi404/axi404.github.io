@@ -1,0 +1,1097 @@
+<!DOCTYPE html><html lang="zh" class="astro-37fxchfa" style="--highlightColor: #416592;"> <head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"><meta content="IE=edge" http-equiv="X-UA-Compatible"><title>OpenVLA 代码笔记 • Axi&#39;s Blog</title><link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon.ico"><link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon.ico"><link rel="manifest" href="/favicon/site.webmanifest"><link rel="preload" href="/fonts/Satoshi-Variable.ttf" as="font" type="font/ttf" crossorigin><link rel="preload" href="/fonts/Satoshi-VariableItalic.ttf" as="font" type="font/ttf" crossorigin><link rel="canonical" href="https://axi404.github.io/blog/openvla-reading"><meta content="OpenVLA 代码笔记 • Axi's Blog" name="title"><meta content="OpenVLA 纯小白代码阅读记录。" name="description"><meta content="阿汐" name="author"><meta content="" name="theme-color"><meta content="article" property="og:type"><meta content="OpenVLA 代码笔记" property="og:title"><meta content="OpenVLA 纯小白代码阅读记录。" property="og:description"><meta content="https://axi404.github.io/blog/openvla-reading" property="og:url"><meta content="Axi's Blog" property="og:site_name"><meta content="en_US" property="og:locale"><meta content="https://picr2.axi404.top/openvla-reading-zh.webp" property="og:image"><meta content="1200" property="og:image:width"><meta content="630" property="og:image:height"><meta content="阿汐" property="article:author"><meta content="2024-07-23T00:00:00.000Z" property="article:published_time"><meta content="summary_large_image" property="twitter:card"><meta content="https://axi404.github.io/blog/openvla-reading" property="twitter:url"><meta content="OpenVLA 代码笔记" property="twitter:title"><meta content="OpenVLA 纯小白代码阅读记录。" property="twitter:description"><meta content="https://picr2.axi404.top/openvla-reading-zh.webp" property="twitter:image"><link href="/sitemap-index.xml" rel="sitemap"><link rel="alternate" type="application/rss+xml" title="Axi's Blog" href="https://axi404.github.io/rss.xml"><meta content="Astro v5.18.0" name="generator"><link rel="stylesheet" href="/styles/global.css"><!-- <ClientRouter /> --><!-- <script is:inline>
+  const style = document.createElement('style')
+  style.textContent = `* { transition: none !important; }`
+  document.addEventListener('astro:after-swap', () => {
+    document.head.appendChild(style)
+    setTimeout(() => {
+      style.remove()
+    }, 100)
+  })
+</script> --><script type="module">console.log("%c Astro Theme Axi %c https://github.com/Axi404/","color:#fff;background:linear-gradient(90deg,#448bff,#44e9ff);padding:5px 0;","color:#000;background:linear-gradient(90deg,#44e9ff,#ffffff);padding:5px 10px 5px 0px;");</script><script>
+  function simpleSetTheme() {
+    let theme = localStorage.getItem('theme')
+    // If undefined or 'system', get from system
+    if (!theme || theme === 'system') {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+    document.documentElement.classList.toggle('dark', theme === 'dark')
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', theme === 'dark' ? '#0B0B10' : '#FCFCFD')
+  }
+  simpleSetTheme()
+  document.addEventListener('astro:page-load', () => simpleSetTheme())
+</script><script type="module" src="/_astro/ThemeProvider.astro_astro_type_script_index_0_lang.Caxdygof.js"></script><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-23SWRT8LTH"></script><script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-23SWRT8LTH')
+    </script><link rel="stylesheet" href="/_astro/_id_.Ba06E69F.css">
+<link rel="stylesheet" href="/_astro/_id_.D2o6uScX.css">
+<style>@keyframes pulsate{0%{opacity:1}50%{opacity:.4}to{opacity:1}}.loading:where(.astro-c2irgjnt) .gh-text:where(.astro-c2irgjnt){color:transparent;border-radius:calc(var(--radius) - 3px);background-color:hsl(var(--primary-foreground) / var(--tw-text-opacity));animation:pulsate 2s infinite linear;-webkit-user-select:none;-moz-user-select:none;user-select:none}.loading:where(.astro-c2irgjnt) .gh-text:where(.astro-c2irgjnt):nth-child(2){animation-delay:1s}
+</style>
+<link rel="stylesheet" href="/_astro/_id_.DaOTqi34.css">
+<style>.link-preview:where(.astro-wi47756d) img:where(.astro-wi47756d),.link-preview:where(.astro-wi47756d) video:where(.astro-wi47756d){aspect-ratio:1200 / 630;width:100%;height:auto;-o-object-fit:cover;object-fit:cover}
+.medium-zoom-overlay{position:fixed;inset:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1;z-index:999}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform;z-index:999}
+.aside:where(.astro-vjnanpl3)>.aside-container:where(.astro-vjnanpl3){--tw-bg-opacity: .07;&.aside-tip{--primary: 234 60% 60%}&.aside-caution{--primary: 41 90% 50%}&.aside-danger{--primary: 339 90% 60%}.aside-content{>:first-child{margin-top:0}>:last-child{margin-bottom:0}& p a,li a,blockquote a,td a,a{color:hsl(var(--foreground) / var(--tw-text-opacity, 1));text-decoration:underline;text-decoration-color:hsl(var(--muted-foreground) / .5);text-underline-offset:.125rem;transition:all .2s ease;border-radius:.25rem;padding:.125rem .25rem;margin:-.125rem -.25rem;&:hover{text-decoration:none;background-color:hsl(var(--foreground) / var(--tw-text-opacity, 1));color:hsl(var(--background))}}}}
+</style>
+<link rel="stylesheet" href="/_astro/waline.BdFLgl11.css">
+<style>svg:where(.astro-p7sajfz3){color:var(--sl-icon-color);font-size:var(--sl-icon-size, 1em);width:1.5em;height:1.5em}
+#waline:where(.astro-w2uxdene){--waline-font-size: 16px;--waline-white: hsl(var(--background) / var(--tw-bg-opacity, 1));--waline-light-grey: #999;--waline-dark-grey: #666;--waline-theme-color: hsl(var(--foreground) / var(--tw-text-opacity, 1));--waline-active-color: hsl(var(--primary) / var(--tw-text-opacity, 1));--waline-color: hsl(var(--muted-foreground) / var(--tw-text-opacity, 1));--waline-bg-color: hsl(var(--muted) / var(--tw-bg-opacity, 1));--waline-bg-color-light: hsl(var(--input) / var(--tw-text-opacity, 1));--waline-bg-color-hover: #f0f0f0;--waline-border-color: hsl(var(--border) / var(--tw-border-opacity, 1));--waline-disable-bg-color: #f8f8f8;--waline-disable-color: #bbb;--waline-code-bg-color: #282c34;--waline-bq-color: #f0f0f0;--waline-avatar-size: 3.25rem;--waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);--waline-badge-color: hsl(var(--border) / var(--tw-border-opacity, 1));--waline-badge-font-size: .775em;--waline-info-bg-color: var(--waline-bg-color-light);--waline-info-color: var(--waline-color);--waline-info-font-size: .625em;--waline-border: 1px solid var(--waline-border-color);--waline-avatar-radius: 50%;--waline-box-shadow: none}#waline:where(.astro-w2uxdene) .wl-reaction-title,.wl-reaction-text{display:none}#waline:where(.astro-w2uxdene) .wl-reaction{overflow:visible;margin-bottom:.5em}#waline:where(.astro-w2uxdene) .wl-reaction-img{width:auto;display:flex;height:35px;align-items:center;-moz-column-gap:.4rem;column-gap:.4rem}#waline:where(.astro-w2uxdene) .wl-reaction-votes{position:inherit;top:inherit;min-width:inherit;inset-inline-end:inherit;display:flex;font-weight:400;border:none;background:none;color:inherit;padding:.2rem .4rem;border-radius:6px}#waline:where(.astro-w2uxdene) .wl-reaction-loading{position:inherit;top:inherit;min-width:inherit}#waline:where(.astro-w2uxdene) .wl-reaction-item.active .wl-reaction-votes{background:var(--waline-theme-color);color:var(--waline-bg-color)}#waline:where(.astro-w2uxdene) .wl-reaction-votes:after{margin-left:.25em;content:"Like(s)";display:inline-block;clear:both;border:0}#waline:where(.astro-w2uxdene) .wl-reaction img{filter:invert(25%)}.dark #waline:where(.astro-w2uxdene) .wl-reaction img{filter:invert(75%)}
+.expand-conetent:where(.astro-jvehtkjd){grid-template-rows:0fr}.expanded:where(.astro-jvehtkjd) .expand-conetent:where(.astro-jvehtkjd){grid-template-rows:1fr}
+.sl-steps{--bullet-size: 1.75rem ;--bullet-margin: .375rem;list-style:none!important;counter-reset:steps-counter var(--sl-steps-start, 0);padding-inline-start:0!important}.sl-steps>li{counter-increment:steps-counter;position:relative;padding-inline-start:calc(var(--bullet-size) + 1rem);padding-bottom:1px;min-height:calc(var(--bullet-size) + var(--bullet-margin))}.sl-steps>li+li{margin-top:0}.sl-steps>li:before{content:counter(steps-counter);position:absolute;top:0;inset-inline-start:0;width:var(--bullet-size);height:var(--bullet-size);line-height:var(--bullet-size);font-size:.8125rem;font-weight:600;text-align:center;color:hsl(var(--foreground) / var(--tw-text-opacity, 1));background-color:hsl(var(--primary-foreground) / var(--tw-bg-opacity, 1));border-radius:99rem;box-shadow:inset 0 0 0 1px hsl(var(--border) / var(--tw-border-opacity, 1))}.sl-steps>li:after{--guide-width: 1px;content:"";position:absolute;top:calc(var(--bullet-size) + var(--bullet-margin));bottom:var(--bullet-margin);inset-inline-start:calc((var(--bullet-size) - var(--guide-width)) / 2);width:var(--guide-width);background-color:hsl(var(--border) / var(--tw-border-opacity, 1))}.sl-steps>li>:first-child{--lh: 1.75em ;--shift-y: calc(.5 * (var(--bullet-size) - var(--lh)));margin-top:0;transform:translateY(var(--shift-y));margin-bottom:var(--shift-y);color:hsl(var(--foreground) / var(--tw-text-opacity, 1))}.sl-steps>li>:first-child:where(h1,h2,h3,h4,h5,h6){--lh: 1.2em }
+.docs-item:where(.astro-ewgkb4yy):hover{background-color:hsl(var(--muted) / .5)}.docs-item:where(.astro-ewgkb4yy):before{content:"";display:block;position:absolute;top:5%;bottom:5%;left:-.5rem;width:2px;background-color:hsl(var(--input) / var(--un-bg-opacity))}.docs-item:where(.astro-ewgkb4yy).docs-hl{background-color:hsl(var(--muted) / var(--un-bg-opacity));font-weight:500}.docs-item:where(.astro-ewgkb4yy).docs-hl a:where(.astro-ewgkb4yy){color:hsl(var(--primary) / var(--un-text-opacity))}.docs-item:where(.astro-ewgkb4yy).docs-hl:before{background-color:hsl(var(--primary) / var(--un-bg-opacity))}
+</style><script type="module" src="/_astro/page.D1uwR3nK.js"></script></head> <body class="flex justify-center bg-background astro-37fxchfa" style="--highlightColor: #416592;"> <!-- <div
+      id='gradient-background'
+      class='pointer-events-none fixed h-screen w-screen blur-2xl transition-opacity duration-1000'
+    >
+      <div
+        class='absolute right-[25%] top-[-90%] h-full w-[75%] rounded-full bg-gradient-to-b from-blue-300 via-pink-300 to-transparent opacity-40 dark:opacity-25'
+      >
+      </div>
+      <div
+        class='absolute left-[25%] top-[-90%] h-full w-[75%] rounded-full bg-gradient-to-b from-blue-300 via-pink-300 to-transparent opacity-40 dark:opacity-25'
+      >
+      </div>
+      <div
+        class='absolute right-[25%] top-[-85%] h-full w-[55%] rounded-full bg-gradient-to-b from-purple-300 via-blue-300 to-transparent opacity-40 dark:opacity-25'
+      >
+      </div>
+      <div
+        class='absolute left-[25%] top-[-85%] h-full w-[55%] rounded-full bg-gradient-to-b from-indigo-300 via-orange-300 to-transparent opacity-40 dark:opacity-25'
+      >
+      </div>
+      <div
+        class='absolute left-[-25%] top-[-75%] h-full w-[65%] rounded-full bg-gradient-to-b from-blue-300 via-pink-300 to-transparent opacity-30 dark:opacity-20'
+      >
+      </div>
+      <div
+        class='absolute right-[-25%] top-[-75%] h-full w-[65%] rounded-full bg-gradient-to-b from-purple-300 via-blue-300 to-transparent opacity-30 dark:opacity-20'
+      >
+      </div>
+      <div
+        class='absolute left-[-30%] top-[-85%] h-full w-[85%] rounded-full bg-gradient-to-b from-indigo-300 via-orange-300 to-transparent opacity-60 dark:opacity-30'
+      >
+      </div>
+      <div
+        class='absolute right-[-30%] top-[-85%] h-full w-[85%] rounded-full bg-gradient-to-b from-orange-300 via-indigo-300 to-transparent opacity-60 dark:opacity-30'
+      >
+      </div>
+    </div> --> <div id="highlight-gradient" class="pointer-events-none absolute start-0 top-0 z-0 h-screen w-full opacity-25 astro-37fxchfa" style="background-image:linear-gradient(#416592,transparent); --highlightColor: #416592;"></div> <div class="w-full max-w-[70rem] px-4 sm:px-7 lg:px-10 astro-37fxchfa" style="--highlightColor: #416592;"> <script type="module">document.addEventListener("DOMContentLoaded",()=>{const t=document.getElementById("language-switch-btn");t&&t.addEventListener("click",()=>{const e=t.dataset.targetUrl;e&&(window.location.href=e)})});</script><header-component class="group sticky top-4 z-30 mb-12 flex items-center justify-between rounded-xl border border-transparent max-sm:py-1 sm:rounded-2xl [&#38;.not-top]:border-border [&#38;.not-top]:bg-background/60 [&#38;.not-top]:px-1.5 [&#38;.not-top]:backdrop-blur-md dark:[&#38;.not-top]:bg-muted/60 astro-dpuuw7tv"> <!-- <div
+      class='absolute -left-4 -top-8 -z-10 box-content hidden h-20 w-[calc(100%+2rem)] !duration-0 max-sm:group-[.expanded]:block max-sm:group-[.expanded.not-top]:hidden max-sm:group-[.expanded]:bg-white dark:max-sm:group-[.expanded]:bg-muted'
+    >
+    </div> --> <a class="z-30 text-xl font-semibold group-[.not-top]:ms-2 sm:group-[.not-top]:ms-3 astro-dpuuw7tv" style="transition:margin-inline 0.3s" href="/" aria-label="Brand">Axi&#39;s Blog</a> <div class="flex items-center gap-x-2 astro-dpuuw7tv">  <div id="headerExpandConetent" class="end-0 start-0 top-12 grid border border-transparent group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-muted/60 max-md:absolute max-md:opacity-0 max-md:pointer-events-none max-md:group-[.expanded]:pointer-events-auto max-md:group-[.not-top]:border-border max-md:group-[.expanded.not-top]:bg-background/60 max-md:group-[.expanded.not-top]:backdrop-blur-md max-md:group-[.not-top]:px-4 max-md:group-[.not-top]:py-2 md:grid-rows-1 astro-dpuuw7tv"> <div class="flex flex-col items-center justify-center md:flex-row astro-dpuuw7tv"> <div class="menu-item-with-dropdown relative w-full md:w-fit astro-dpuuw7tv" style="position: relative;"> <a href="/blog/research" class="blog-menu-link flex w-full flex-none items-center justify-end py-2 font-medium transition-none hover:text-primary md:px-3 md:justify-center astro-dpuuw7tv" aria-label="Nav menu item"> Blog <svg aria-hidden="true" class="chevron-icon ml-1 size-4 transition-transform astro-dpuuw7tv astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"/></g></svg>  </a>  <div class="dropdown-menu absolute right-0 top-full mt-0 w-48 rounded-xl border border-border bg-background/80 shadow-lg backdrop-blur-md dark:bg-muted/80 md:left-0 md:right-auto astro-dpuuw7tv" style="z-index: 9999;"> <div class="py-1 astro-dpuuw7tv"> <a href="/blog/research" class="category-link block px-4 py-2 text-sm transition-colors hover:bg-background/60 hover:text-primary dark:hover:bg-muted/60 astro-dpuuw7tv"> Research </a><a href="/blog/tech" class="category-link block px-4 py-2 text-sm transition-colors hover:bg-background/60 hover:text-primary dark:hover:bg-muted/60 astro-dpuuw7tv"> Technical </a><a href="/blog/daily" class="category-link block px-4 py-2 text-sm transition-colors hover:bg-background/60 hover:text-primary dark:hover:bg-muted/60 astro-dpuuw7tv"> Daily Life </a><a href="/blog/journal" class="category-link block px-4 py-2 text-sm transition-colors hover:bg-background/60 hover:text-primary dark:hover:bg-muted/60 astro-dpuuw7tv"> Month Journal </a> </div> </div> </div><a href="/academic" class="w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary md:w-fit md:px-3 astro-dpuuw7tv" aria-label="Nav menu item"> Academic </a><a href="/projects" class="w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary md:w-fit md:px-3 astro-dpuuw7tv" aria-label="Nav menu item"> Projects </a><a href="/links" class="w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary md:w-fit md:px-3 astro-dpuuw7tv" aria-label="Nav menu item"> Links </a><a href="/about" class="w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary md:w-fit md:px-3 astro-dpuuw7tv" aria-label="Nav menu item"> About </a> <a class="w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary md:w-fit md:px-3 astro-dpuuw7tv" href="https://www.travellings.cn/go.html" title="Travellings" target="_blank" rel="noopener noreferrer"> <span class="sr-only astro-dpuuw7tv">Travellings</span> <span class="text-xl astro-dpuuw7tv">🚇</span> </a> <div class="flex w-full grow flex-row justify-end gap-x-3 md:w-fit md:gap-x-5 astro-dpuuw7tv"> <a class="px-1 py-2 transition-none md:px-2 astro-dpuuw7tv" href="/search" title="Search"> <span class="sr-only astro-dpuuw7tv">Search</span> <svg aria-hidden="true" class="size-5 astro-dpuuw7tv astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M5 10a5 5 0 1 1 10 0a5 5 0 0 1-10 0m5-7a7 7 0 1 0 4.192 12.606l5.1 5.101a1 1 0 0 0 1.415-1.414l-5.1-5.1A7 7 0 0 0 10 3"/></g></svg>  </a> </div> </div> </div> <!-- buttons --> <div class="z-30 flex gap-x-4 group-[.not-top]:gap-x-2 astro-dpuuw7tv" style="transition:gap 0.3s"> <button id="language-switch-btn" class="box-content rounded-md border p-1.5 transition-colors hover:bg-border md:group-[.not-top]:rounded-xl" title="切换到English" data-target-url="/en/blog/openvla-reading"> <span class="sr-only">切换到English</span> <div class="flex items-center gap-1"> <svg aria-hidden="true" class="size-4 astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m1.482 14.94a18 18 0 0 1-2.964 0q.14.596.31 1.102c.251.755.53 1.293.79 1.622c.127.162.23.248.3.29l.051.028l.03.008l.032-.008l.051-.027a1.2 1.2 0 0 0 .3-.29c.26-.33.539-.868.79-1.623q.17-.506.31-1.102m-8.675-1.435a8.03 8.03 0 0 0 4.441 4.01a11 11 0 0 1-.318-.84a16 16 0 0 1-.52-2.033a18 18 0 0 1-3.603-1.137m14.387 0c-1.145.5-2.351.883-3.605 1.137a16 16 0 0 1-.52 2.034q-.144.437-.318.838a8.03 8.03 0 0 0 4.443-4.01Zm-5.218-4.634a15 15 0 0 1-3.952 0a26 26 0 0 0 .141 4.025a16.2 16.2 0 0 0 3.67 0A25 25 0 0 0 14 12q0-.576-.024-1.13ZM4.568 9.032a8 8 0 0 0-.52 3.856a16 16 0 0 0 4.067 1.637a28 28 0 0 1-.074-4.053a15 15 0 0 1-3.473-1.44m14.864 0a15 15 0 0 1-3.473 1.44a28 28 0 0 1-.074 4.053a16 16 0 0 0 4.066-1.637a8 8 0 0 0-.52-3.855Zm-7.416-5.02l-.011-.002l-.02.003l-.038.015a1.2 1.2 0 0 0-.33.307c-.26.33-.538.868-.79 1.622c-.27.808-.488 1.8-.633 2.919a13 13 0 0 0 3.612 0c-.145-1.12-.364-2.111-.633-2.919c-.252-.754-.53-1.293-.79-1.622a1.2 1.2 0 0 0-.3-.29l-.067-.032Zm-2.768.474a8 8 0 0 0-3.71 2.797c.843.484 1.746.876 2.695 1.163c.16-1.164.397-2.223.697-3.122q.145-.438.318-.838m5.504 0q.172.4.318.838c.3.9.537 1.958.697 3.122a13 13 0 0 0 2.695-1.163a8 8 0 0 0-3.71-2.797"/></g></svg>  <span class="text-xs font-medium">中文</span> </div> </button>  <button id="toggleDarkMode" class="group/dark box-content size-5 rounded-md border p-1.5 transition-colors hover:bg-border md:group-[.not-top]:rounded-xl astro-dpuuw7tv"> <span class="sr-only astro-dpuuw7tv">Dark Theme</span> <svg aria-hidden="true" class="system size-5 group-hover/dark:text-primary astro-dpuuw7tv astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" fill-rule="nonzero" d="M19 3a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-4v1h1a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h1v-1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Zm-6 15h-2v1h2zm6-13H5v11h14z"/></g></svg>  <svg aria-hidden="true" class="light hidden size-5 group-hover/dark:text-primary astro-dpuuw7tv astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 19a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1m6.364-2.05l.707.707a1 1 0 0 1-1.414 1.414l-.707-.707a1 1 0 0 1 1.414-1.414m-12.728 0a1 1 0 0 1 1.497 1.32l-.083.094l-.707.707a1 1 0 0 1-1.497-1.32l.083-.094zM12 6a6 6 0 1 1 0 12a6 6 0 0 1 0-12m0 2a4 4 0 1 0 0 8a4 4 0 0 0 0-8m-8 3a1 1 0 0 1 .117 1.993L4 13H3a1 1 0 0 1-.117-1.993L3 11zm17 0a1 1 0 1 1 0 2h-1a1 1 0 1 1 0-2zM4.929 4.929a1 1 0 0 1 1.32-.083l.094.083l.707.707a1 1 0 0 1-1.32 1.497l-.094-.083l-.707-.707a1 1 0 0 1 0-1.414m14.142 0a1 1 0 0 1 0 1.414l-.707.707a1 1 0 1 1-1.414-1.414l.707-.707a1 1 0 0 1 1.414 0M12 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1"/></g></svg>  <svg aria-hidden="true" class="dark hidden size-5 group-hover/dark:text-primary astro-dpuuw7tv astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12.477 4.546a1.01 1.01 0 0 1 1.097-1.409A9 9 0 0 1 12 21c-4.434 0-8.118-3.206-8.863-7.426a1.01 1.01 0 0 1 1.409-1.097a6 6 0 0 0 7.931-7.931m2.404 1.072a8 8 0 0 1-9.263 9.263A7.002 7.002 0 0 0 19 12.001a7 7 0 0 0-4.12-6.383ZM5.565 7.716l.064.14a3.26 3.26 0 0 0 1.237 1.363l.1.059a.068.068 0 0 1 0 .118l-.1.058a3.26 3.26 0 0 0-1.237 1.364l-.064.14a.071.071 0 0 1-.13 0l-.064-.14a3.26 3.26 0 0 0-1.237-1.364l-.1-.058a.068.068 0 0 1 0-.118l.1-.059A3.26 3.26 0 0 0 5.37 7.855l.064-.14a.071.071 0 0 1 .13 0Zm2.832-4.859c.04-.09.166-.09.206 0l.102.222a5.2 5.2 0 0 0 1.97 2.172l.157.092a.108.108 0 0 1 0 .189l-.158.092a5.2 5.2 0 0 0-2.07 2.394a.113.113 0 0 1-.207 0l-.102-.222a5.2 5.2 0 0 0-1.97-2.172l-.158-.092a.108.108 0 0 1 0-.189l.158-.092a5.2 5.2 0 0 0 1.97-2.172z"/></g></svg>  </button> <button id="toggleMenu" class="rounded-md border p-1.5 transition-colors hover:bg-border md:hidden md:group-[.not-top]:rounded-xl astro-dpuuw7tv"> <span class="sr-only astro-dpuuw7tv">Menu</span> <svg aria-hidden="true" class="size-5 astro-dpuuw7tv astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M20 18a1 1 0 0 1 .117 1.993L20 20H4a1 1 0 0 1-.117-1.993L4 18zm0-7a1 1 0 1 1 0 2H4a1 1 0 1 1 0-2zm0-7a1 1 0 1 1 0 2H4a1 1 0 0 1 0-2z"/></g></svg>  </button> </div> </div> </header-component>  <script>
+  const toggleDarkModeElement = document.getElementById('toggleDarkMode')
+  if (toggleDarkModeElement) {
+    toggleDarkModeElement.dataset.theme = localStorage.getItem('theme') || 'system'
+  }
+</script> <script type="module" src="/_astro/Header.astro_astro_type_script_index_0_lang.BEwokT6C.js"></script>   <main class="mt-6 items-start gap-x-10 md:flex">  <aside class="animate top-24 min-w-48 basis-60 overflow-y-scroll max-md:hidden md:sticky md:order-2 lg:shrink-0" style="height:calc(100vh - 8rem);" id="sidebar"> <toc-heading slot="sidebar"> <h2 class="font-semibold">TABLE OF CONTENTS</h2> <ul class="mt-4 text-card-foreground"> <li> <div class="relative"> <span class="absolute top-[5%] w-[2px] rounded transition-colors duration-300 [&.highlight-bg]:bg-primary [&.readed]:bg-input"></span> <a aria-label="Scroll to section: OpenVLA" class="line-clamp-2 px-3 py-1 ms-2 flex-1 text-foreground/75 transition-all hover:text-foreground [&#38;.highlight]:font-medium [&#38;.highlight]:text-primary [&#38;.readed]:text-input [&#38;.highlight-bg-translucent]:bg-muted" href="#openvla">OpenVLA</a> </div>  </li><li> <div class="relative"> <span class="absolute top-[5%] w-[2px] rounded transition-colors duration-300 [&.highlight-bg]:bg-primary [&.readed]:bg-input"></span> <a aria-label="Scroll to section: 代码结构" class="line-clamp-2 px-3 py-1 ms-2 flex-1 text-foreground/75 transition-all hover:text-foreground [&#38;.highlight]:font-medium [&#38;.highlight]:text-primary [&#38;.readed]:text-input [&#38;.highlight-bg-translucent]:bg-muted" href="#代码结构">代码结构</a> </div>  </li><li> <div class="relative"> <span class="absolute top-[5%] w-[2px] rounded transition-colors duration-300 [&.highlight-bg]:bg-primary [&.readed]:bg-input"></span> <a aria-label="Scroll to section: 模型训练" class="line-clamp-2 px-3 py-1 ms-2 flex-1 text-foreground/75 transition-all hover:text-foreground [&#38;.highlight]:font-medium [&#38;.highlight]:text-primary [&#38;.readed]:text-input [&#38;.highlight-bg-translucent]:bg-muted" href="#模型训练">模型训练</a> </div> <ul> <li> <div class="relative"> <span class="absolute top-[5%] w-[2px] rounded transition-colors duration-300 [&.highlight-bg]:bg-primary [&.readed]:bg-input"></span> <a aria-label="Scroll to section: 主文件" class="line-clamp-2 px-3 py-1 ms-2 flex-1 text-foreground/75 transition-all hover:text-foreground [&#38;.highlight]:font-medium [&#38;.highlight]:text-primary [&#38;.readed]:text-input [&#38;.highlight-bg-translucent]:bg-muted ps-7" href="#主文件">主文件</a> </div>  </li><li> <div class="relative"> <span class="absolute top-[5%] w-[2px] rounded transition-colors duration-300 [&.highlight-bg]:bg-primary [&.readed]:bg-input"></span> <a aria-label="Scroll to section: prismatic-vlms" class="line-clamp-2 px-3 py-1 ms-2 flex-1 text-foreground/75 transition-all hover:text-foreground [&#38;.highlight]:font-medium [&#38;.highlight]:text-primary [&#38;.readed]:text-input [&#38;.highlight-bg-translucent]:bg-muted ps-7" href="#prismatic-vlms">prismatic-vlms</a> </div>  </li><li> <div class="relative"> <span class="absolute top-[5%] w-[2px] rounded transition-colors duration-300 [&.highlight-bg]:bg-primary [&.readed]:bg-input"></span> <a aria-label="Scroll to section: run_vla_training" class="line-clamp-2 px-3 py-1 ms-2 flex-1 text-foreground/75 transition-all hover:text-foreground [&#38;.highlight]:font-medium [&#38;.highlight]:text-primary [&#38;.readed]:text-input [&#38;.highlight-bg-translucent]:bg-muted ps-7" href="#run_vla_training">run_vla_training</a> </div>  </li> </ul> </li> </ul> </toc-heading> <script type="module">class c extends HTMLElement{headings=[];tocLinks=[];headingProgress={};constructor(){super(),this.headings=Array.from(document.querySelectorAll("article h2, article h3, article h4, article h5, article h6")),this.tocLinks=Array.from(this.querySelectorAll('a[href^="#"]')).map(e=>({element:e,progressBar:e.previousElementSibling,slug:(e.getAttribute("href")||"").substring(1)}))}updatePositionAndStyle=()=>{const e=window.innerHeight,r=document.querySelector("#content"),o=r?.getBoundingClientRect().top+window.scrollY||0,h=(r?.offsetHeight||0)+o;this.headings.forEach((s,i)=>{const g=s.getBoundingClientRect().top+window.scrollY,n=this.headings[i+1]?this.headings[i+1].getBoundingClientRect().top+window.scrollY:h,t=[g-window.scrollY,n-window.scrollY-s.offsetHeight],l=(e-t[0])/(t[1]-t[0]);this.headingProgress[s.id]={inView:t[0]<e&&t[1]>0,progress:Math.max(0,Math.min(1,l))}}),this.tocLinks.forEach(({element:s,progressBar:i,slug:g},n)=>{const{inView:t,progress:l}=this.headingProgress[g];this.headingProgress[g]&&(s.classList.toggle("highlight",t),s.classList.toggle("highlight-bg-translucent",t),s.classList.toggle("rounded-t-2xl",t&&(n==0||!this.headingProgress[this.tocLinks[n-1]?.slug].inView)),s.classList.toggle("rounded-b-2xl",t&&(n==this.tocLinks.length-1||!this.headingProgress[this.tocLinks[n+1]?.slug].inView)),i.classList.toggle("readed",!t&&l==1),i.classList.toggle("highlight-bg",t),i.style.setProperty("height",`${l*90}%`))})};connectedCallback(){this.tocLinks.forEach(e=>{e.element.addEventListener("click",r=>{r.preventDefault();const o=this.headings.find(h=>h.id===e.slug);o?(history.pushState(null,o.textContent||"",e.element.getAttribute("href")),o.scrollIntoView({behavior:"smooth"})):console.warn(`No heading found for slug: ${e.slug}`)})}),setInterval(this.updatePositionAndStyle,100),window.addEventListener("scroll",this.updatePositionAndStyle)}}customElements.define("toc-heading",c);</script> </aside> <article class="min-w-0 grow">  <div id="content-header" class="animate"> <div class="hero-image relative mb-6"><img src="/_astro/openvla-reading-zh_ZQhBcp.webp" alt="OpenVLA 代码笔记" fetchpriority="high" loading="eager" decoding="async" width="1200" height="630" class="cover-image relative z-10 h-auto w-full max-w-[65ch] rounded-2xl object-contain"><img src="/_astro/openvla-reading-zh_ZQhBcp.webp" alt="Blur image" fetchpriority="high" loading="eager" id="blurImage" decoding="async" width="1200" height="630" class="absolute end-0 top-4 z-0 mt-0 h-full max-w-[65ch] rounded-3xl opacity-60 blur-xl transition-opacity duration-300"></div><div class="article-info max-lg:mx-auto"> <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs leading-6 text-muted-foreground">  <div class="flex items-center gap-1"> <svg aria-hidden="true" class="size-5 astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M16 3a1 1 0 0 1 1 1v1h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2V4a1 1 0 0 1 2 0v1h6V4a1 1 0 0 1 1-1M8 7H5v2h14V7h-3zm-3 4v8h14v-8zm2 2a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H8a1 1 0 0 1-1-1m1 2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2zm3-2a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H12a1 1 0 0 1-1-1m1 2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2zm3-2a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2H16a1 1 0 0 1-1-1m1 2a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2z"/></g></svg>  <span class="text-muted-foreground font-sans"> <time datetime="2024-07-23T00:00:00.000Z"> Jul 23, 2024 </time> </span> <div class="flex items-center gap-1"> <span> / </span> <span>
+Update
+<span class="text-muted-foreground font-sans"> <time datetime="2024-07-23T00:00:00.000Z"> Jul 23, 2024 </time> </span> </span> </div> </div>  <div class="flex items-center gap-1"> <svg aria-hidden="true" class="size-5 astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 2a1 1 0 0 1 .993.883L13 7v4.586l2.707 2.707a1 1 0 0 1-1.32 1.497l-.094-.083l-3-3a1 1 0 0 1-.284-.576L11 12V7a1 1 0 0 1 1-1"/></g></svg>  17 min read </div>  <span class="flex items-center gap-1"> <svg aria-hidden="true" class="size-5 astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12.477 4.546a1.01 1.01 0 0 1 1.097-1.409A9 9 0 0 1 12 21c-4.434 0-8.118-3.206-8.863-7.426a1.01 1.01 0 0 1 1.409-1.097a6 6 0 0 0 7.931-7.931m2.404 1.072a8 8 0 0 1-9.263 9.263A7.002 7.002 0 0 0 19 12.001a7 7 0 0 0-4.12-6.383ZM5.565 7.716l.064.14a3.26 3.26 0 0 0 1.237 1.363l.1.059a.068.068 0 0 1 0 .118l-.1.058a3.26 3.26 0 0 0-1.237 1.364l-.064.14a.071.071 0 0 1-.13 0l-.064-.14a3.26 3.26 0 0 0-1.237-1.364l-.1-.058a.068.068 0 0 1 0-.118l.1-.059A3.26 3.26 0 0 0 5.37 7.855l.064-.14a.071.071 0 0 1 .13 0Zm2.832-4.859c.04-.09.166-.09.206 0l.102.222a5.2 5.2 0 0 0 1.97 2.172l.157.092a.108.108 0 0 1 0 .189l-.158.092a5.2 5.2 0 0 0-2.07 2.394a.113.113 0 0 1-.207 0l-.102-.222a5.2 5.2 0 0 0-1.97-2.172l-.158-.092a.108.108 0 0 1 0-.189l.158-.092a5.2 5.2 0 0 0 1.97-2.172z"/></g></svg>  <a href="https://www.pixiv.net/artworks/113600258" target="_blank" rel="noopener noreferrer" class="hover:underline hover:underline-offset-4">
+Hero Image
+</a> </span> <span class="flex items-center gap-1"> <svg aria-hidden="true" class="size-5 astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M10.124 3.008a1 1 0 0 1 .868 1.116L10.508 8h3.984l.516-4.124a1 1 0 1 1 1.984.248L16.508 8H20a1 1 0 1 1 0 2h-3.742l-.5 4H19.5a1 1 0 1 1 0 2h-3.992l-.516 4.124a1 1 0 1 1-1.984-.248L13.492 16H9.508l-.516 4.124a1 1 0 1 1-1.984-.248L7.492 16H4.5a1 1 0 1 1 0-2h3.242l.5-4H5a1 1 0 0 1 0-2h3.492l.516-4.124a1 1 0 0 1 1.116-.868M13.742 14l.5-4h-3.984l-.5 4z"/></g></svg>  <div> <a aria-label="View more blogs with the tag vla" class="hover:underline hover:underline-offset-4" data-pagefind-filter="tag" href="/tags/vla"> vla </a> / </div><div> <a aria-label="View more blogs with the tag code reading" class="hover:underline hover:underline-offset-4" data-pagefind-filter="tag" href="/tags/code reading"> code reading </a> / </div><div> <a aria-label="View more blogs with the tag embodied ai" class="hover:underline hover:underline-offset-4" data-pagefind-filter="tag" href="/tags/embodied ai"> embodied ai </a>  </div> </span> </div> <h1 class="mt-4 text-2xl font-medium sm:mb-2 sm:mt-6 sm:text-3xl"> OpenVLA 代码笔记 </h1> <div class="mt-3 italic"> <blockquote class="text-sm text-muted-foreground"><q>OpenVLA 纯小白代码阅读记录。</q></blockquote> <div class="text-sm text-muted-foreground mt-1"> <span class="waline-pageview-count" data-path="/blog/openvla-reading"></span> views
+<a href="#waline">
+| <span class="waline-comment-count" data-path="/blog/openvla-reading"></span> comments
+</a> </div> </div> </div>  <div class="mt-4 w-1/2 border-t max-lg:mx-auto sm:mt-6 sm:w-1/3"></div> <script type="module">const o=window.innerHeight,s=o/9,i=o*2/9,l=o*3/9,e=document.getElementById("blurImage");e&&window.addEventListener("scroll",()=>{const t=window.scrollY;t>=l?e.style.opacity="0.15":t>=i?e.style.opacity="0.3":t>=s&&(e.style.opacity="0.45")});</script> </div>  <div id="content" class="max-w-none animate mt-8 md:min-w-[45ch] break-words prose prose-axi dark:prose-invert dark:prose-axi prose-headings:font-medium">   <aside aria-label="NOTE" class="aside my-3 overflow-hidden rounded-xl border astro-vjnanpl3"> <div class="aside-container border-l-8 border-primary px-4 py-3 bg-primary aside-note astro-vjnanpl3"> <p class="not-prose flex items-center gap-x-2 font-medium text-primary astro-vjnanpl3" aria-hidden="true"> <svg aria-hidden="true" class="astro-vjnanpl3 astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m-.01 6c.558 0 1.01.452 1.01 1.01v5.124A1 1 0 0 1 12.5 18h-.49A1.01 1.01 0 0 1 11 16.99V12a1 1 0 1 1 0-2zM12 7a1 1 0 1 1 0 2a1 1 0 0 1 0-2"/></g></svg>  NOTE </p> <div class="aside-content mt-2 astro-vjnanpl3"> <p>出于个人选择，目前并未继续在 OpenVLA 上进行开发，本文现在已经不再维护。然本人依然有相关的知识储备，如果您有相关的需求，可以在评论区评论，我会更新完这篇博客。</p><p>当下使用 GR00t 的 Codebase 进行模型搭建会更加方便。同时我们的项目 <a href="https://github.com/starVLA/starVLA" rel="nofollow noopener noreferrer" target="_blank">starVLA<span> ↗</span></a> 基于 InternVLA-M1 的 Codebase，基于 LeRobot/Llava 的 Dataloader，实现了不止 VLA 更包括 VLM co-training 的支持。</p> </div> </div> </aside> 
+<p>因为要开始入门具身智能，所以说要阅读代码，显然选择了开源的 OpenVLA，于是在这里记录一下代码的阅读过程。</p>
+<p>本人代码水平为，掌握 Pytorch 大多数语法，对于 Hugging Face 不太了解。故部分内容会省略，尽量做到大多数内容均详实。</p>
+<h2 id="openvla">OpenVLA<a class="anchor" href="#openvla">#</a></h2>
+<p>OpenVLA 是一个具身智能大模型，Open 在这里就是 Open Source 的意思，于是使用其开源代码，开源网址为 <a href="https://github.com/openvla/openvla" rel="nofollow noopener noreferrer" target="_blank">https://github.com/openvla/openvla<span> ↗</span></a>。</p>
+<h2 id="代码结构">代码结构<a class="anchor" href="#代码结构">#</a></h2>
+<p>直接运行一个 <code>tree</code>，看一下代码结构：</p>
+<div class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="txt"><pre><code><span class="line"><span>├───prismatic</span></span>
+<span class="line"><span>│   ├───conf</span></span>
+<span class="line"><span>│   ├───extern</span></span>
+<span class="line"><span>│   │   └───hf</span></span>
+<span class="line"><span>│   ├───models</span></span>
+<span class="line"><span>│   │   ├───backbones</span></span>
+<span class="line"><span>│   │   │   ├───llm</span></span>
+<span class="line"><span>│   │   │   │   └───prompting</span></span>
+<span class="line"><span>│   │   │   └───vision</span></span>
+<span class="line"><span>│   │   ├───vlas</span></span>
+<span class="line"><span>│   │   └───vlms</span></span>
+<span class="line"><span>│   ├───overwatch</span></span>
+<span class="line"><span>│   ├───preprocessing</span></span>
+<span class="line"><span>│   │   └───datasets</span></span>
+<span class="line"><span>│   ├───training</span></span>
+<span class="line"><span>│   │   └───strategies</span></span>
+<span class="line"><span>│   ├───util</span></span>
+<span class="line"><span>│   └───vla</span></span>
+<span class="line"><span>│       └───datasets</span></span>
+<span class="line"><span>│           └───rlds</span></span>
+<span class="line"><span>│               ├───oxe</span></span>
+<span class="line"><span>│               │   └───utils</span></span>
+<span class="line"><span>│               └───utils</span></span>
+<span class="line"><span>├───scripts</span></span>
+<span class="line"><span>│   ├───additional-datasets</span></span>
+<span class="line"><span>│   └───extern</span></span>
+<span class="line"><span>└───vla-scripts</span></span>
+<span class="line"><span>    └───extern</span></span></code></pre><span class="language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none">txt</span><button class="copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground" data-code="├───prismatic
+│   ├───conf
+│   ├───extern
+│   │   └───hf
+│   ├───models
+│   │   ├───backbones
+│   │   │   ├───llm
+│   │   │   │   └───prompting
+│   │   │   └───vision
+│   │   ├───vlas
+│   │   └───vlms
+│   ├───overwatch
+│   ├───preprocessing
+│   │   └───datasets
+│   ├───training
+│   │   └───strategies
+│   ├───util
+│   └───vla
+│       └───datasets
+│           └───rlds
+│               ├───oxe
+│               │   └───utils
+│               └───utils
+├───scripts
+│   ├───additional-datasets
+│   └───extern
+└───vla-scripts
+    └───extern" onclick="
+          navigator.clipboard.writeText(this.dataset.code);
+          this.classList.add(&#x27;copied&#x27;);
+          setTimeout(() => this.classList.remove(&#x27;copied&#x27;), 2000)
+        "><div class="ready"><svg class="size-5"><use href="/icons/code.svg#mingcute-clipboard-line"></use></svg></div><div class="success hidden"><svg class="size-5"><use href="/icons/code.svg#mingcute-file-check-line"></use></svg></div></button></div>
+<p>其中首先关注如何从头训练，于是关注 <code>vla-scripts/train.py</code> 这个文件。</p>
+<h2 id="模型训练">模型训练<a class="anchor" href="#模型训练">#</a></h2>
+<h3 id="主文件">主文件<a class="anchor" href="#主文件">#</a></h3>
+<p>简单让 GPT4-o 生成了 <code>vla-scripts/train.py</code> 的逐行注释，如下：</p>
+<div class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><div class="title absolute top-0 left-0 m-2 text-sm text-foreground px-3 py-1 bg-primary-foreground rounded-lg border border-border">vla-scripts/train.py</div><pre><code><span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"""</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">train.py</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">Training script for Vision-Language-Action (VLA) Policies, built on top of pretrained VLMs, trained using mixtures of</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">the Open-X Embodiment dataset. Performs training in native PyTorch, using Fully-Sharded Data Parallel (FSDP) to run</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">distributed across GPUs (and nodes). By default, assumes that CUDA toolkit is >= 11.0 (to support BF16 mixed precision).</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">Notes &#x26; Prerequisites:</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    - If you want to set a custom location for all HF / TIMM artifacts --> `export HF_HOME="&#x3C;PATH>"` *before* running!</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">        => For example (add to end of .bashrc): `export HF_HOME="/mnt/fsx/skaramcheti/cache"`</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    - If you want to suppress random Tensorflow logs --> `export TF_CPP_MIN_LOG_LEVEL=3`</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">Run with:</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    - [Single Node One-GPU (Debug)] : torchrun --standalone --nnodes 1 --nproc-per-node 1 vla-scripts/train.py</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">    - [Single Node Multi-GPU (= $K)]: torchrun --standalone --nnodes 1 --nproc-per-node $K vla-scripts/train.py</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">"""</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> json  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 导入json模块，用于处理JSON数据</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> os  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 导入os模块，用于与操作系统交互</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> re  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 导入re模块，用于正则表达式操作</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> dataclasses </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> dataclass, field  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从dataclasses模块导入dataclass和field，用于定义数据类</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> pathlib </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Path  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从pathlib模块导入Path，用于文件路径操作</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> typing </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Optional, Tuple, Union  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从typing模块导入一些类型提示</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> draccus  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 导入draccus库，用于配置管理</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> torch  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 导入torch库，用于深度学习</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> torch.distributed </span><span style="color:#D73A49;--shiki-dark:#F97583">as</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> dist  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 导入torch.distributed模块，用于分布式训练</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> yaml  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 导入yaml模块，用于处理YAML文件</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> prismatic.conf </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> VLAConfig, VLARegistry  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从prismatic.conf导入VLAConfig和VLARegistry</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> prismatic.models </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> load, load_vla  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从prismatic.models导入load和load_vla函数</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> prismatic.overwatch </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> initialize_overwatch  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从prismatic.overwatch导入initialize_overwatch函数</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> prismatic.training </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> VLAMetrics, get_train_strategy  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从prismatic.training导入VLAMetrics和get_train_strategy</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> prismatic.util </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> set_global_seed  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从prismatic.util导入set_global_seed函数</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> prismatic.vla </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> get_vla_dataset_and_collator  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从prismatic.vla导入get_vla_dataset_and_collator函数</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">from</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> prismatic.vla.datasets.rlds.utils.data_utils </span><span style="color:#D73A49;--shiki-dark:#F97583">import</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> save_dataset_statistics  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 从prismatic.vla.datasets.rlds.utils.data_utils导入save_dataset_statistics函数</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置合理的默认值</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">os.environ[</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"TOKENIZERS_PARALLELISM"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "false"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 禁用分词器的并行处理</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># 初始化Overwatch =>> 包装`logging.Logger`</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">overwatch </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> initialize_overwatch(</span><span style="color:#005CC5;--shiki-dark:#79B8FF">__name__</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 初始化日志记录工具</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">@dataclass</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 使用dataclass装饰器定义数据类</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">class</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> TrainConfig</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # fmt: off</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # VLAConfig (`prismatic/conf/vla.py`); override with --vla.type `VLARegistry.&#x3C;VLA>.vla_id`</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    vla: VLAConfig </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> field(</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        default_factory</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">VLAConfig.get_choice_class(VLARegistry.</span><span style="color:#005CC5;--shiki-dark:#79B8FF">DINOSIGLIP_224PX_MX_OXE_MAGIC_SOUP_PLUS</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla_id)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    )  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># VLA配置，默认使用VLARegistry.DINOSIGLIP_224PX_MX_OXE_MAGIC_SOUP_PLUS.vla_id</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 目录路径</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    data_root_dir: Path </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Path(  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># Open-X数据集目录的路径</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">        "datasets/open-x-embodiment"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    )</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    run_root_dir: Path </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Path(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"runs"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 存储日志和检查点的目录路径</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 恢复运行参数</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    pretrained_checkpoint: Optional[Path] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 预训练检查点的绝对路径</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    is_resume: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> True</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 是否继续之前的训练</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    resume_step: Optional[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 恢复的全局步骤</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    resume_epoch: Optional[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 恢复的训练周期</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 运行参数</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    run_id: Optional[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 用于日志记录的运行ID</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    run_id_note: Optional[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 用于日志记录的额外注释</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    save_interval: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 2500</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 保存检查点的间隔（以步骤为单位）</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    image_aug: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> False</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 是否启用图像增强</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    seed: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 7</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 随机种子（用于可重复性）</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # HF Hub 凭证（用于任何受限模型）</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    hf_token: Union[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, Path] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Path(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">".hf_token"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 环境变量或HF Token的路径</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 跟踪参数</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    trackers: Tuple[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">...</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"jsonl"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"wandb"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 初始化的跟踪器</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    wandb_project: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "openvla"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # W&#x26;B项目名称</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    wandb_entity: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "stanford-voltron"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # W&#x26;B实体名称</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    def</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> __post_init__</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(self) -> </span><span style="color:#005CC5;--shiki-dark:#79B8FF">None</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">        """提升优化参数的可用性，并验证`expected_world_size`"""</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.epochs </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.epochs  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置训练周期数</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.max_steps </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.max_steps  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置最大训练步骤数</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.global_batch_size </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.global_batch_size  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置全局批次大小</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.per_device_batch_size </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.per_device_batch_size  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置每个设备的批次大小</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.learning_rate </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.learning_rate  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置学习率</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.weight_decay </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.weight_decay  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置权重衰减</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.max_grad_norm </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.max_grad_norm  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置最大梯度范数</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.lr_scheduler_type </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.lr_scheduler_type  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置学习率调度器类型</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.warmup_ratio </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.warmup_ratio  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置预热比率</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">        self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.train_strategy </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.train_strategy  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置训练策略</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">        # [验证] 断言`expected_world_size`</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">            self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.expected_world_size </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> overwatch.world_size()</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        ), </span><span style="color:#D73A49;--shiki-dark:#F97583">f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Expected World Size = </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.vla.expected_world_size</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> but Found </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">overwatch.world_size()</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> GPUs!"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 验证期望的世界大小是否与实际一致</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # fmt: on</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">@draccus.wrap</span><span style="color:#24292E;--shiki-dark:#E1E4E8">()  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 使用draccus.wrap装饰器定义训练函数</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">def</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> train</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(cfg: TrainConfig) -> </span><span style="color:#005CC5;--shiki-dark:#79B8FF">None</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"OpenVLA Training :: Warming Up"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录训练开始的信息</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 注意 => 在`torchrun`下初始化`overwatch`会自动设置`torch.distributed`</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    torch.cuda.set_device(device_id </span><span style="color:#D73A49;--shiki-dark:#F97583">:=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> overwatch.local_rank())  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置CUDA设备</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    torch.cuda.empty_cache()  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 清空CUDA缓存</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 配置唯一的运行名称和保存目录</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    vla_id </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.vla_id  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 获取VLA ID</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    cfg.run_id </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">vla_id</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">+n</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.expected_world_size </span><span style="color:#D73A49;--shiki-dark:#F97583">//</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 8}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">+b</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.per_device_batch_size</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">+x</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.seed</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.run_id </span><span style="color:#D73A49;--shiki-dark:#F97583">is</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        else</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.run_id</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    )  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 如果运行ID为空，则生成唯一的运行ID</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.run_id_note </span><span style="color:#D73A49;--shiki-dark:#F97583">is</span><span style="color:#D73A49;--shiki-dark:#F97583"> not</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        cfg.run_id </span><span style="color:#D73A49;--shiki-dark:#F97583">+=</span><span style="color:#D73A49;--shiki-dark:#F97583"> f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"--</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.run_id_note</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 如果有运行ID注释，则添加到运行ID中</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.image_aug:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        cfg.run_id </span><span style="color:#D73A49;--shiki-dark:#F97583">+=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "--image_aug"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 如果启用了图像增强，则添加到运行ID中</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 开始 =>> 创建目录并设置随机性</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">'"Do or do not; there is no try."'</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#E36209;--shiki-dark:#FFAB70">ctx_level</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF">1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    hf_token </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.hf_token.read_text().strip() </span><span style="color:#D73A49;--shiki-dark:#F97583">if</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> isinstance</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(cfg.hf_token, Path) </span><span style="color:#D73A49;--shiki-dark:#F97583">else</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> os.environ[cfg.hf_token]  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 读取HF Token</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    worker_init_fn </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> set_global_seed(cfg.seed, </span><span style="color:#E36209;--shiki-dark:#FFAB70">get_worker_init_fn</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF">True</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置全局随机种子</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    os.makedirs(run_dir </span><span style="color:#D73A49;--shiki-dark:#F97583">:=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (cfg.run_root_dir </span><span style="color:#D73A49;--shiki-dark:#F97583">/</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.run_id), </span><span style="color:#E36209;--shiki-dark:#FFAB70">exist_ok</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF">True</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 创建运行目录</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    os.makedirs(cfg.run_root_dir </span><span style="color:#D73A49;--shiki-dark:#F97583">/</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.run_id </span><span style="color:#D73A49;--shiki-dark:#F97583">/</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "checkpoints"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#E36209;--shiki-dark:#FFAB70">exist_ok</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF">True</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 创建检查点目录</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 保存配置 =>> 另外保存一个JSON版本以供以后HF集成</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> overwatch.is_rank_zero():</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        draccus.dump(cfg, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">open</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(run_dir </span><span style="color:#D73A49;--shiki-dark:#F97583">/</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "config.yaml"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"w"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">))  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 保存配置到YAML文件</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        with</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> open</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(run_dir </span><span style="color:#D73A49;--shiki-dark:#F97583">/</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "config.yaml"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"r"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">as</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> f_yaml, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">open</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(run_dir </span><span style="color:#D73A49;--shiki-dark:#F97583">/</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "config.json"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"w"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">as</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> f_json:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">            yaml_cfg </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> yaml.safe_load(f_yaml)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">            json.dump(yaml_cfg, f_json, </span><span style="color:#E36209;--shiki-dark:#FFAB70">indent</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF">2</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 保存配置到JSON文件</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 加载VLA检查点（如果从训练中恢复）或基础VLM（从`cfg.vla.base_vlm` ID或路径）</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    #   =>> 注意::验证所有参数在加载时都以FP32加载！</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#D73A49;--shiki-dark:#F97583">f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Loading Base VLM `</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.base_vlm</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">` from ID/Path"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.pretrained_checkpoint </span><span style="color:#D73A49;--shiki-dark:#F97583">is</span><span style="color:#D73A49;--shiki-dark:#F97583"> not</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">        # [验证] 预训练检查点的`step`和`epoch`应与`resume_step`和`resume_epoch`匹配</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">        #   =>> 注意::我们要求开发人员传递`resume_*`参数作为额外的健全性检查！</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.is_resume:</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">            assert</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> int</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(re.search(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"step-(.+?)-"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, cfg.pretrained_checkpoint.name).group(</span><span style="color:#005CC5;--shiki-dark:#79B8FF">1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)) </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.resume_step</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">            assert</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> int</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(re.search(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"epoch-(.+?)-"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, cfg.pretrained_checkpoint.name).group(</span><span style="color:#005CC5;--shiki-dark:#79B8FF">1</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)) </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.resume_epoch</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        vlm </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> load_vla(cfg.pretrained_checkpoint, </span><span style="color:#E36209;--shiki-dark:#FFAB70">hf_token</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">hf_token, </span><span style="color:#E36209;--shiki-dark:#FFAB70">load_for_training</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF">True</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 加载VLA检查点</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    else</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        vlm </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> load(cfg.vla.base_vlm, </span><span style="color:#E36209;--shiki-dark:#FFAB70">hf_token</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">hf_token, </span><span style="color:#E36209;--shiki-dark:#FFAB70">load_for_training</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF">True</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 加载基础VLM</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # [验证] 模型应为全精度！</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> param </span><span style="color:#D73A49;--shiki-dark:#F97583">in</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> vlm.parameters():</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> param.dtype </span><span style="color:#D73A49;--shiki-dark:#F97583">==</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> torch.float32, </span><span style="color:#D73A49;--shiki-dark:#F97583">f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Loaded VLM parameter not in full precision: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">param</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 验证模型参数类型</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 根据冻结与未冻结的参数确定训练“阶段”-->支持不同的微调方案！</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    if</span><span style="color:#D73A49;--shiki-dark:#F97583"> not</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.freeze_vision_backbone </span><span style="color:#D73A49;--shiki-dark:#F97583">and</span><span style="color:#D73A49;--shiki-dark:#F97583"> not</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.freeze_llm_backbone:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        stage </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "vla-full-train"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 完全微调</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    elif</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.freeze_vision_backbone </span><span style="color:#D73A49;--shiki-dark:#F97583">and</span><span style="color:#D73A49;--shiki-dark:#F97583"> not</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.freeze_llm_backbone:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        stage </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "vla-train"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 冻结视觉编码器</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    elif</span><span style="color:#D73A49;--shiki-dark:#F97583"> not</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.freeze_vision_backbone </span><span style="color:#D73A49;--shiki-dark:#F97583">and</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.freeze_llm_backbone:</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.unfreeze_last_llm_layer, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"You should unfreeze at least the last layer of your LLM!"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        stage </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "vla-sandwich-train"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 微调视觉编码器、投影器和LLM最后一层</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    elif</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.freeze_vision_backbone </span><span style="color:#D73A49;--shiki-dark:#F97583">and</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.freeze_llm_backbone:</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        assert</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> cfg.vla.unfreeze_last_llm_layer, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Need to unfreeze at least last LLM layer to train!"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        stage </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "vla-last-layer-train"</span><span style="color:#6A737D;--shiki-dark:#6A737D">  # 仅微调LLM最后一层</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    else</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        raise</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> ValueError</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#032F62;--shiki-dark:#9ECBFF">            "Weight freezing configuration not supported. VLA config has the following parameters: "</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">            f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"freeze_vision_backbone: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.freeze_vision_backbone</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">            f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"freeze_llm_backbone: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.freeze_llm_backbone</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">            f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"unfreeze_last_llm_layer: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.unfreeze_last_llm_layer</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        )  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 如果配置不支持，则引发错误</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # [显式] 调用`freeze_backbones`以提高清晰度 =>> 将准确记录哪些被冻结</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#D73A49;--shiki-dark:#F97583">f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Invoking `VLM.freeze_backbones()` for `</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">vla_id</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">` => Stage: `</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">stage</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">`"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    vlm.freeze_backbones(stage)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 冻结模型参数</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 打印总参数和可训练参数的数量</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    num_params </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> sum</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(p.numel() </span><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> p </span><span style="color:#D73A49;--shiki-dark:#F97583">in</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> vlm.parameters())</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    num_trainable_params </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> sum</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(p.numel() </span><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> p </span><span style="color:#D73A49;--shiki-dark:#F97583">in</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> vlm.parameters() </span><span style="color:#D73A49;--shiki-dark:#F97583">if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> p.requires_grad)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"# Parameters (in millions): </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">num_params </span><span style="color:#D73A49;--shiki-dark:#F97583">/</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 10</span><span style="color:#D73A49;--shiki-dark:#F97583">**</span><span style="color:#005CC5;--shiki-dark:#79B8FF">6</span><span style="color:#D73A49;--shiki-dark:#F97583">:.3f</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> Total, </span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">num_trainable_params </span><span style="color:#D73A49;--shiki-dark:#F97583">/</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 10</span><span style="color:#D73A49;--shiki-dark:#F97583">**</span><span style="color:#005CC5;--shiki-dark:#79B8FF">6</span><span style="color:#D73A49;--shiki-dark:#F97583">:.3f</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> Trainable"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    )  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录参数数量</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 获取VLA数据集和collator</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#D73A49;--shiki-dark:#F97583">f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Creating VLA Open-X Dataset with Mixture `</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.data_mix</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">`"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    vla_dataset, action_tokenizer, collator </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> get_vla_dataset_and_collator(</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        cfg.data_root_dir,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        cfg.vla.data_mix,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        image_transform</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">vlm.vision_backbone.get_image_transform(),</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        tokenizer</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">vlm.llm_backbone.get_tokenizer(),</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        prompt_builder_fn</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">vlm.llm_backbone.prompt_builder_fn,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        default_image_resolution</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">vlm.vision_backbone.default_image_resolution,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        shuffle_buffer_size</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.shuffle_buffer_size,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        image_aug</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.image_aug,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    )  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 获取VLA数据集和collator</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 保存数据集统计信息以便在推理时去归一化</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    if</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> overwatch.is_rank_zero():</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        save_dataset_statistics(vla_dataset.dataset_statistics, run_dir)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 保存数据集统计信息</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 创建训练策略</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#D73A49;--shiki-dark:#F97583">f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Initializing Train Strategy `</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.train_strategy</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">`"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    train_strategy </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> get_train_strategy(</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        train_strategy</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.train_strategy,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        vlm</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">vlm,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        device_id</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">device_id,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        stage</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">stage,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        epochs</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.epochs,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        max_steps</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.max_steps,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        global_batch_size</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.global_batch_size,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        per_device_batch_size</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.per_device_batch_size,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        learning_rate</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.learning_rate,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        weight_decay</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.weight_decay,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        max_grad_norm</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.max_grad_norm,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        lr_scheduler_type</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.lr_scheduler_type,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        warmup_ratio</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.warmup_ratio,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        enable_gradient_checkpointing</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.enable_gradient_checkpointing,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        enable_mixed_precision_training</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.enable_mixed_precision_training,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        reduce_in_full_precision</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.vla.reduce_in_full_precision,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        worker_init_fn</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">worker_init_fn,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    )  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 初始化训练策略</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    train_strategy.run_setup(</span><span style="color:#E36209;--shiki-dark:#FFAB70">run_dir</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">run_dir, </span><span style="color:#E36209;--shiki-dark:#FFAB70">n_train_examples</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF">len</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(vla_dataset))  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 设置训练策略</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 创建度量工具 =>> 动态跟踪，记录到指定的跟踪器（例如JSONL，Weights &#x26; Biases）</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#D73A49;--shiki-dark:#F97583">f</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Creating Metrics with Active Trackers => `</span><span style="color:#005CC5;--shiki-dark:#79B8FF">{</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.trackers</span><span style="color:#005CC5;--shiki-dark:#79B8FF">}</span><span style="color:#032F62;--shiki-dark:#9ECBFF">`"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    metrics </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> VLAMetrics(</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        cfg.trackers,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        cfg.run_id,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        run_dir,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        draccus.encode(cfg),</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        wandb_project</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.wandb_project,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        wandb_entity</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.wandb_entity,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        resume_step</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.resume_step,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        resume_epoch</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.resume_epoch,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    )  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 创建度量工具</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 运行VLA训练</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Starting VLA Training Loop"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    train_strategy.run_vla_training(</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        vla_dataset,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        collator,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        action_tokenizer,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">        metrics,</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">        save_interval</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">cfg.save_interval,</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    )  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 运行VLA训练</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 完成</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Done with Training =>> Finalizing Metrics"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    metrics.finalize()  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 完成度量工具</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # 完成所有操作</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    overwatch.info(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"... and that's all, folks!"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">)  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 记录日志信息</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    dist.barrier()  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 同步所有进程</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    dist.destroy_process_group()  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 销毁进程组</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">if</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> __name__</span><span style="color:#D73A49;--shiki-dark:#F97583"> ==</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "__main__"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    train()  </span><span style="color:#6A737D;--shiki-dark:#6A737D"># 如果是主模块，则运行训练函数</span></span></code></pre><span class="language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none">python</span><button class="copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground" data-code="&#x22;&#x22;&#x22;
+train.py
+
+Training script for Vision-Language-Action (VLA) Policies, built on top of pretrained VLMs, trained using mixtures of
+the Open-X Embodiment dataset. Performs training in native PyTorch, using Fully-Sharded Data Parallel (FSDP) to run
+distributed across GPUs (and nodes). By default, assumes that CUDA toolkit is >= 11.0 (to support BF16 mixed precision).
+
+Notes &#x26; Prerequisites:
+    - If you want to set a custom location for all HF / TIMM artifacts --> &#x60;export HF_HOME=&#x22;<PATH>&#x22;&#x60; *before* running!
+        => For example (add to end of .bashrc): &#x60;export HF_HOME=&#x22;/mnt/fsx/skaramcheti/cache&#x22;&#x60;
+    - If you want to suppress random Tensorflow logs --> &#x60;export TF_CPP_MIN_LOG_LEVEL=3&#x60;
+
+Run with:
+    - [Single Node One-GPU (Debug)] : torchrun --standalone --nnodes 1 --nproc-per-node 1 vla-scripts/train.py
+    - [Single Node Multi-GPU (= $K)]: torchrun --standalone --nnodes 1 --nproc-per-node $K vla-scripts/train.py
+&#x22;&#x22;&#x22;
+
+import json  # 导入json模块，用于处理JSON数据
+import os  # 导入os模块，用于与操作系统交互
+import re  # 导入re模块，用于正则表达式操作
+from dataclasses import dataclass, field  # 从dataclasses模块导入dataclass和field，用于定义数据类
+from pathlib import Path  # 从pathlib模块导入Path，用于文件路径操作
+from typing import Optional, Tuple, Union  # 从typing模块导入一些类型提示
+
+import draccus  # 导入draccus库，用于配置管理
+import torch  # 导入torch库，用于深度学习
+import torch.distributed as dist  # 导入torch.distributed模块，用于分布式训练
+import yaml  # 导入yaml模块，用于处理YAML文件
+
+from prismatic.conf import VLAConfig, VLARegistry  # 从prismatic.conf导入VLAConfig和VLARegistry
+from prismatic.models import load, load_vla  # 从prismatic.models导入load和load_vla函数
+from prismatic.overwatch import initialize_overwatch  # 从prismatic.overwatch导入initialize_overwatch函数
+from prismatic.training import VLAMetrics, get_train_strategy  # 从prismatic.training导入VLAMetrics和get_train_strategy
+from prismatic.util import set_global_seed  # 从prismatic.util导入set_global_seed函数
+from prismatic.vla import get_vla_dataset_and_collator  # 从prismatic.vla导入get_vla_dataset_and_collator函数
+from prismatic.vla.datasets.rlds.utils.data_utils import save_dataset_statistics  # 从prismatic.vla.datasets.rlds.utils.data_utils导入save_dataset_statistics函数
+
+# 设置合理的默认值
+os.environ[&#x22;TOKENIZERS_PARALLELISM&#x22;] = &#x22;false&#x22;  # 禁用分词器的并行处理
+
+# 初始化Overwatch =>> 包装&#x60;logging.Logger&#x60;
+overwatch = initialize_overwatch(__name__)  # 初始化日志记录工具
+
+@dataclass  # 使用dataclass装饰器定义数据类
+class TrainConfig:
+    # fmt: off
+
+    # VLAConfig (&#x60;prismatic/conf/vla.py&#x60;); override with --vla.type &#x60;VLARegistry.<VLA>.vla_id&#x60;
+    vla: VLAConfig = field(
+        default_factory=VLAConfig.get_choice_class(VLARegistry.DINOSIGLIP_224PX_MX_OXE_MAGIC_SOUP_PLUS.vla_id)
+    )  # VLA配置，默认使用VLARegistry.DINOSIGLIP_224PX_MX_OXE_MAGIC_SOUP_PLUS.vla_id
+
+    # 目录路径
+    data_root_dir: Path = Path(  # Open-X数据集目录的路径
+        &#x22;datasets/open-x-embodiment&#x22;
+    )
+    run_root_dir: Path = Path(&#x22;runs&#x22;)  # 存储日志和检查点的目录路径
+
+    # 恢复运行参数
+    pretrained_checkpoint: Optional[Path] = None  # 预训练检查点的绝对路径
+    is_resume: bool = True  # 是否继续之前的训练
+    resume_step: Optional[int] = None  # 恢复的全局步骤
+    resume_epoch: Optional[int] = None  # 恢复的训练周期
+
+    # 运行参数
+    run_id: Optional[str] = None  # 用于日志记录的运行ID
+    run_id_note: Optional[str] = None  # 用于日志记录的额外注释
+    save_interval: int = 2500  # 保存检查点的间隔（以步骤为单位）
+    image_aug: bool = False  # 是否启用图像增强
+    seed: int = 7  # 随机种子（用于可重复性）
+
+    # HF Hub 凭证（用于任何受限模型）
+    hf_token: Union[str, Path] = Path(&#x22;.hf_token&#x22;)  # 环境变量或HF Token的路径
+
+    # 跟踪参数
+    trackers: Tuple[str, ...] = (&#x22;jsonl&#x22;, &#x22;wandb&#x22;)  # 初始化的跟踪器
+    wandb_project: str = &#x22;openvla&#x22;  # W&#x26;B项目名称
+    wandb_entity: str = &#x22;stanford-voltron&#x22;  # W&#x26;B实体名称
+
+    def __post_init__(self) -> None:
+        &#x22;&#x22;&#x22;提升优化参数的可用性，并验证&#x60;expected_world_size&#x60;&#x22;&#x22;&#x22;
+        self.epochs = self.vla.epochs  # 设置训练周期数
+        self.max_steps = self.vla.max_steps  # 设置最大训练步骤数
+        self.global_batch_size = self.vla.global_batch_size  # 设置全局批次大小
+        self.per_device_batch_size = self.vla.per_device_batch_size  # 设置每个设备的批次大小
+
+        self.learning_rate = self.vla.learning_rate  # 设置学习率
+        self.weight_decay = self.vla.weight_decay  # 设置权重衰减
+        self.max_grad_norm = self.vla.max_grad_norm  # 设置最大梯度范数
+        self.lr_scheduler_type = self.vla.lr_scheduler_type  # 设置学习率调度器类型
+        self.warmup_ratio = self.vla.warmup_ratio  # 设置预热比率
+
+        self.train_strategy = self.vla.train_strategy  # 设置训练策略
+
+        # [验证] 断言&#x60;expected_world_size&#x60;
+        assert (
+            self.vla.expected_world_size == overwatch.world_size()
+        ), f&#x22;Expected World Size = {self.vla.expected_world_size} but Found {overwatch.world_size()} GPUs!&#x22;  # 验证期望的世界大小是否与实际一致
+
+    # fmt: on
+
+
+@draccus.wrap()  # 使用draccus.wrap装饰器定义训练函数
+def train(cfg: TrainConfig) -> None:
+    overwatch.info(&#x22;OpenVLA Training :: Warming Up&#x22;)  # 记录训练开始的信息
+
+    # 注意 => 在&#x60;torchrun&#x60;下初始化&#x60;overwatch&#x60;会自动设置&#x60;torch.distributed&#x60;
+    torch.cuda.set_device(device_id := overwatch.local_rank())  # 设置CUDA设备
+    torch.cuda.empty_cache()  # 清空CUDA缓存
+
+    # 配置唯一的运行名称和保存目录
+    vla_id = cfg.vla.vla_id  # 获取VLA ID
+    cfg.run_id = (
+        f&#x22;{vla_id}+n{cfg.vla.expected_world_size // 8}+b{cfg.per_device_batch_size}+x{cfg.seed}&#x22;
+        if cfg.run_id is None
+        else cfg.run_id
+    )  # 如果运行ID为空，则生成唯一的运行ID
+    if cfg.run_id_note is not None:
+        cfg.run_id += f&#x22;--{cfg.run_id_note}&#x22;  # 如果有运行ID注释，则添加到运行ID中
+    if cfg.image_aug:
+        cfg.run_id += &#x22;--image_aug&#x22;  # 如果启用了图像增强，则添加到运行ID中
+
+    # 开始 =>> 创建目录并设置随机性
+    overwatch.info(&#x27;&#x22;Do or do not; there is no try.&#x22;&#x27;, ctx_level=1)  # 记录日志信息
+    hf_token = cfg.hf_token.read_text().strip() if isinstance(cfg.hf_token, Path) else os.environ[cfg.hf_token]  # 读取HF Token
+    worker_init_fn = set_global_seed(cfg.seed, get_worker_init_fn=True)  # 设置全局随机种子
+    os.makedirs(run_dir := (cfg.run_root_dir / cfg.run_id), exist_ok=True)  # 创建运行目录
+    os.makedirs(cfg.run_root_dir / cfg.run_id / &#x22;checkpoints&#x22;, exist_ok=True)  # 创建检查点目录
+
+    # 保存配置 =>> 另外保存一个JSON版本以供以后HF集成
+    if overwatch.is_rank_zero():
+        draccus.dump(cfg, open(run_dir / &#x22;config.yaml&#x22;, &#x22;w&#x22;))  # 保存配置到YAML文件
+        with open(run_dir / &#x22;config.yaml&#x22;, &#x22;r&#x22;) as f_yaml, open(run_dir / &#x22;config.json&#x22;, &#x22;w&#x22;) as f_json:
+            yaml_cfg = yaml.safe_load(f_yaml)
+            json.dump(yaml_cfg, f_json, indent=2)  # 保存配置到JSON文件
+
+    # 加载VLA检查点（如果从训练中恢复）或基础VLM（从&#x60;cfg.vla.base_vlm&#x60; ID或路径）
+    #   =>> 注意::验证所有参数在加载时都以FP32加载！
+    overwatch.info(f&#x22;Loading Base VLM &#x60;{cfg.vla.base_vlm}&#x60; from ID/Path&#x22;)  # 记录日志信息
+    if cfg.pretrained_checkpoint is not None:
+        # [验证] 预训练检查点的&#x60;step&#x60;和&#x60;epoch&#x60;应与&#x60;resume_step&#x60;和&#x60;resume_epoch&#x60;匹配
+        #   =>> 注意::我们要求开发人员传递&#x60;resume_*&#x60;参数作为额外的健全性检查！
+        if cfg.is_resume:
+            assert int(re.search(&#x22;step-(.+?)-&#x22;, cfg.pretrained_checkpoint.name).group(1)) == cfg.resume_step
+            assert int(re.search(&#x22;epoch-(.+?)-&#x22;, cfg.pretrained_checkpoint.name).group(1)) == cfg.resume_epoch
+
+        vlm = load_vla(cfg.pretrained_checkpoint, hf_token=hf_token, load_for_training=True)  # 加载VLA检查点
+
+    else:
+        vlm = load(cfg.vla.base_vlm, hf_token=hf_token, load_for_training=True)  # 加载基础VLM
+
+    # [验证] 模型应为全精度！
+    for param in vlm.parameters():
+        assert param.dtype == torch.float32, f&#x22;Loaded VLM parameter not in full precision: {param}&#x22;  # 验证模型参数类型
+
+    # 根据冻结与未冻结的参数确定训练“阶段”-->支持不同的微调方案！
+    if not cfg.vla.freeze_vision_backbone and not cfg.vla.freeze_llm_backbone:
+        stage = &#x22;vla-full-train&#x22;  # 完全微调
+    elif cfg.vla.freeze_vision_backbone and not cfg.vla.freeze_llm_backbone:
+        stage = &#x22;vla-train&#x22;  # 冻结视觉编码器
+    elif not cfg.vla.freeze_vision_backbone and cfg.vla.freeze_llm_backbone:
+        assert cfg.vla.unfreeze_last_llm_layer, &#x22;You should unfreeze at least the last layer of your LLM!&#x22;
+        stage = &#x22;vla-sandwich-train&#x22;  # 微调视觉编码器、投影器和LLM最后一层
+    elif cfg.vla.freeze_vision_backbone and cfg.vla.freeze_llm_backbone:
+        assert cfg.vla.unfreeze_last_llm_layer, &#x22;Need to unfreeze at least last LLM layer to train!&#x22;
+        stage = &#x22;vla-last-layer-train&#x22;  # 仅微调LLM最后一层
+    else:
+        raise ValueError(
+            &#x22;Weight freezing configuration not supported. VLA config has the following parameters: &#x22;
+            f&#x22;freeze_vision_backbone: {cfg.vla.freeze_vision_backbone}&#x22;
+            f&#x22;freeze_llm_backbone: {cfg.vla.freeze_llm_backbone}&#x22;
+            f&#x22;unfreeze_last_llm_layer: {cfg.vla.unfreeze_last_llm_layer}&#x22;
+        )  # 如果配置不支持，则引发错误
+
+    # [显式] 调用&#x60;freeze_backbones&#x60;以提高清晰度 =>> 将准确记录哪些被冻结
+    overwatch.info(f&#x22;Invoking &#x60;VLM.freeze_backbones()&#x60; for &#x60;{vla_id}&#x60; => Stage: &#x60;{stage}&#x60;&#x22;)  # 记录日志信息
+    vlm.freeze_backbones(stage)  # 冻结模型参数
+
+    # 打印总参数和可训练参数的数量
+    num_params = sum(p.numel() for p in vlm.parameters())
+    num_trainable_params = sum(p.numel() for p in vlm.parameters() if p.requires_grad)
+    overwatch.info(
+        f&#x22;# Parameters (in millions): {num_params / 10**6:.3f} Total, {num_trainable_params / 10**6:.3f} Trainable&#x22;
+    )  # 记录参数数量
+
+    # 获取VLA数据集和collator
+    overwatch.info(f&#x22;Creating VLA Open-X Dataset with Mixture &#x60;{cfg.vla.data_mix}&#x60;&#x22;)  # 记录日志信息
+    vla_dataset, action_tokenizer, collator = get_vla_dataset_and_collator(
+        cfg.data_root_dir,
+        cfg.vla.data_mix,
+        image_transform=vlm.vision_backbone.get_image_transform(),
+        tokenizer=vlm.llm_backbone.get_tokenizer(),
+        prompt_builder_fn=vlm.llm_backbone.prompt_builder_fn,
+        default_image_resolution=vlm.vision_backbone.default_image_resolution,
+        shuffle_buffer_size=cfg.vla.shuffle_buffer_size,
+        image_aug=cfg.image_aug,
+    )  # 获取VLA数据集和collator
+
+    # 保存数据集统计信息以便在推理时去归一化
+    if overwatch.is_rank_zero():
+        save_dataset_statistics(vla_dataset.dataset_statistics, run_dir)  # 保存数据集统计信息
+
+    # 创建训练策略
+    overwatch.info(f&#x22;Initializing Train Strategy &#x60;{cfg.train_strategy}&#x60;&#x22;)  # 记录日志信息
+    train_strategy = get_train_strategy(
+        train_strategy=cfg.train_strategy,
+        vlm=vlm,
+        device_id=device_id,
+        stage=stage,
+        epochs=cfg.epochs,
+        max_steps=cfg.max_steps,
+        global_batch_size=cfg.global_batch_size,
+        per_device_batch_size=cfg.per_device_batch_size,
+        learning_rate=cfg.learning_rate,
+        weight_decay=cfg.weight_decay,
+        max_grad_norm=cfg.max_grad_norm,
+        lr_scheduler_type=cfg.lr_scheduler_type,
+        warmup_ratio=cfg.warmup_ratio,
+        enable_gradient_checkpointing=cfg.vla.enable_gradient_checkpointing,
+        enable_mixed_precision_training=cfg.vla.enable_mixed_precision_training,
+        reduce_in_full_precision=cfg.vla.reduce_in_full_precision,
+        worker_init_fn=worker_init_fn,
+    )  # 初始化训练策略
+    train_strategy.run_setup(run_dir=run_dir, n_train_examples=len(vla_dataset))  # 设置训练策略
+
+    # 创建度量工具 =>> 动态跟踪，记录到指定的跟踪器（例如JSONL，Weights &#x26; Biases）
+    overwatch.info(f&#x22;Creating Metrics with Active Trackers => &#x60;{cfg.trackers}&#x60;&#x22;)  # 记录日志信息
+    metrics = VLAMetrics(
+        cfg.trackers,
+        cfg.run_id,
+        run_dir,
+        draccus.encode(cfg),
+        wandb_project=cfg.wandb_project,
+        wandb_entity=cfg.wandb_entity,
+        resume_step=cfg.resume_step,
+        resume_epoch=cfg.resume_epoch,
+    )  # 创建度量工具
+
+    # 运行VLA训练
+    overwatch.info(&#x22;Starting VLA Training Loop&#x22;)  # 记录日志信息
+    train_strategy.run_vla_training(
+        vla_dataset,
+        collator,
+        action_tokenizer,
+        metrics,
+        save_interval=cfg.save_interval,
+    )  # 运行VLA训练
+
+    # 完成
+    overwatch.info(&#x22;Done with Training =>> Finalizing Metrics&#x22;)  # 记录日志信息
+    metrics.finalize()  # 完成度量工具
+
+    # 完成所有操作
+    overwatch.info(&#x22;... and that&#x27;s all, folks!&#x22;)  # 记录日志信息
+    dist.barrier()  # 同步所有进程
+    dist.destroy_process_group()  # 销毁进程组
+
+if __name__ == &#x22;__main__&#x22;:
+    train()  # 如果是主模块，则运行训练函数" onclick="
+          navigator.clipboard.writeText(this.dataset.code);
+          this.classList.add(&#x27;copied&#x27;);
+          setTimeout(() => this.classList.remove(&#x27;copied&#x27;), 2000)
+        "><div class="ready"><svg class="size-5"><use href="/icons/code.svg#mingcute-clipboard-line"></use></svg></div><div class="success hidden"><svg class="size-5"><use href="/icons/code.svg#mingcute-file-check-line"></use></svg></div></button></div>
+<p>在这里暂时不用关注太多的事情，我第一件关心的事情是，一开始 <code>import</code> 的那么多的库里面，他们分别起到了什么作用。</p>
+<p>假如说前往 OpenVLA 的 <a href="https://github.com/openvla/openvla" rel="nofollow noopener noreferrer" target="_blank">Github 仓库<span> ↗</span></a>，可以发现其 fork 了另一个库，也就是 <a href="https://github.com/TRI-ML/prismatic-vlms" rel="nofollow noopener noreferrer" target="_blank">prismatic-vlms<span> ↗</span></a>，在这里我只想关注 OpenVLA 的实现，所以我想要知道，相较于 prismatic-vlms，OpenVLA 有什么改动。</p>
+<h3 id="prismatic-vlms">prismatic-vlms<a class="anchor" href="#prismatic-vlms">#</a></h3>
+<p>在 prismatic-vlms 中，同样运行一下 <code>tree</code>，看一下文件结构：</p>
+<div class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="txt"><pre><code><span class="line"><span>├───prismatic</span></span>
+<span class="line"><span>│   ├───conf</span></span>
+<span class="line"><span>│   ├───models</span></span>
+<span class="line"><span>│   │   ├───backbones</span></span>
+<span class="line"><span>│   │   │   ├───llm</span></span>
+<span class="line"><span>│   │   │   │   └───prompting</span></span>
+<span class="line"><span>│   │   │   └───vision</span></span>
+<span class="line"><span>│   │   └───vlms</span></span>
+<span class="line"><span>│   ├───overwatch</span></span>
+<span class="line"><span>│   ├───preprocessing</span></span>
+<span class="line"><span>│   │   └───datasets</span></span>
+<span class="line"><span>│   ├───training</span></span>
+<span class="line"><span>│   │   └───strategies</span></span>
+<span class="line"><span>│   │   └───strategies</span></span>
+<span class="line"><span>│   └───util</span></span>
+<span class="line"><span>└───scripts</span></span>
+<span class="line"><span>    └───additional-datasets</span></span></code></pre><span class="language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none">txt</span><button class="copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground" data-code="├───prismatic
+│   ├───conf
+│   ├───models
+│   │   ├───backbones
+│   │   │   ├───llm
+│   │   │   │   └───prompting
+│   │   │   └───vision
+│   │   └───vlms
+│   ├───overwatch
+│   ├───preprocessing
+│   │   └───datasets
+│   ├───training
+│   │   └───strategies
+│   │   └───strategies
+│   └───util
+└───scripts
+    └───additional-datasets" onclick="
+          navigator.clipboard.writeText(this.dataset.code);
+          this.classList.add(&#x27;copied&#x27;);
+          setTimeout(() => this.classList.remove(&#x27;copied&#x27;), 2000)
+        "><div class="ready"><svg class="size-5"><use href="/icons/code.svg#mingcute-clipboard-line"></use></svg></div><div class="success hidden"><svg class="size-5"><use href="/icons/code.svg#mingcute-file-check-line"></use></svg></div></button></div>
+<p>在 <code>conf</code> 里面，可以发现的是，其中包括 <code>datasets.py</code> 以及 <code>models.py</code> 这两个文件，OpenVLA 增加了一个新的 <code>vla.py</code>，也是同样一个代码风格。</p>
+<p>以 <code>vla.py</code> 为例，具有一个 <code>VLAConfig</code> 的类：</p>
+<div class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><pre><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">@dataclass</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">class</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> VLAConfig</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">ChoiceRegistry</span><span style="color:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # fmt: off</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    vla_id: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#6A737D;--shiki-dark:#6A737D">                                     # Unique VLA Policy ID that fully specifies a configuration variant</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    base_vlm: Union[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, Path]                      </span><span style="color:#6A737D;--shiki-dark:#6A737D"># Base VLM as ID/Path to Run Directory (e.g., `prism-dinosiglip+7b`)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    freeze_vision_backbone: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#6A737D;--shiki-dark:#6A737D">                    # Freeze Vision Backbone Parameters (akin to pretraining)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    freeze_llm_backbone: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#6A737D;--shiki-dark:#6A737D">                       # Freeze LLM Backbone parameters</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    unfreeze_last_llm_layer: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#6A737D;--shiki-dark:#6A737D">                   # Unfreeze final layer of LLM (only takes effect if LLM is frozen)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # Data Mixture Parameters</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    data_mix: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#6A737D;--shiki-dark:#6A737D">                                   # Open-X Embodiment Dataset =>> Unique Mixture ID (e.g., `bridge`)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    shuffle_buffer_size: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#6A737D;--shiki-dark:#6A737D">                        # Size of Shuffle Buffer (100K for Bridge, 1M for OXE)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # Optimization Parameters</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    epochs: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#6A737D;--shiki-dark:#6A737D">                                     # Epochs to Run (in case `max_steps` is not specified)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    max_steps: Optional[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]                        </span><span style="color:#6A737D;--shiki-dark:#6A737D"># [Optional] Max Gradient Steps to Run (overrides `epochs`)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    expected_world_size: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#6A737D;--shiki-dark:#6A737D">                        # Expected # of GPUs =>> allows us to gate training on hardware</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    global_batch_size: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#6A737D;--shiki-dark:#6A737D">                          # Global Batch Size (divided across processes / world size)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    per_device_batch_size: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#6A737D;--shiki-dark:#6A737D">                      # Per-Device Batch Size (per-process / individual GPU)</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">                                                    #   =>> # of accumulation steps is auto-computed</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    learning_rate: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">float</span><span style="color:#6A737D;--shiki-dark:#6A737D">                            # Peak Learning Rate (`lr_scheduler_type` sets warmup/decay)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    weight_decay: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">float</span><span style="color:#6A737D;--shiki-dark:#6A737D">                             # Weight Decay for AdamW Optimizer</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    max_grad_norm: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">float</span><span style="color:#6A737D;--shiki-dark:#6A737D">                            # Max Grad Norm (for global gradient clipping)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    lr_scheduler_type: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#6A737D;--shiki-dark:#6A737D">                          # LR Scheduler (usually: "constant" | "linear-warmup+cosine-decay")</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    warmup_ratio: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">float</span><span style="color:#6A737D;--shiki-dark:#6A737D">                             # Fraction of Steps to Warmup (for warmup LR schedulers)</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    train_strategy: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#6A737D;--shiki-dark:#6A737D">                             # Train Strategy (default "fsdp-full-shard")</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # Enable Gradient/Activation Checkpointing (for the LLM Backbone)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    enable_gradient_checkpointing: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> True</span><span style="color:#6A737D;--shiki-dark:#6A737D">      # Enable Gradient/Activation Checkpointing during Training</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # Mixed Precision Training via Torch Native AMP (`autocast`)</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    enable_mixed_precision_training: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> True</span><span style="color:#6A737D;--shiki-dark:#6A737D">    # Enable Traditional BF16 Mixed Precision</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    reduce_in_full_precision: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> True</span><span style="color:#6A737D;--shiki-dark:#6A737D">           # Accumulate/Reduce All-Gather Gradients in FP32 Full Precision</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # fmt: on</span></span></code></pre><span class="language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none">python</span><button class="copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground" data-code="@dataclass
+class VLAConfig(ChoiceRegistry):
+    # fmt: off
+    vla_id: str                                     # Unique VLA Policy ID that fully specifies a configuration variant
+    base_vlm: Union[str, Path]                      # Base VLM as ID/Path to Run Directory (e.g., &#x60;prism-dinosiglip+7b&#x60;)
+    freeze_vision_backbone: bool                    # Freeze Vision Backbone Parameters (akin to pretraining)
+    freeze_llm_backbone: bool                       # Freeze LLM Backbone parameters
+    unfreeze_last_llm_layer: bool                   # Unfreeze final layer of LLM (only takes effect if LLM is frozen)
+
+    # Data Mixture Parameters
+    data_mix: str                                   # Open-X Embodiment Dataset =>> Unique Mixture ID (e.g., &#x60;bridge&#x60;)
+    shuffle_buffer_size: int                        # Size of Shuffle Buffer (100K for Bridge, 1M for OXE)
+
+    # Optimization Parameters
+    epochs: int                                     # Epochs to Run (in case &#x60;max_steps&#x60; is not specified)
+    max_steps: Optional[int]                        # [Optional] Max Gradient Steps to Run (overrides &#x60;epochs&#x60;)
+
+    expected_world_size: int                        # Expected # of GPUs =>> allows us to gate training on hardware
+    global_batch_size: int                          # Global Batch Size (divided across processes / world size)
+    per_device_batch_size: int                      # Per-Device Batch Size (per-process / individual GPU)
+                                                    #   =>> # of accumulation steps is auto-computed
+
+    learning_rate: float                            # Peak Learning Rate (&#x60;lr_scheduler_type&#x60; sets warmup/decay)
+    weight_decay: float                             # Weight Decay for AdamW Optimizer
+    max_grad_norm: float                            # Max Grad Norm (for global gradient clipping)
+    lr_scheduler_type: str                          # LR Scheduler (usually: &#x22;constant&#x22; | &#x22;linear-warmup+cosine-decay&#x22;)
+    warmup_ratio: float                             # Fraction of Steps to Warmup (for warmup LR schedulers)
+
+    train_strategy: str                             # Train Strategy (default &#x22;fsdp-full-shard&#x22;)
+
+    # Enable Gradient/Activation Checkpointing (for the LLM Backbone)
+    enable_gradient_checkpointing: bool = True      # Enable Gradient/Activation Checkpointing during Training
+
+    # Mixed Precision Training via Torch Native AMP (&#x60;autocast&#x60;)
+    enable_mixed_precision_training: bool = True    # Enable Traditional BF16 Mixed Precision
+    reduce_in_full_precision: bool = True           # Accumulate/Reduce All-Gather Gradients in FP32 Full Precision
+
+    # fmt: on" onclick="
+          navigator.clipboard.writeText(this.dataset.code);
+          this.classList.add(&#x27;copied&#x27;);
+          setTimeout(() => this.classList.remove(&#x27;copied&#x27;), 2000)
+        "><div class="ready"><svg class="size-5"><use href="/icons/code.svg#mingcute-clipboard-line"></use></svg></div><div class="success hidden"><svg class="size-5"><use href="/icons/code.svg#mingcute-file-check-line"></use></svg></div></button></div>
+<p>这等于说是全部的需要的配置信息了，接下来就需要在里面塞入一些配置就好了，之后在创建的时候，使用类似于 factory 的东西进行调用就可以了。</p>
+<p>于是就使用一个配置即可：</p>
+<div class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><pre><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">@dataclass</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">class</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> Exp_SigLIP_224px_Bridge</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">VLAConfig</span><span style="color:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    vla_id: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "siglip-224px+mx-bridge"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    base_vlm: Union[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, Path] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "siglip-224px+7b"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    freeze_vision_backbone: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> False</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    freeze_llm_backbone: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> False</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    unfreeze_last_llm_layer: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> False</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # Data Mixture Parameters</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    data_mix: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "bridge"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    shuffle_buffer_size: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 256_000</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # Optimization Parameters</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    epochs: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 1000</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    max_steps: Optional[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#24292E;--shiki-dark:#E1E4E8">] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> None</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    expected_world_size: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 8</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    global_batch_size: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 256</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    per_device_batch_size: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">int</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 32</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    learning_rate: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">float</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 2e-5</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    weight_decay: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">float</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0.0</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    max_grad_norm: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">float</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 1.0</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    lr_scheduler_type: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "constant"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    warmup_ratio: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">float</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> 0.0</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    train_strategy: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "fsdp-full-shard"</span></span></code></pre><span class="language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none">python</span><button class="copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground" data-code="@dataclass
+class Exp_SigLIP_224px_Bridge(VLAConfig):
+    vla_id: str = &#x22;siglip-224px+mx-bridge&#x22;
+    base_vlm: Union[str, Path] = &#x22;siglip-224px+7b&#x22;
+
+    freeze_vision_backbone: bool = False
+    freeze_llm_backbone: bool = False
+    unfreeze_last_llm_layer: bool = False
+
+    # Data Mixture Parameters
+    data_mix: str = &#x22;bridge&#x22;
+    shuffle_buffer_size: int = 256_000
+
+    # Optimization Parameters
+    epochs: int = 1000
+    max_steps: Optional[int] = None
+
+    expected_world_size: int = 8
+    global_batch_size: int = 256
+    per_device_batch_size: int = 32
+
+    learning_rate: float = 2e-5
+    weight_decay: float = 0.0
+    max_grad_norm: float = 1.0
+    lr_scheduler_type: str = &#x22;constant&#x22;
+    warmup_ratio: float = 0.0
+
+    train_strategy: str = &#x22;fsdp-full-shard&#x22;" onclick="
+          navigator.clipboard.writeText(this.dataset.code);
+          this.classList.add(&#x27;copied&#x27;);
+          setTimeout(() => this.classList.remove(&#x27;copied&#x27;), 2000)
+        "><div class="ready"><svg class="size-5"><use href="/icons/code.svg#mingcute-clipboard-line"></use></svg></div><div class="success hidden"><svg class="size-5"><use href="/icons/code.svg#mingcute-file-check-line"></use></svg></div></button></div>
+<p>对于其他的配置来说的话，相较于这个原来的配置文件，只需要进行少量的修改，于是直接进行继承就好：</p>
+<div class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><pre><code><span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">@dataclass</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">class</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> Exp_FreezeVIT_SigLIP_224px_Bridge</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">Exp_SigLIP_224px_Bridge</span><span style="color:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    vla_id: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "siglip-224px-icy+mx-bridge"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    base_vlm: Union[</span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, Path] </span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#032F62;--shiki-dark:#9ECBFF"> "siglip-224px+7b"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    freeze_vision_backbone: </span><span style="color:#005CC5;--shiki-dark:#79B8FF">bool</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> True</span></span></code></pre><span class="language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none">python</span><button class="copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground" data-code="@dataclass
+class Exp_FreezeVIT_SigLIP_224px_Bridge(Exp_SigLIP_224px_Bridge):
+    vla_id: str = &#x22;siglip-224px-icy+mx-bridge&#x22;
+    base_vlm: Union[str, Path] = &#x22;siglip-224px+7b&#x22;
+    freeze_vision_backbone: bool = True" onclick="
+          navigator.clipboard.writeText(this.dataset.code);
+          this.classList.add(&#x27;copied&#x27;);
+          setTimeout(() => this.classList.remove(&#x27;copied&#x27;), 2000)
+        "><div class="ready"><svg class="size-5"><use href="/icons/code.svg#mingcute-clipboard-line"></use></svg></div><div class="success hidden"><svg class="size-5"><use href="/icons/code.svg#mingcute-file-check-line"></use></svg></div></button></div>
+<p>之后实现一个枚举：</p>
+<div class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><pre><code><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># === Define a VLA Registry Enum for Reference &#x26; Validation ===</span></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">@unique</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">class</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> VLARegistry</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#6F42C1;--shiki-dark:#B392F0">Enum</span><span style="color:#24292E;--shiki-dark:#E1E4E8">):</span></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # Sanity Check Configurations =>> BridgeV2</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    SIGLIP_224PX_MX_BRIDGE</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_SigLIP_224px_Bridge</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    DINOSIGLIP_224PX_MX_BRIDGE</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_DinoSigLIP_224px_Bridge</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # SigLIP Frozen Backbone Experiment</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    FREEZE_SIGLIP_224PX_MX_BRIDGE</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_FreezeVIT_SigLIP_224px_Bridge</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # [OpenVLA v0.1 7B] SigLIP 224px + OXE Magic Soup</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    SIGLIP_224PX_MX_OXE_MAGIC_SOUP</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_SigLIP_224px_OXE_Magic_Soup</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # [OpenVLA 7B] DINO + SigLIP 224px + OXE Magic Soup++</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    DINOSIGLIP_224PX_MX_OXE_MAGIC_SOUP_PLUS</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_DinoSigLIP_224px_OXE_Magic_Soup_Plus</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # === TDROID Fine-tuning Configs ===</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    SIGLIP_224PX_MX_TDROID_CARROT_IN_BOWL</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_SigLIP_224px_TDROID_CarrotInBowl</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    SIGLIP_224PX_MX_TDROID_POUR_CORN_IN_POT</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_SigLIP_224px_TDROID_PourCornInPot</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    SIGLIP_224PX_ICY_MX_TDROID_CARROT_IN_BOWL</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_SigLIP_224px_Icy_TDROID_CarrotInBowl</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    SIGLIP_224PX_LASTLAYER_MX_TDROID_CARROT_IN_BOWL</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_SigLIP_224px_LastLayer_TDROID_CarrotInBowl</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    SIGLIP_224PX_SANDWICH_MX_TDROID_CARROT_IN_BOWL</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_SigLIP_224px_Sandwich_TDROID_CarrotInBowl</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D">    # === DROID Fine-tuning Configs ===</span></span>
+<span class="line"><span style="color:#005CC5;--shiki-dark:#79B8FF">    SIGLIP_224PX_MX_DROID_WIPE</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Exp_SigLIP_224px_Droid_Wipe</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6F42C1;--shiki-dark:#B392F0">    @</span><span style="color:#005CC5;--shiki-dark:#79B8FF">property</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">    def</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> vla_id</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(self) -> </span><span style="color:#005CC5;--shiki-dark:#79B8FF">str</span><span style="color:#24292E;--shiki-dark:#E1E4E8">:</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">        return</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> self</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.value.vla_id</span></span></code></pre><span class="language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none">python</span><button class="copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground" data-code="# === Define a VLA Registry Enum for Reference &#x26; Validation ===
+@unique
+class VLARegistry(Enum):
+    # Sanity Check Configurations =>> BridgeV2
+    SIGLIP_224PX_MX_BRIDGE = Exp_SigLIP_224px_Bridge
+    DINOSIGLIP_224PX_MX_BRIDGE = Exp_DinoSigLIP_224px_Bridge
+
+    # SigLIP Frozen Backbone Experiment
+    FREEZE_SIGLIP_224PX_MX_BRIDGE = Exp_FreezeVIT_SigLIP_224px_Bridge
+
+    # [OpenVLA v0.1 7B] SigLIP 224px + OXE Magic Soup
+    SIGLIP_224PX_MX_OXE_MAGIC_SOUP = Exp_SigLIP_224px_OXE_Magic_Soup
+
+    # [OpenVLA 7B] DINO + SigLIP 224px + OXE Magic Soup++
+    DINOSIGLIP_224PX_MX_OXE_MAGIC_SOUP_PLUS = Exp_DinoSigLIP_224px_OXE_Magic_Soup_Plus
+
+    # === TDROID Fine-tuning Configs ===
+    SIGLIP_224PX_MX_TDROID_CARROT_IN_BOWL = Exp_SigLIP_224px_TDROID_CarrotInBowl
+    SIGLIP_224PX_MX_TDROID_POUR_CORN_IN_POT = Exp_SigLIP_224px_TDROID_PourCornInPot
+
+    SIGLIP_224PX_ICY_MX_TDROID_CARROT_IN_BOWL = Exp_SigLIP_224px_Icy_TDROID_CarrotInBowl
+    SIGLIP_224PX_LASTLAYER_MX_TDROID_CARROT_IN_BOWL = Exp_SigLIP_224px_LastLayer_TDROID_CarrotInBowl
+    SIGLIP_224PX_SANDWICH_MX_TDROID_CARROT_IN_BOWL = Exp_SigLIP_224px_Sandwich_TDROID_CarrotInBowl
+
+    # === DROID Fine-tuning Configs ===
+    SIGLIP_224PX_MX_DROID_WIPE = Exp_SigLIP_224px_Droid_Wipe
+
+    @property
+    def vla_id(self) -> str:
+        return self.value.vla_id" onclick="
+          navigator.clipboard.writeText(this.dataset.code);
+          this.classList.add(&#x27;copied&#x27;);
+          setTimeout(() => this.classList.remove(&#x27;copied&#x27;), 2000)
+        "><div class="ready"><svg class="size-5"><use href="/icons/code.svg#mingcute-clipboard-line"></use></svg></div><div class="success hidden"><svg class="size-5"><use href="/icons/code.svg#mingcute-file-check-line"></use></svg></div></button></div>
+<p>然后批量将这些内容注册成 <code>subclass</code>：</p>
+<div class="astro-code astro-code-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><pre><code><span class="line"><span style="color:#6A737D;--shiki-dark:#6A737D"># Register VLAs in Choice Registry</span></span>
+<span class="line"><span style="color:#D73A49;--shiki-dark:#F97583">for</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> vla_variant </span><span style="color:#D73A49;--shiki-dark:#F97583">in</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> VLARegistry:</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">    VLAConfig.register_subclass(vla_variant.vla_id, vla_variant.value)</span></span></code></pre><span class="language transition-opacity duration-300 absolute top-3 right-0 ps-1 pe-3 text-sm bg-muted text-muted-foreground select-none">python</span><button class="copy transition-opacity duration-300 opacity-0 absolute top-3 right-3 text-muted-foreground p-1 box-content border border-border rounded bg-primary-foreground" data-code="# Register VLAs in Choice Registry
+for vla_variant in VLARegistry:
+    VLAConfig.register_subclass(vla_variant.vla_id, vla_variant.value)" onclick="
+          navigator.clipboard.writeText(this.dataset.code);
+          this.classList.add(&#x27;copied&#x27;);
+          setTimeout(() => this.classList.remove(&#x27;copied&#x27;), 2000)
+        "><div class="ready"><svg class="size-5"><use href="/icons/code.svg#mingcute-clipboard-line"></use></svg></div><div class="success hidden"><svg class="size-5"><use href="/icons/code.svg#mingcute-file-check-line"></use></svg></div></button></div>
+<p>虽然现在 prismatic-vlms 我还没有看完，但是我已经急了，所以对一些内容进行了跳过，接下来再次回到 <code>train.py</code>。</p>
+<h3 id="run_vla_training">run_vla_training<a class="anchor" href="#run_vla_training">#</a></h3>
+<p>简单检查一下训练的代码，不难发现，前面的大多数内容都是类似的，除了一些获取数据集之类的操作之外，主要还是正在设置各种的配置文件，但是在这里暂时先不关心这些，而是直接跳到 <code>run_vla_training</code>，换句话说，我想要知道其论文中的训练是如何实现的。</p>
+<p>在这里简单再次复述一下 OpenVLA 的训练过程，</p>     </div> </article> </main> <div class="mt-6 items-start gap-x-10 md:flex">  <div class="mt-8 flex-1 text-muted-foreground md:min-w-[50ch]"> <script type="module" src="/_astro/Copyright.astro_astro_type_script_index_0_lang.BjzDteS2.js"></script><script type="module" src="/_astro/Comment.astro_astro_type_script_index_0_lang.C4Mj7xEh.js"></script><div class="relative flex flex-col gap-y-2 rounded-xl border px-3 sm:px-4 py-2 sm:py-3 astro-tju7bdtj"> <svg aria-hidden="true" class="absolute end-4 top-4 size-20 opacity-10 astro-tju7bdtj astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2m0 2a8 8 0 1 0 0 16a8 8 0 0 0 0-16m0 3a5 5 0 0 1 3.75 1.692a1 1 0 1 1-1.5 1.324a3 3 0 1 0 0 3.968a1 1 0 1 1 1.5 1.324A5 5 0 1 1 12 7"/></g></svg>  <div class="absolute bottom-2 right-2 w-20 h-10 signature-container astro-tju7bdtj"> <svg viewBox="0 -1 163.403 90.305" xmlns="http://www.w3.org/2000/svg" class="w-full h-full signature-svg astro-tju7bdtj"> <g stroke-linecap="round" fill-rule="evenodd" stroke="currentColor" stroke-width="0.3mm" fill="currentColor" class="astro-tju7bdtj"> <path class="signature-path astro-tju7bdtj" d="M 24.402 85.301 Q 17.502 85.301 11.952 81.901 Q 6.402 78.501 3.202 72.051 Q 0.002 65.601 0.002 56.801 Q 0.002 41.601 6.502 28.651 Q 13.002 15.701 25.702 7.851 Q 38.402 0.001 56.202 0.001 Q 60.802 0.001 66.052 0.701 Q 71.302 1.401 75.602 2.801 Q 78.402 3.601 78.402 6.801 Q 78.402 9.401 76.452 11.701 Q 74.502 14.001 71.902 14.001 Q 71.102 14.001 70.702 13.901 Q 65.502 12.701 61.802 12.151 Q 58.102 11.601 54.002 11.601 Q 41.302 11.601 32.402 17.751 Q 23.502 23.901 19.102 34.001 Q 14.702 44.101 14.702 55.801 Q 14.702 64.301 18.052 68.951 Q 21.402 73.601 26.802 73.601 Q 32.902 73.601 37.502 68.601 Q 42.102 63.601 45.902 52.401 Q 49.702 41.201 53.402 22.001 Q 54.002 19.201 55.802 18.201 Q 57.602 17.201 60.602 17.201 Q 67.702 17.201 67.702 21.801 Q 67.702 22.601 67.402 23.801 Q 64.802 33.501 62.652 45.251 Q 60.502 57.001 60.502 63.101 Q 60.502 68.501 62.102 70.951 Q 63.702 73.401 67.002 73.401 Q 70.202 73.401 73.102 71.251 A 23.845 23.845 0 0 0 74.956 69.705 A 43.109 43.109 0 0 0 75.125 69.55 A 12.009 12.009 0 0 1 76.332 66.429 A 10.164 10.164 0 0 1 77.002 65.401 Q 79.302 62.301 83.502 62.301 Q 87.102 62.301 87.102 65.001 Q 87.102 65.701 86.902 67.501 Q 86.602 71.101 86.602 71.601 Q 86.602 74.601 89.202 74.601 Q 91.102 74.601 92.852 72.351 Q 94.602 70.101 95.752 66.201 Q 96.902 62.301 96.902 57.601 Q 96.902 54.001 96.002 51.551 Q 95.102 49.101 93.802 49.101 Q 92.702 49.101 92.202 49.651 Q 91.702 50.201 91.202 51.501 Q 90.602 53.101 89.602 54.051 Q 88.602 55.001 86.102 55.001 Q 83.902 55.001 82.602 53.451 Q 81.302 51.901 81.302 48.701 Q 81.302 43.601 84.402 40.701 Q 87.502 37.801 92.402 37.801 Q 96.602 37.801 100.002 39.851 Q 103.402 41.901 105.202 45.801 Q 108.202 41.801 111.952 39.801 Q 115.702 37.801 119.302 37.801 Q 123.202 37.801 125.252 39.601 Q 127.302 41.401 127.302 45.401 Q 127.302 49.901 125.602 52.451 Q 123.902 55.001 121.502 55.001 Q 119.302 55.001 118.502 54.101 Q 117.702 53.201 117.302 51.501 Q 117.102 50.301 116.702 49.701 Q 116.302 49.101 115.302 49.101 Q 114.102 49.101 112.752 51.351 Q 111.402 53.601 110.452 57.301 Q 109.502 61.001 109.502 65.001 Q 109.502 69.701 111.752 72.251 Q 114.002 74.801 117.902 74.801 Q 121.802 74.801 125.252 72.151 Q 127.442 70.468 130.096 67.598 A 81.726 81.726 0 0 0 130.631 67.01 A 46.575 46.575 0 0 1 130.738 65.106 Q 130.998 61.577 131.752 56.951 Q 132.902 49.901 134.702 43.801 Q 135.602 40.601 137.102 39.401 Q 138.602 38.201 141.902 38.201 Q 147.002 38.201 147.002 41.601 Q 147.002 44.101 145.102 53.201 Q 142.702 64.201 142.702 68.101 Q 142.702 71.101 143.502 72.701 Q 144.302 74.301 146.202 74.301 Q 148.002 74.301 150.702 71.801 Q 153.402 69.301 157.902 63.901 Q 159.102 62.501 160.602 62.501 Q 161.902 62.501 162.652 63.701 Q 163.402 64.901 163.402 67.001 Q 163.402 71.001 161.502 73.201 Q 151.602 85.301 143.002 85.301 Q 136.502 85.301 133.552 80.701 A 17.114 17.114 0 0 1 132.192 78.047 A 46.504 46.504 0 0 1 129.824 80.016 A 41.632 41.632 0 0 1 127.252 81.851 Q 122.002 85.301 115.402 85.301 Q 110.302 85.301 106.352 83.401 Q 102.402 81.501 100.102 78.001 Q 94.402 85.201 86.602 85.201 Q 81.102 85.201 77.902 82.001 A 10.732 10.732 0 0 1 76.686 80.537 A 42.127 42.127 0 0 1 76.431 80.739 A 31.425 31.425 0 0 1 74.402 82.201 Q 69.702 85.301 62.902 85.301 Q 55.902 85.301 51.602 81.251 Q 47.302 77.201 46.202 69.801 Q 38.802 85.301 24.402 85.301 Z M 143.802 31.601 Q 139.602 31.601 137.502 29.651 Q 135.402 27.701 135.402 24.201 Q 135.402 20.701 138.152 18.351 Q 140.902 16.001 145.002 16.001 Q 148.702 16.001 151.002 17.801 Q 153.302 19.601 153.302 22.901 Q 153.302 26.901 150.702 29.251 Q 148.102 31.601 143.802 31.601 Z" vector-effect="non-scaling-stroke"></path> </g> </svg> </div>  <div class="flex flex-col astro-tju7bdtj"> <div class="font-medium text-foreground astro-tju7bdtj">OpenVLA 代码笔记</div> <div class="text-sm astro-tju7bdtj">https://axi404.github.io/blog/openvla-reading</div> </div>  <div class="flex flex-row flex-wrap justify-start gap-x-5 gap-y-1 sm:gap-x-8 astro-tju7bdtj"> <div class="flex gap-x-2 sm:flex-col astro-tju7bdtj"> <span class="astro-tju7bdtj">Author</span> <span class="text-sm text-foreground max-sm:place-self-center astro-tju7bdtj">阿汐</span> </div> <div class="flex gap-x-2 sm:min-w-16 sm:flex-col astro-tju7bdtj"> <span class="astro-tju7bdtj">Published at</span> <span class="text-sm text-foreground max-sm:place-self-center astro-tju7bdtj"> July 23, 2024 </span> </div> <div class="flex gap-x-2 sm:flex-col astro-tju7bdtj"> <span class="astro-tju7bdtj">Copyright</span> <a class="text-sm text-foreground max-sm:place-self-center underline decoration-muted-foreground/50 underline-offset-2 rounded px-1 -mx-1 transition-all duration-200 hover:no-underline hover:bg-foreground hover:text-background astro-tju7bdtj" href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+CC BY-NC-SA 4.0
+</a> </div> </div>  <div class="relative astro-tju7bdtj"> <div class="flex flex-row gap-3 astro-tju7bdtj"> <button id="copy-link" class="group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5 astro-tju7bdtj"> <svg aria-hidden="true" class="size-5 astro-tju7bdtj astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M16.243 9.878a1 1 0 0 1 1.32-.083l.094.083L19.778 12a5.5 5.5 0 0 1-7.596 7.952L12 19.778l-2.121-2.121a1 1 0 0 1 1.32-1.498l.094.083l2.121 2.122a3.5 3.5 0 0 0 5.091-4.8l-.141-.15l-2.121-2.121a1 1 0 0 1 0-1.415M9.17 9.171a1 1 0 0 1 1.32-.083l.095.083l4.242 4.243a1 1 0 0 1-1.32 1.497l-.094-.083l-4.243-4.242a1 1 0 0 1 0-1.415m-4.95-4.95a5.5 5.5 0 0 1 7.597-.173l.182.174l2.121 2.12A1 1 0 0 1 12.8 7.84l-.094-.083l-2.121-2.121a3.5 3.5 0 0 0-5.091 4.8l.141.15l2.121 2.12a1 1 0 0 1-1.32 1.498l-.094-.083L4.222 12a5.5 5.5 0 0 1 0-7.778Z"/></g></svg>  </button> <button id="get-qrcode" class="group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5 astro-tju7bdtj"> <svg aria-hidden="true" class="size-5 astro-tju7bdtj astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M11 3a2 2 0 0 1 1.995 1.85L13 5v6a2 2 0 0 1-1.85 1.995L11 13H5a2 2 0 0 1-1.995-1.85L3 11V5a2 2 0 0 1 1.85-1.995L5 3zm0 2H5v6h6zM8.5 7a.5.5 0 0 1 .492.41L9 7.5v1a.5.5 0 0 1-.41.492L8.5 9h-1a.5.5 0 0 1-.492-.41L7 8.5v-1a.5.5 0 0 1 .41-.492L7.5 7zM21 5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm-4 0h2v2h-2zM7 15a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2zm0 2H5v2h2zm14 0a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm-4 0h2v2h-2zm-2-5a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1m-2 4a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0z"/></g></svg>  </button> <a href="http://service.weibo.com/share/share.php?url=https://axi404.github.io/blog/openvla-reading&title=OpenVLA 代码笔记&pic=https://picr2.axi404.top/openvla-reading-zh.webp" target="_blank" id="share-weibo" class="group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5 astro-tju7bdtj"> <svg aria-hidden="true" class="size-5 astro-tju7bdtj astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M13.12 5.815c.55.537.826 1.24.863 1.992c1.675-.502 3.045-.362 3.937.5c.848.82.937 1.967.617 2.964C19.9 11.961 21 13.058 21 14.715c0 1.93-1.256 3.526-2.962 4.586C16.318 20.371 14.004 21 11.5 21s-4.818-.63-6.538-1.699C3.256 18.241 2 16.646 2 14.715c0-1.762.842-3.589 2.05-5.156a14.6 14.6 0 0 1 4.723-3.954c1.635-.847 3.286-.828 4.347.21m-1.399 1.43c-.213-.21-.829-.485-2.028.136a12.6 12.6 0 0 0-4.06 3.4C4.576 12.154 4 13.558 4 14.715c0 .988.647 2.035 2.018 2.888C7.374 18.446 9.309 19 11.5 19c2.19 0 4.127-.554 5.482-1.397c1.371-.853 2.018-1.9 2.018-2.888c0-.711-.56-1.439-2.16-1.991a1 1 0 0 1-.473-1.546c.495-.66.355-1.248.163-1.433l-.048-.04l-.067-.042c-.337-.186-1.274-.368-3.335.661a1 1 0 0 1-1.347-1.33c.444-.92.225-1.517-.012-1.75ZM17 3c1.576 0 3.128.643 4.243 1.757A6.05 6.05 0 0 1 23 9a1 1 0 1 1-2 0c0-1.05-.429-2.086-1.172-2.828A4.04 4.04 0 0 0 17 5a1 1 0 1 1 0-2"/></g></svg>  </a><a href="https://x.com/intent/tweet?text='OpenVLA 代码笔记'&url='https://axi404.github.io/blog/openvla-reading'&via='阿汐'" target="_blank" id="share-x" class="group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5 astro-tju7bdtj"> <svg aria-hidden="true" class="size-5 astro-tju7bdtj astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M19.753 4.659a1 1 0 0 0-1.506-1.317l-5.11 5.84L8.8 3.4A1 1 0 0 0 8 3H4a1 1 0 0 0-.8 1.6l6.437 8.582l-5.39 6.16a1 1 0 0 0 1.506 1.317l5.11-5.841L15.2 20.6a1 1 0 0 0 .8.4h4a1 1 0 0 0 .8-1.6l-6.437-8.582l5.39-6.16ZM16.5 19L6 5h1.5L18 19z"/></g></svg>  </a><a href="https://bsky.app/intent/compose?text=OpenVLA 代码笔记%0Ahttps://axi404.github.io/blog/openvla-reading" target="_blank" id="share-bluesky" class="group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5 astro-tju7bdtj"> <svg aria-hidden="true" class="size-5 astro-tju7bdtj astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M4.747 5.105a.94.94 0 0 0-.41.892l.314 3.287A3 3 0 0 0 7.637 12H9a1 1 0 0 1 .371 1.928l-2.34.937c-.885.354-1.122 1.32-.664 1.932c.288.384.576.731.84.996c.233.233.532.485.865.74c.619.475 1.625.214 1.94-.734l1.04-3.115a1 1 0 0 1 1.897 0l1.038 3.115c.316.948 1.322 1.21 1.941.735a9 9 0 0 0 .865-.741c.265-.265.553-.612.84-.996c.458-.612.222-1.578-.664-1.932l-2.34-.937A1 1 0 0 1 15 12h1.363a3 3 0 0 0 2.986-2.716l.314-3.287a.94.94 0 0 0-.41-.892a.75.75 0 0 0-.858-.001c-2.645 1.708-4.05 3.442-5.5 6.343a1 1 0 0 1-1.79 0c-1.45-2.901-2.855-4.635-5.5-6.343a.75.75 0 0 0-.858.001m-2.4 1.082C2.13 3.913 4.567 2.053 6.69 3.424C9.13 5 10.662 6.639 12 8.9c1.338-2.261 2.87-3.9 5.31-5.476c2.123-1.371 4.56.49 4.344 2.763l-.314 3.287a5 5 0 0 1-2.783 4.02c1.329 1.039 1.818 2.978.677 4.502c-.317.423-.669.853-1.027 1.211c-.317.317-.69.628-1.062.914c-1.88 1.441-4.375.35-5.055-1.69l-.09-.269l-.09.27c-.68 2.04-3.175 3.13-5.055 1.689a11 11 0 0 1-1.062-.914a11.5 11.5 0 0 1-1.027-1.211c-1.141-1.524-.651-3.463.678-4.502a5 5 0 0 1-2.784-4.02z"/></g></svg>  </a> </div> <div id="qrcode-container" class="absolute z-10 -mt-2 box-content max-h-0 max-w-44 overflow-hidden rounded-xl border bg-muted p-4 opacity-0 transition-all duration-300 ease-in-out aria-expanded:max-h-44 aria-expanded:translate-y-4 aria-expanded:opacity-100 astro-tju7bdtj" aria-expanded="false"></div> <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script> <script>(function(){const content = undefined;
+
+  const renderContent = content ?? window.location.href
+  // Load qrcode
+  function loadqrcode(qrcodeContainer) {
+    if (!qrcodeContainer) throw new Error('qrcode container not found')
+    if (qrcodeContainer.innerHTML !== '') return
+    new QRCode(qrcodeContainer, renderContent)
+  }
+  const qrcodeContainer = document.getElementById('qrcode-container')
+  if (!qrcodeContainer) throw new Error('qrcode container not found')
+  loadqrcode(qrcodeContainer)
+})();</script> </div> </div> <div class="mx-6 rounded-b-xl border border-t-0 px-3 pb-1.5 pt-1 sm:mx-8 sm:px-4 astro-tju7bdtj"> <a href="/projects#sponsorship" class="flex items-center justify-between text-muted-foreground no-underline astro-tju7bdtj"> <span class="astro-tju7bdtj">Buy me a cup of coffee ☕.</span> <svg aria-hidden="true" class="box-content size-5 p-1 astro-tju7bdtj astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M17 2a3 3 0 0 1 3 3v12a1 1 0 0 1 .351 1.936l-8 3a1 1 0 0 1-.702 0l-8-3A1 1 0 0 1 4 17V5a3 3 0 0 1 3-3zm0 2H7a1 1 0 0 0-.993.883L6 5v12.682l6 2.25l6-2.25V5a1 1 0 0 0-.883-.993zm-5 1a1 1 0 0 1 .993.883L13 6v1h2a1 1 0 0 1 .117 1.993L15 9h-5a.5.5 0 0 0-.09.992L10 10h4a2.5 2.5 0 0 1 .164 4.995L14 15h-1v1a1 1 0 0 1-1.993.117L11 16v-1H9a1 1 0 0 1-.117-1.993L9 13h5a.5.5 0 0 0 .09-.992L14 12h-4a2.5 2.5 0 0 1-.164-4.995L10 7h1V6a1 1 0 0 1 1-1"/></g></svg>  </a> </div>   <div class="flex max-sm:flex-col sm:justify-between gap-2 mt-3 sm:mt-6"> <span class="min-w-0"> <a href="/blog/vpn-setting" class="group inline-flex items-center gap-x-2 rounded-xl px-4 py-2 no-underline transition-colors duration-300 hover:bg-muted max-sm:max-w-[80%] sm:flex"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 rotate-180 stroke-muted-foreground transition-colors group-hover:stroke-primary"> <line x1="5" y1="12" x2="19" y2="12" class="translate-x-4 scale-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:scale-x-100"></line> <polyline points="12 5 19 12 12 19" class="translate-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1"></polyline> </svg> <p class="truncate font-medium transition-colors">校园 VPN 连接实录</p> </a> </span> <span class="min-w-0"> <a href="/blog/rm-tutorial-section-1" class="group inline-flex items-center gap-x-2 rounded-xl px-4 py-2 text-right no-underline transition-colors duration-300 hover:bg-muted max-sm:float-end max-sm:max-w-[80%] sm:flex"> <p class="truncate font-medium transition-colors">RoboMaster 视觉组第一次培训</p> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="shrink-0 stroke-muted-foreground transition-colors group-hover:stroke-primary"> <line x1="5" y1="12" x2="19" y2="12" class="translate-x-4 scale-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1 group-hover:scale-x-100"></line> <polyline points="12 5 19 12 12 19" class="translate-x-0 transition-all duration-300 ease-in-out group-hover:translate-x-1"></polyline> </svg> </a> </span> </div> <comment-component class="astro-w2uxdene"><div id="waline" class="not-prose mt-3 sm:mt-6 astro-w2uxdene">
+Comment seems to stuck. Try to refresh?✨
+</div></comment-component> </div> <div class="min-w-48 basis-60">  </div> </div> <button aria-label="Back to Top" class="z-90 group fixed bottom-8 end-4 flex h-10 w-10 translate-y-28 items-center justify-center rounded-full border-2 border-transparent bg-muted text-muted-foreground opacity-0 transition-all duration-300 hover:border-border/75 data-[show=true]:translate-y-0 data-[show=true]:opacity-100 sm:end-8 sm:h-12 sm:w-12" data-show="false" id="to-top-btn"> <div class="absolute bottom-0 end-0 start-0 top-0 flex items-center justify-center transition-opacity group-hover:opacity-0 group-[.ended]:opacity-0"> <span class="text">10</span> <span class="text-xs">%</span> </div> <svg aria-hidden="true" class="opacity-0 transition-opacity group-hover:opacity-100 group-[.ended]:opacity-100 astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M11.293 8.293a1 1 0 0 1 1.414 0l5.657 5.657a1 1 0 0 1-1.414 1.414L12 10.414l-4.95 4.95a1 1 0 0 1-1.414-1.414z"/></g></svg>  </button> <script>(function(){const headerName = "content-header";
+const contentName = "content";
+const needPercent = true;
+
+  const scrollBtn = document.getElementById('to-top-btn')
+  const scrollPercentEl = scrollBtn.children[0].children[0]
+  const targetHeader = document.getElementById(headerName)
+  const articleElement = document.getElementById(contentName)
+
+  // scroll to top
+  function callback(entries) {
+    entries.forEach((entry) => {
+      // only show the scroll to top button when the heading is out of view
+      scrollBtn.dataset.show = (!entry.isIntersecting).toString()
+    })
+  }
+  scrollBtn.addEventListener('click', () => {
+    document.documentElement.scrollTo({ behavior: 'smooth', top: 0 })
+  })
+  if (targetHeader) {
+    const observer = new IntersectionObserver(callback)
+    observer.observe(targetHeader)
+  } else {
+    console.error(`Element with ID ${headerName} not found.`)
+  }
+
+  if (needPercent) {
+    // scroll percentage
+    let scrollHeight = articleElement.scrollHeight // total height
+    let articleTop = articleElement.offsetTop // article top
+    const clientHeight = document.documentElement.clientHeight // client height
+
+    function recalculateHeights() {
+      scrollHeight = articleElement.scrollHeight
+      articleTop = articleElement.offsetTop
+    }
+
+    const images = articleElement.querySelectorAll('img')
+    let loadedImagesCount = 0
+    const totalImages = images.length
+
+    if (totalImages > 0) {
+      images.forEach((img) => {
+        if (img.complete) {
+          loadedImagesCount++
+        } else {
+          img.addEventListener('load', () => {
+            loadedImagesCount++
+            if (loadedImagesCount === totalImages) {
+              recalculateHeights()
+            }
+          })
+          img.addEventListener('error', () => {
+            loadedImagesCount++
+            if (loadedImagesCount === totalImages) {
+              recalculateHeights()
+            }
+          })
+        }
+      })
+      if (loadedImagesCount === totalImages) {
+        recalculateHeights()
+      }
+    }
+
+    function calculateScrollPercent() {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      if (scrollTop < articleTop) return
+      
+      const scrollableHeight = Math.max(scrollHeight - clientHeight, 1)
+      const scrolledAmount = scrollTop - articleTop
+      
+      const percent = Math.round((scrolledAmount / scrollableHeight) * 100)
+      return Math.max(0, Math.min(100, percent))
+    }
+
+    document.addEventListener('scroll', () => {
+      const scrollPercent = calculateScrollPercent()
+      if (scrollPercent === undefined) return
+      scrollPercentEl.innerText = scrollPercent.toString()
+
+      // If percent is 100, percent won't need to show
+      scrollBtn.classList.toggle('ended', scrollPercent >= 100)
+    })
+
+    window.addEventListener('resize', recalculateHeights)
+  } else {
+    scrollBtn.classList.add('ended')
+  }
+})();</script>  <script type="module">const e=document.getElementById("icp-registration");if(e){const t=e.dataset.website;if(t)try{const i=new URL(t.includes("://")?t:`https://${t}`).hostname;window.location.hostname===i&&e.classList.remove("hidden")}catch{window.location.hostname===t&&e.classList.remove("hidden")}}</script> <footer class="mx-auto mb-5 mt-16"> <div class="border-t border-border pt-5"> <div class="flex items-center gap-y-3 max-sm:flex-col sm:justify-between sm:gap-y-0"> <div class="flex items-center gap-x-4 gap-y-2 text-muted-foreground max-sm:flex-col [&_a:hover]:text-primary [&_a]:text-foreground"> <a id="icp-registration" class="hidden text-xs" data-website="https://axi404.com" style="color:hsl(var(--muted-foreground)/var(--tw-text-opacity,1))" href="https://beian.miit.gov.cn/" target="_blank"> 京 ICP 2025143919 </a> <span>
+© 2026 阿汐 &
+<a href="/terms/list">Site policy</a> </span> <span class="text-muted-foreground [&_a:hover]:text-primary [&_a]:text-foreground"> <a href="https://github.com/withastro/astro" target="_blank">
+Astro
+</a> 
+theme powered
+</span> </div>  <div class="flex items-center gap-x-4"> <a class="inline-block text-muted-foreground transition-all hover:text-muted-foreground/75" href="https://github.com/Axi404/Axi-Blog" aria-label="github"> <svg aria-hidden="true" class=" astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M6.315 6.176c-.25-.638-.24-1.367-.129-2.034a6.8 6.8 0 0 1 2.12 1.07c.28.214.647.283.989.18A9.3 9.3 0 0 1 12 5c.961 0 1.874.14 2.703.391c.342.104.709.034.988-.18a6.8 6.8 0 0 1 2.119-1.07c.111.667.12 1.396-.128 2.033c-.15.384-.075.826.208 1.14C18.614 8.117 19 9.04 19 10c0 2.114-1.97 4.187-5.134 4.818c-.792.158-1.101 1.155-.495 1.726c.389.366.629.882.629 1.456v3a1 1 0 0 0 2 0v-3c0-.57-.12-1.112-.334-1.603C18.683 15.35 21 12.993 21 10c0-1.347-.484-2.585-1.287-3.622c.21-.82.191-1.646.111-2.28c-.071-.568-.17-1.312-.57-1.756c-.595-.659-1.58-.271-2.28-.032a9 9 0 0 0-2.125 1.045A11.4 11.4 0 0 0 12 3c-.994 0-1.953.125-2.851.356a9 9 0 0 0-2.125-1.045c-.7-.24-1.686-.628-2.281.031c-.408.452-.493 1.137-.566 1.719l-.005.038c-.08.635-.098 1.462.112 2.283C3.484 7.418 3 8.654 3 10c0 2.992 2.317 5.35 5.334 6.397A4 4 0 0 0 8 17.98l-.168.034c-.717.099-1.176.01-1.488-.122c-.76-.322-1.152-1.133-1.63-1.753c-.298-.385-.732-.866-1.398-1.088a1 1 0 0 0-.632 1.898c.558.186.944 1.142 1.298 1.566c.373.448.869.916 1.58 1.218c.682.29 1.483.393 2.438.276V21a1 1 0 0 0 2 0v-3c0-.574.24-1.09.629-1.456c.607-.572.297-1.568-.495-1.726C6.969 14.187 5 12.114 5 10c0-.958.385-1.881 1.108-2.684c.283-.314.357-.756.207-1.14"/></g></svg>  </a><a class="inline-block text-muted-foreground transition-all hover:text-muted-foreground/75" href="/rss.xml" aria-label="rss"> <svg aria-hidden="true" class=" astro-p7sajfz3" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><g fill="none"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M5.5 17a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3m0-14C14.06 3 21 9.94 21 18.5q0 .268-.009.534a1 1 0 0 1-1.999-.068Q19 18.734 19 18.5C19 11.044 12.956 5 5.5 5q-.234 0-.466.008a1 1 0 0 1-.068-1.999Q5.231 3 5.5 3m0 7a8.5 8.5 0 0 1 8.482 9.066a1 1 0 0 1-1.996-.132a6.5 6.5 0 0 0-6.92-6.92a1 1 0 1 1-.132-1.995q.28-.02.566-.019"/></g></svg>  </a> </div> </div> </div> </footer> </div>   <script type="module" src="/_astro/BaseLayout.astro_astro_type_script_index_0_lang.BK0m7-AI.js"></script> <!-- <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const originalTitle = document.title
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            document.title = 'ฅ^•ﻌ•^ฅ 主人快回来吧~'
+          } else {
+            document.title = originalTitle
+          }
+        })
+        window.addEventListener('blur', () => {
+          document.title = 'ฅ^•ﻌ•^ฅ 主人快回来吧~'
+        })
+        window.addEventListener('focus', () => {
+          document.title = originalTitle
+        })
+      })
+    </script> --> <script type="module">document.addEventListener("DOMContentLoaded",()=>{function s(n,i,a,e,o){const t=document.createElement("div");t.className=`click-particle color-${o}`;const c=Math.cos(a)*e,l=Math.sin(a)*e;t.style.setProperty("--dx",c+"px"),t.style.setProperty("--dy",l+"px"),t.style.left=n+"px",t.style.top=i+"px";const d=Math.random()*6+8;t.style.width=d+"px",t.style.height=d+"px",document.body.appendChild(t),setTimeout(()=>{t.parentNode&&t.parentNode.removeChild(t)},1100)}document.addEventListener("click",n=>{for(let e=0;e<10;e++){const o=Math.PI*2/10*e,t=18+Math.random()*8,c=e%10+1;setTimeout(()=>{s(n.clientX,n.clientY,o,t,c)},e*12)}for(let e=0;e<4;e++){const o=Math.random()*Math.PI*2,t=18+Math.random()*10,c=Math.floor(Math.random()*10)+1;setTimeout(()=>{s(n.clientX,n.clientY,o,t,c)},(10+e)*12)}})});</script> <script type="module">document.addEventListener("DOMContentLoaded",()=>{document.addEventListener("click",n=>{const e=n.target.closest('a[href^="#"]');if(!e||e.closest("toc-heading"))return;const t=e.getAttribute("href");if(!t||t==="#")return;const o=t.substring(1),r=document.getElementById(o);r&&(n.preventDefault(),history.pushState(null,"",t),r.scrollIntoView({behavior:"smooth",block:"start"}))})});</script> </body> </html> <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script> <script>(function(){const selector = ".prose .zoomable";
+const background = "hsl(var(--background) / 0.8)";
+
+  if (typeof mediumZoom !== 'undefined') {
+    mediumZoom(selector, { background })
+  }
+})();</script> 
