@@ -1,0 +1,1 @@
+import{c as t}from"./site.config.DALe7Udu.js";new Intl.DateTimeFormat(t.locale.dateLocale,t.locale.dateOptions);function a(o){document.dispatchEvent(new CustomEvent("toast",{detail:o}))}export{a as s};
