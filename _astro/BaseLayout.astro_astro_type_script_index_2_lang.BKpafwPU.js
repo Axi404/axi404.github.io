@@ -1,0 +1,1 @@
+import{_ as n}from"./preload-helper.CVfkMyKi.js";if(document.getElementById("gradient-background")){const e=async()=>{const{initializeWebGL:t}=await n(async()=>{const{initializeWebGL:i}=await import("./index.DruYMONA.js");return{initializeWebGL:i}},[]);t()};document.readyState==="loading"?document.addEventListener("DOMContentLoaded",e,{once:!0}):e()}
