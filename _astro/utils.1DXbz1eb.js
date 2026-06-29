@@ -1,0 +1,1 @@
+import{t as e}from"./site.config._UF0CEzL.js";new Intl.DateTimeFormat(e.locale.dateLocale,e.locale.dateOptions);function t(e){document.dispatchEvent(new CustomEvent(`toast`,{detail:e}))}export{t};

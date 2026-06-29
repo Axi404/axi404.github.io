@@ -1,0 +1,1 @@
+import{t as e}from"./preload-helper.L5lOfJxi.js";if(document.getElementById(`gradient-background`)){let t=async()=>{let{initializeWebGL:t}=await e(async()=>{let{initializeWebGL:e}=await import(`./webgl.C75RSz8A.js`);return{initializeWebGL:e}},[]);t()};document.readyState===`loading`?document.addEventListener(`DOMContentLoaded`,t,{once:!0}):t()}
