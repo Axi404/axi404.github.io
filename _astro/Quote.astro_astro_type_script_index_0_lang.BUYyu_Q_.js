@@ -1,0 +1,1 @@
+import{t as e}from"./site.config._UF0CEzL.js";var{quote:t}=e.integ,n=class extends HTMLElement{constructor(){super()}render(e){let t=this.querySelector(`#quote-sentence`);t&&(t.innerText=e)}connectedCallback(){let e=Function(`return `+t.target)();fetch(t.server).then(e=>e.json()).then(t=>this.render(e(t)))}};customElements.define(`quote-component`,n);
